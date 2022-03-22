@@ -14,14 +14,14 @@ export default {
   name: "App",
   created() {
     this.$store.dispatch({ type: "loadGigs" });
-  },
+    },
   components: {
     appHeader,
     appFooter
   },
   computed: {},
   methods: {
-    // this.$store.dispatch({ type: "loadGigs" });
+    
   },
 };
 

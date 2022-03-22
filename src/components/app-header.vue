@@ -1,9 +1,12 @@
 <template>
-<h1>sixerr</h1>
-    <!-- //TODO 
-    logo 
-    search
-    user -->
+<h1 to="/">Sixerr</h1>
+    <nav class="nav">
+        <router-link to="/explore">Explore</router-link> |
+        <router-link to="/">Become A Seller</router-link> |
+        <router-link to="/">Login</router-link>
+        
+    </nav>
+
 
 
 </template>
