@@ -1,13 +1,13 @@
-// import { toyService } from '../services/toy.service.js';
+import { gigService } from '../services/gig.service.js';
 
 export default {
   state: {
-    toys: null,
+    gigs: null,
   },
   getters: {
-    // getToys(state) {
-    //   return state.toys;
-    // },
+    getGigs(state) {
+      return state.gigs;
+    },
     // getLabels(state) {
     //   return state.labels;
     // },
@@ -16,10 +16,15 @@ export default {
     // },
   },
   mutations: {
-    setToys(state, { toys }) {
-      state.toys = toys;
+    setGigs(state, { gigs }) {
+      state.gigs = gigs;
     },
   },
   actions: {
+    loadGigs({ commit, state }) {
+      var gigs = gigService.query()
+      console.log(gigs);
+      commit({ type: 'setGigs', gigs })
+    }
   }
 };

@@ -1,3 +1,4 @@
+import { createStore } from 'vuex';
 import gigStore from './gig.store.js';
 import userStore from './user.store.js'
 

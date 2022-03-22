@@ -12,12 +12,17 @@ import appHeader from "./components/app-header.vue";
 import appFooter from "./components/app-footer.vue";
 export default {
   name: "App",
-  created() {},
+  created() {
+    this.$store.dispatch({ type: "loadGigs" });
+  },
   components: {
     appHeader,
     appFooter
   },
   computed: {},
+  methods: {
+    // this.$store.dispatch({ type: "loadGigs" });
+  },
 };
 
 </script>

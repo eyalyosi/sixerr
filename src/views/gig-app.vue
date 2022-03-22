@@ -18,7 +18,9 @@ export default {
   methods: {
   },
   computed: {
-
+    gigs() {
+      return this.$store.getters.getGigs;
+    }
   },
   components: {
     gigList,
