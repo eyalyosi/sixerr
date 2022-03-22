@@ -1,7 +1,7 @@
 <template>
   <section>
     <gig-filter />
-    <gig-list />
+    <gig-list v-if="gigs" :gigs="gigs"/>
   </section>
 </template>
 

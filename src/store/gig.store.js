@@ -21,10 +21,19 @@ export default {
     },
   },
   actions: {
+    // async loadGigs({ commit, state }) {
+    //   try {
+    //     var gigs = gigService.query()
+    //     commit({ type: 'setGigs', gigs })
+    //   } catch (err) {
+    //     console.error('Cannot Load toys', err);
+    //     throw err;
+    //   }
+    // }
     loadGigs({ commit, state }) {
-      var gigs = gigService.query()
-      console.log(gigs);
-      commit({ type: 'setGigs', gigs })
+      gigService.query().then((gigs) => {
+        commit({ type: 'setGigs', gigs })
+      })
     }
   }
-};
+}
