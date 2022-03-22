@@ -9,18 +9,23 @@ import { storageService } from './async-storage-service.js';
 
 
 const GIGS_KEY = 'gigs_db';
+const CATEGORY_KEY = 'category_db';
 _createGigs()
+createCatergories()
 
 export const gigService = {
     query,
     save,
     getById,
+    createCatergories
 
 }
 
 function query() {
     return storageService.query(GIGS_KEY);
 }
+
+
 
 function save(gig) {
     if (gig.id) return storageService.put(GIGS_KEY, gig);
@@ -35,6 +40,7 @@ function _createGigs() {
     if (!gigs || !gigs.length) {
         gigs = [
             {
+                category: 'Arts & Crafts',
                 image: "https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/231682055/original/77cc585046a1ceb81a809218fef35ee8252bbb3b.jpg",
                 title: "I will do hyper realistic pencil portrait by hand drawing",
                 description: "Hello ! Much obliged for visiting my gig :)\nIn this gig I'm offering you an exceptionally 3 one of a kind, best and reasonable bundles.\nIn case you are thinking for giving somebody uncommon an extremely delightful, eye getting gift( hyper practical hand drawing pencil sketch picture)?\nKindly select the helpful bundle and submit your request at this moment and I'll give you an ideal picture sketch, hand drawing, practical drawing, pencil attracting high goal JPEG/PNG advanced document.\nI will give hand-drawn dark and White or hued reasonable pictures.\nSympathetically give me clear reference photograph however much as could be expected.\nThe material I utilized for Creating pencil representations are:\nDrawing materials: graphite pencil, charcoal, Bristol paper, mono eraser, brush, mixing stump, mechanical pencil, graphite powder and so on .\nYou can give me anything:\nPicture photographs\nFamily photographs\nCreature photographs\nAny item photographs\nScene photographs\nEngineering photographs\nAnything you envision\nKindly reach me prior to submitting your request! Much appreciated.\nI DO NOT DELIVER ORIGINAL PHYSICAL COPY BUT A HIGH RESOLUTION JPEG DIGITA",
@@ -178,6 +184,53 @@ function _createGigs() {
         utilService.saveToStorage(GIGS_KEY, gigs);
     }
     return gigs;
+}
+
+function createCatergories() {
+     const categories = [{
+        name: 'Arts and Crafts',
+        txt: 'Outsource your arts and crafts.',
+        img: 'https://upload.wikimedia.org/wikipedia/commons/b/b4/William_Morris_design_for_Trellis_wallpaper_1862.jpg'
+
+    },
+    {
+        name: 'Data Entry',
+        txt: 'Learn your Business',
+        img: 'https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_2.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741664/data-entry-2x.png'
+    },
+    {
+        name: 'Logo design',
+        txt: 'Build your brand',
+        img: 'https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_2.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741678/logo-design-2x.png'
+    },
+    {
+        name: 'Marketing',
+        txt: 'Build your brand. Grow your business.',
+        img: 'https://www.insegment.com/blog/wp-content/uploads/2016/04/The-Role-of-Marketing-1.jpg'
+    },
+    {
+        name: 'Research and Summeries',
+        txt: 'Explore more',
+        img: 'https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/192053463/original/d52627959e5a21f2f9a104c22c8005a2e898ec0a/write-effective-and-inspiring-articles.png'
+    },
+    {
+        name: 'Translation',
+        txt: 'Go global',
+        img: 'https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_2.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741674/translation-2x.png'
+    },
+    {
+        name: 'write linkedin profile',
+        txt: 'Start your future',
+        img: 'https://resources.biginterview.com/wp-content/uploads/2014/06/woman-linkedin-profile-scaled.jpg'
+
+    },
+    {
+        name: 'video-explainers',
+        txt: 'Engage your audience',
+        img: 'https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_2.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741663/animated-explainer-2x.png'
+    },
+    ]
+    return categories
 }
 
 

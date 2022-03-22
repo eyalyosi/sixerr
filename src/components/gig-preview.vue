@@ -1,26 +1,33 @@
 <template>
   <li>
-    <p><img src="" alt="">
-        {{gig.title}}</p>
-    <p>{{gig.price}}</p>
-    <p>{{gig.fullname}}</p>
+    <img :src="category" alt />
+    <p>{{ gig.price }}</p>
+    <p>{{ gig.fullname }}</p>
   </li>
 </template>
 
 <script>
+import { gigService } from "../services/gig.service.js"
 export default {
   name: "gig-preview",
   props: {
     gig: Object,
   },
   components: {
-    // customCard,
+    gigService
+
   },
   computed: {
-  },
-  methods: {
-  },
-  created() {
-  },
-};
+    gigImg() {
+      return this.gig.image
+    },
+    category() {
+      return this.gigService.createCatergories()
+    },
+    methods: {
+    },
+
+  }
+
+}
 </script>
