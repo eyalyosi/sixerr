@@ -14,7 +14,7 @@
       {{ gig.title }}
     </div>
     <div class="gig-rate">
-      <p>{{ gigRate }}</p>
+      <p>⭐{{ gigRate }}</p>
       <p>({{ gigReviewersLength }})</p>
     </div>
     <div>
