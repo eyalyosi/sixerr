@@ -1,7 +1,7 @@
 <template>
   <section>
     <ul>
-      <!-- <gig-preview v-for="gig in gigs" :gig="gig" :key="gig.loc" /> -->
+      <gig-preview v-for="gig in gigs" :gig="gig" :key="gig.loc" />
       
     </ul>
   </section>
@@ -30,4 +30,4 @@ export default {
   },
 };
 </script>
-<style></style>
+

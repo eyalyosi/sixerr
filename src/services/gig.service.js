@@ -11,14 +11,13 @@ import { storageService } from './async-storage-service.js';
 const GIGS_KEY = 'gigs_db';
 const CATEGORY_KEY = 'category_db';
 _createGigs()
-createCatergories()
+// createCatergories()
 
 export const gigService = {
     query,
     save,
     getById,
     createCatergories
-
 }
 
 function query() {
@@ -45,6 +44,7 @@ function _createGigs() {
                 title: "I will do hyper realistic pencil portrait by hand drawing",
                 description: "Hello ! Much obliged for visiting my gig :)\nIn this gig I'm offering you an exceptionally 3 one of a kind, best and reasonable bundles.\nIn case you are thinking for giving somebody uncommon an extremely delightful, eye getting gift( hyper practical hand drawing pencil sketch picture)?\nKindly select the helpful bundle and submit your request at this moment and I'll give you an ideal picture sketch, hand drawing, practical drawing, pencil attracting high goal JPEG/PNG advanced document.\nI will give hand-drawn dark and White or hued reasonable pictures.\nSympathetically give me clear reference photograph however much as could be expected.\nThe material I utilized for Creating pencil representations are:\nDrawing materials: graphite pencil, charcoal, Bristol paper, mono eraser, brush, mixing stump, mechanical pencil, graphite powder and so on .\nYou can give me anything:\nPicture photographs\nFamily photographs\nCreature photographs\nAny item photographs\nScene photographs\nEngineering photographs\nAnything you envision\nKindly reach me prior to submitting your request! Much appreciated.\nI DO NOT DELIVER ORIGINAL PHYSICAL COPY BUT A HIGH RESOLUTION JPEG DIGITA",
                 price: "₪16.84",
+                level: "Level 2 seller",
                 daysToMake: "2 Days Delivery",
                 fullname: "frederick kessie",
                 imgUrl: "https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/4abf6f5b58e4d78cfb7c410cf8d7a9ac-1626111679444/4a04b77c-22ee-4ce8-b4be-747fd059e9ff.jpg",
@@ -60,21 +60,24 @@ function _createGigs() {
                         country: "Thailand",
                         flag: "https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1f9-1f1ed.png",
                         review: "frederickkessie ist a super kind artist doing the process he was super professional and only took him 1 shot to deliver a perfect result ! Highly recommended work with this guy !",
-                        reviewedAt: "Published 2 months ago"
+                        reviewedAt: "Published 2 months ago",
+                        rate: "5"
                     },
                     {
                         name: "liam31",
                         country: "United Kingdom",
                         flag: "https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1ec-1f1e7.png",
                         review: "I requested a slightly earlier delivery on this and once again Frederick came through and provided a fantastic delivery. Thanks so much!",
-                        reviewedAt: "Published 3 weeks ago"
+                        reviewedAt: "Published 3 weeks ago",
+                        rate: "5"
                     },
                     {
                         name: "liam31",
                         country: "United Kingdom",
                         flag: "https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1ec-1f1e7.png",
                         review: "Frederick is amazing and extremely talented. This is the second time working with him and he has been a pleasure yet again!",
-                        reviewedAt: "Published 3 weeks ago"
+                        reviewedAt: "Published 3 weeks ago",
+                        rate: "4"
                     },
                 ],
                 tags: [
@@ -100,6 +103,7 @@ function _createGigs() {
                 title: "I will do hyper realistic pencil sketch portrait by hand drawing",
                 description: "Hey ! Thanks for visiting my gig :)\nIn this gig i'm offering you a very 3 unique, preferable and affordable packages.\nIf you are thinking for giving someone special a very beautiful, eye catching gift( hyper realistic hand drawing pencil sketch portrait)?\nPlease select the desirable package and place your order right now and i'll give you a perfect portrait sketch, hand drawing, realistic drawing,pencil drawing in high resolution JPEG/PNG digital file.\nI will provide hand-drawn black & White or colored realistic portraits.\nKindly provide me clear reference photo as much as possible.\nThe material I used for Creating pencil portraits are:\nDrawing materials: graphite pencil, charcoal, Bristol paper, tombomono eraser, brush, blending stump, mechanical pencil, graphite powder etc .\nYou can give me anything:\nPortrait photos\nFamily photos\nAnimal photos\nAny product photos\nLandscape photos\nArchitecture photos\nAnything you imagine\nPlease contact me before placing your order! Thanks.\nI DO NOT DELIVER ORIGINAL PHYSICAL COPY BUT A HIGH RESOLUTION JPEG DIGITAL FILE, IF YOU WANT THE ORIGINAL ONE THEN MESSAGE ME FOR DETAILS.\nFeel free to ask me anything! :)\nThank You...\nvividstore",
                 price: "₪67.37",
+                level: "Level 1 seller",
                 daysToMake: "3 Days Delivery",
                 fullname: "vividstore",
                 imgUrl: "https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/83cc7c97f9873bdb052590a94d32f84c-1576419363871/ed47443e-0f9b-42ab-beaf-ec0a0acccfe8.jpeg",
@@ -108,6 +112,16 @@ function _createGigs() {
                 avgResponceTime: "1 hour",
                 lastDelivery: "about 16 hours",
                 about: "Hello, this is Masuk, stand up for vividstore,I am a young and enthusiastic graphic artist and realistic pencil sketch artist. I am certified as graphic designer from George Washington University, USA. I have almost 11 years experience in this field since my university life. I really love to work with Adobe Illustrator, Adobe Photoshop, and so on as a full time online freelancer. And also passionate about sketching. Thank you.",
+                reviewers: [
+                    {
+                        name: "Eli ohane",
+                        country: "Thailand",
+                        flag: "https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1f9-1f1ed.png",
+                        review: "vividstore ist a super kind artist doing the process he was super professional and only took him 1 shot to deliver a perfect result ! Highly recommended work with this guy !",
+                        reviewedAt: "Published 1 months ago",
+                        rate: "4"
+                    },
+                ],
                 tags: [
                     {
                         name: "pencil drawing"
@@ -131,6 +145,7 @@ function _createGigs() {
                 title: "I will draw a hyperrealistic portrait of face or entire body and animals",
                 description: "Desenho de lápis hiperrealista da sua foto, posso adicionar detalhes de fundo e personalizar o desenho do jeito que você quiser.",
                 price: "₪202.11",
+                level: "Level 2 seller",
                 daysToMake: "14 Days Delivery",
                 fullname: "andreacarvalho_",
                 imgUrl: "https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/5344c10fd4820db3626c4fc24968783d-1588608774469/1e4a3bd9-b71d-48ce-8ac0-0ff6d667caf4.jpeg",
@@ -145,21 +160,24 @@ function _createGigs() {
                         country: "United States",
                         flag: "https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1fa-1f1f8.png",
                         review: "Incredibly grateful for the amazing experience working with you . You are so talented and a kind soul! I highly recommend if you want high quality art to work with her every time",
-                        reviewedAt: "Published 1 month ago"
+                        reviewedAt: "Published 1 month ago",
+                        rate: "5"
                     },
                     {
                         name: "mark001994",
                         country: "Austria",
                         flag: "https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1e6-1f1f9.png",
                         review: "The artist was very kind and polite also very fast at the communication. The delivery of the project was on time. And her work is worth the money. I'm really excited about the painting she did. I can truely recommend the Aritst and her work. Big Thanks! :)",
-                        reviewedAt: "Published 1 month ago"
+                        reviewedAt: "Published 1 month ago",
+                        rate: "4"
                     },
                     {
                         name: "thurstonrobby",
                         country: "United States",
                         flag: "https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1fa-1f1f8.png",
                         review: "incredible on how precise that art is, picture perfect. 100% amazing job and I will use your services again ...",
-                        reviewedAt: "Published 3 weeks ago"
+                        reviewedAt: "Published 3 weeks ago",
+                        rate: "4"
                     },
                 ],
                 tags: [
