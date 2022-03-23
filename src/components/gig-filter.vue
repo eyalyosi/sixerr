@@ -2,7 +2,7 @@
   <section class="gig-filter">
     <input
       @change="setFilter"
-      v-model="filterBy.category"
+      v-model="filterBy.title"
       type="text"
       placeholder='Try "logo"'
     />
@@ -13,7 +13,7 @@ export default {
   data() {
     return {
       filterBy: {
-        category: "",
+        title: "",
       },
     };
   },

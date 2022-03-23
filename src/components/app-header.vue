@@ -25,7 +25,7 @@ import gigFilter from "./gig-filter.vue";
 export default {
   methods: {
     setFilter(filterBy) {
-      this.$store.dispatch({ type: "filterBy", filterBy });
+      this.$store.dispatch({ type: "setFilter", filterBy });
     },
   },
   components: {

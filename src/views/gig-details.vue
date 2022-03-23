@@ -3,16 +3,14 @@
     <h1>{{ gig.title }}</h1>
     <div class="seller-info-details">
       <img :src="gigSellerImg" alt="seller image" />
-      <div class="seller-name-level">
-        <div>{{ gig.fullname }}</div>
-        <div>{{ gig.level }}</div>
-      </div>
+      <div>{{ gig.owner.fullname }}</div>
+      <div>{{ gig.owner.level }}</div>
     </div>
     <div class="gig-rate-details">
-      <p>⭐{{ gigRate }}</p>
-      <p>({{ gigReviewersLength }})</p>
+      <p>⭐{{ gig.owner.rate }}</p>
+      <!-- <p>({{ gigReviewersLength }})</p> -->
+      {{gig.about}}
     </div>
-    
   </section>
 </template>
 
@@ -38,15 +36,15 @@ export default {
       return this.gig.imgUrl;
     },
     gigRate() {
-      const res =
-        this.gig.reviewers.reduce((acc, review) => {
-          acc += +review.rate;
-          return acc;
-        }, 0) / this.gig.reviewers.length;
-      return res.toFixed(1);
+      // const res =
+      //   this.gig.reviewers.reduce((acc, review) => {
+      //     acc += +review.rate;
+      //     return acc;
+      //   }, 0) / this.gig.reviewers.length;
+      // return res.toFixed(1);
     },
     gigReviewersLength() {
-      return this.gig.reviewers.length;
+      // return this.gig.reviewers.length;
     },
   },
   components: {},

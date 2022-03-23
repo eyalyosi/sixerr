@@ -1,5 +1,6 @@
 <template>
-   <!-- <li class="gig-preview-box" @click="goToDetail">
+   <li class="gig-preview-box" @click="goToDetail">
+   {{gig.category}}
     <div class="gig-img-box">
       <img :src="gigImg" alt="gig image" />
     </div>
@@ -22,7 +23,7 @@
         <span>{{ gig.price }}</span>
       </div>
     </div>
-  </li> -->
+  </li>
 </template>
 
 <script>
