@@ -16,9 +16,9 @@
       <p>({{ gigReviewersLength }})</p>
     </div>
     <div>
-      <span> ❤ </span>
+      <span>❤</span>
       <div>
-        <span>Starting at </span>
+        <span>Starting at</span>
         <span>{{ gig.price }}</span>
       </div>
     </div>
@@ -46,35 +46,12 @@ export default {
       return this.gigService.createCatergories();
     },
     gigRate() {
-<<<<<<< HEAD
-      //   const gig = this.gig;
-      //   const rateAvg = [];
-
-      //   const res =
-      //     this.gig.reviewers.reduce((a, b) => {
-      //       console.log(rate);
-      //       const rate = reviewers.rate;
-      //         console.log(rate);
-      //       b = rate;
-      //       a + b;
-      //     }, 0) / arr.length;
-
-      //   return res;
-      //   const average = (arr) => arr.reduce((a, b) => a + b, 0) / arr.length;
-
-      //   average([99, 45, 26, 7, 11, 122, 22]);
-
-      // gig.reviewers.forEach(reviewer => {
-      //     reviewer.rate
-      // });
-=======
       const res =
         this.gig.reviewers.reduce((acc, review) => {
           acc += +review.rate;
           return acc;
         }, 0) / this.gig.reviewers.length;
       return res.toFixed(1);
->>>>>>> f6e495797edaa8be4b3861372a1d6c3ce0da9237
     },
     gigReviewersLength() {
       return this.gig.reviewers.length;
