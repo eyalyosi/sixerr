@@ -13,6 +13,7 @@ export default {
       const regex = new RegExp(filterBy.category, 'i')
       return gigs.filter((gig) => regex.test(gig.category))
     },
+
     reviwersLength(state) {
       return state.gig
     },
