@@ -1,43 +1,29 @@
 <template>
   <section>
-    <gig-filter @setFilter="setFilter" />
     <gig-list :gigs="gigs" />
-    
+    <category-list />
   </section>
 </template>
 
-
 <script>
-import gigList from '../components/gig-list.vue'
-import gigFilter from '../components/gig-filter.vue'
-import catList from '../components/category-list.vue'
+import gigList from "../components/gig-list.vue";
+import categoryList from "../components/category-list.vue";
 export default {
-  name: 'gig-app',
+  name: "gig-app",
   data() {
-    return {
-      // filterBy: null,
-    };
+    return {};
   },
   methods: {
-    setFilter(filterBy) {
-      this.$store.dispatch({ type: 'filterBy', filterBy });
-
-    },
     computed: {
       gigs() {
         return this.$store.getters.getGigs;
-      }
+      },
+
+      components: {
+        gigList,
+        categoryList,
+      },
     },
-
-
-    components: {
-      gigList,
-      gigFilter,
-      catList
-    }
-
-
-  }
-}
+  },
+};
 </script>
-

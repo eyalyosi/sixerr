@@ -16,9 +16,9 @@
       <p>({{ gigReviewersLength }})</p>
     </div>
     <div>
-      <span> ❤ </span>
+      <span>❤</span>
       <div>
-        <span>Starting at </span>
+        <span>Starting at</span>
         <span>{{ gig.price }}</span>
       </div>
     </div>
