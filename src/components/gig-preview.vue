@@ -24,7 +24,7 @@
         <span>❤</span>
         <div>
           <small class="small">Starting at</small>
-          <span>{{ gig.price }}</span>
+          <span class>{{ gig.price }}</span>
         </div>
       </section>
     </article>
