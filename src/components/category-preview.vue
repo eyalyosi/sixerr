@@ -1,7 +1,15 @@
 <template>
   <li class="category-preview-box" @click="explore(category.name)">
-    <p class="category-name">{{ category.name }}</p>
-    <p class="category-txt">{{ category.txt }}</p>
+    <!-- <h4>
+      <small>{{ category.txt }}</small>
+      {{ category.name }}
+    </h4> -->
+
+    <div class="category-txt-name-box">
+      <small class="category-txt">{{ category.txt }}</small>
+      <h4 class="category-name">{{ category.name }}</h4>
+    </div>
+
     <img :src="categoryImg" alt="" />
   </li>
 </template>
@@ -21,7 +29,7 @@ export default {
   methods: {
     explore(filter) {
       this.$emit("explore", filter);
-      this.$router.push('/explore')
+      this.$router.push("/explore");
     },
   },
 };
