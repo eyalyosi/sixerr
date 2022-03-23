@@ -1,5 +1,5 @@
 <template>
-  <li class="gig-preview-box">
+  <li class="gig-preview-box" @click="goToDetail">
     <div class="gig-img-box">
       <img :src="gigImg" alt="gig image" />
     </div>
@@ -48,53 +48,21 @@ export default {
       return this.gigService.createCatergories();
     },
     gigRate() {
-      // console.log(this.gig.reviewers);
-      //     const gig = this.gig;
-      //     const rateAvg = [];
-
-      //   const res =
-      //     this.gig.reviewers.reduce((a, b) => {
-      //     //   console.log(+rate);
-      //       const rate = this.gig.reviewers.rate;
-      //       console.log(rate);
-      //       b = rate;
-      //       a + b;
-      //     }, 0) / this.gig.reviewers.length;
-
-      //   return res;
-      //     const average = (arr) => arr.reduce((a, b) => a + b, 0) / arr.length;
-
-      //     average([99, 45, 26, 7, 11, 122, 22]);
-      var res = 0;
-
-      var rates = this.gig.reviewers.map((reviewer) => {
-        //   console.log(reviewer.rate);
-        reviewer.rate;
-      });
-      console.log(rates);
-
-    //   const averageBy = (arr, fn) =>
-    //     arr
-    //       .map(typeof fn === "function" ? fn : (val) => val[fn])
-    //       .reduce((acc, val) => acc + val, 0) / arr.length;
-
-      //   this.gig.reviewers.forEach((reviewer) => {
-      //     var rate = +reviewer.rate;
-
-      //     console.log(typeof rate);
-
-      //     res += rate;
-      //     console.log(res);
-      //     var avg = res / this.gig.reviewers.length;
-      //     console.log(avg);
-      //     return avg;
-      //     //   reviewer.rate
-      //   });
+      const res =
+        this.gig.reviewers.reduce((acc, review) => {
+          acc += +review.rate;
+          return acc;
+        }, 0) / this.gig.reviewers.length;
+      return res.toFixed(1);
     },
     gigReviewersLength() {
       return this.gig.reviewers.length;
     },
-    methods: {},
+  },
+  methods: {
+    goToDetail() {
+      this.$router.push(`/gig/${this.gig._id}`);
+    },
   },
 };
 </script>
