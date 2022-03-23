@@ -22,7 +22,8 @@ export default {
       return this.gig.image
     },
     category() {
-      return this.gigService.createCatergories()
+      console.log(this.gigs);
+      // return this.gigService.createCatergories()
     },
     methods: {
     },
