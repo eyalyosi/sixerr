@@ -6,9 +6,13 @@ export default {
     categories: gigService.createCatergories()
   },
   getters: {
-    getGigs(state) {
-      return state.gigs;
+    getGigs({ gigs, filterBy }) {
+      console.log(filterBy);
+      if (!filterBy) return gigs
+      const regex = new RegExp(filterBy.category, 'i')
+      return gigs.filter((gig) => regex.test(gig.category))
     },
+
     reviwersLength(state) {
       return state.gig
     },
@@ -29,7 +33,7 @@ export default {
     reviwersLength(state) {
       return state.gigs
     },
-    
+
   },
   actions: {
     // async loadGigs({ commit, state }) {

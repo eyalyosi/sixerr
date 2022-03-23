@@ -8,14 +8,16 @@ export default {
     data() {
         return {
             filterBy: {
-                title: ""
+                category: ""
             }
         };
     },
     methods: {
         setFilter() {
-            console.log(this.filterBy);
-            this.$emit("setFilter", JSON.parse(JSON.stringify(this.filterBy)));
+            this.$emit(
+                "setFilter",
+                JSON.parse(JSON.stringify(this.filterBy))
+            );
         },
 
     }
