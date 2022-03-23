@@ -1,12 +1,12 @@
 <template>
   <section>
-    <category-list v-if="categories" :categories="categories" />
-    <gig-list v-if="gigs" :gigs="gigs" />
+    <category-list v-if="categories" :categories="categories" @explore="explore"/>
+    
   </section>
 </template>
 
 <script>
-import gigList from "../components/gig-list.vue";
+
 import categoryList from "../components/category-list.vue";
 
 export default {
@@ -14,20 +14,19 @@ export default {
   data() {
     return {};
   },
-  methods: {},
+  methods: {
+    explore(filterBy) {
+      this.$store.dispatch({ type: "setFilter", filterBy });
+    }
+  },
   computed: {
-    gigs() {
-      return this.$store.getters.getGigs;
-
-    },
     categories() {
       return this.$store.getters.getCategories;
 
     },
   },
   components: {
-    gigList,
-    categoryList,
+    categoryList
   },
 };
 </script>

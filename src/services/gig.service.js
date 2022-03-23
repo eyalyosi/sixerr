@@ -20,7 +20,7 @@ export const gigService = {
     createCatergories
 }
 
-function query() {
+function query(filterBy) {
     return storageService.query(GIGS_KEY);
 }
 

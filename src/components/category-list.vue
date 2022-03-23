@@ -1,14 +1,19 @@
 <template>
-    <section>
-        <ul class="category-list">
-            <category-preview v-for="category in categories" :category="category" :key="category.name" />
-        </ul>
-    </section>
+  <section>
+    <ul class="category-list">
+      <category-preview
+        v-for="category in categories"
+        :category="category"
+        :key="category.name"
+        @explore="explore"
+      />
+    </ul>
+  </section>
 </template>
 <script>
 import categoryPreview from "./category-preview.vue";
 export default {
-     name: "category-list",
+  name: "category-list",
   props: {
     categories: {
       type: Array,
@@ -19,12 +24,14 @@ export default {
     return {};
   },
   components: {
-    categoryPreview
+    categoryPreview,
   },
-  methods: {},
+  methods: {
+    explore(filter) {
+      this.$emit("explore", filter);
+    },
+  },
   computed: {},
-  created() {
-    console.log(this.categories);
-  },
-}
+  created() {},
+};
 </script>
