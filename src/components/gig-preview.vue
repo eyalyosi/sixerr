@@ -17,8 +17,13 @@
       <p>{{ gigRate }}</p>
       <p>({{ gigReviewersLength }})</p>
     </div>
-    <p>{{ gig.price }}</p>
-    <p></p>
+    <div>
+      <span> ❤ </span>
+      <div>
+        <span>Starting at </span>
+        <span>{{ gig.price }}</span>
+      </div>
+    </div>
   </li>
 </template>
 
@@ -43,26 +48,48 @@ export default {
       return this.gigService.createCatergories();
     },
     gigRate() {
-      //   const gig = this.gig;
-      //   const rateAvg = [];
+      // console.log(this.gig.reviewers);
+      //     const gig = this.gig;
+      //     const rateAvg = [];
 
-    //   const res =
-    //     this.gig.reviewers.reduce((a, b) => {
-    //       console.log(rate);
-    //       const rate = reviewers.rate;
-    //         console.log(rate);
-    //       b = rate;
-    //       a + b;
-    //     }, 0) / arr.length;
+      //   const res =
+      //     this.gig.reviewers.reduce((a, b) => {
+      //     //   console.log(+rate);
+      //       const rate = this.gig.reviewers.rate;
+      //       console.log(rate);
+      //       b = rate;
+      //       a + b;
+      //     }, 0) / this.gig.reviewers.length;
 
-    //   return res;
-      //   const average = (arr) => arr.reduce((a, b) => a + b, 0) / arr.length;
+      //   return res;
+      //     const average = (arr) => arr.reduce((a, b) => a + b, 0) / arr.length;
 
-      //   average([99, 45, 26, 7, 11, 122, 22]);
+      //     average([99, 45, 26, 7, 11, 122, 22]);
+      var res = 0;
 
-      // gig.reviewers.forEach(reviewer => {
-      //     reviewer.rate
-      // });
+      var rates = this.gig.reviewers.map((reviewer) => {
+        //   console.log(reviewer.rate);
+        reviewer.rate;
+      });
+      console.log(rates);
+
+    //   const averageBy = (arr, fn) =>
+    //     arr
+    //       .map(typeof fn === "function" ? fn : (val) => val[fn])
+    //       .reduce((acc, val) => acc + val, 0) / arr.length;
+
+      //   this.gig.reviewers.forEach((reviewer) => {
+      //     var rate = +reviewer.rate;
+
+      //     console.log(typeof rate);
+
+      //     res += rate;
+      //     console.log(res);
+      //     var avg = res / this.gig.reviewers.length;
+      //     console.log(avg);
+      //     return avg;
+      //     //   reviewer.rate
+      //   });
     },
     gigReviewersLength() {
       return this.gig.reviewers.length;

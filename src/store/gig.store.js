@@ -8,6 +8,9 @@ export default {
     getGigs(state) {
       return state.gigs;
     },
+    reviwersLength(state) {
+      return state.gig
+    }
     // getLabels(state) {
     //   return state.labels;
     // },
@@ -19,6 +22,9 @@ export default {
     setGigs(state, { gigs }) {
       state.gigs = gigs;
     },
+    reviwersLength(state) {
+      return state.gigs
+    }
   },
   actions: {
     // async loadGigs({ commit, state }) {
