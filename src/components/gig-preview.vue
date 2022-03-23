@@ -1,5 +1,5 @@
 <template>
-  <li class="gig-preview-box">
+  <li class="gig-preview-box" @click="goToDetail">
     <div class="gig-img-box">
       <img :src="gigImg" alt="gig image" />
     </div>
@@ -12,11 +12,16 @@
     </div>
     <div class="gig-title">{{ gig.title }}</div>
     <div class="gig-rate">
-      <p>{{ gigRate }}</p>
+      <p>⭐{{ gigRate }}</p>
       <p>({{ gigReviewersLength }})</p>
     </div>
-    <p>{{ gig.price }}</p>
-    <p></p>
+    <div>
+      <span> ❤ </span>
+      <div>
+        <span>Starting at </span>
+        <span>{{ gig.price }}</span>
+      </div>
+    </div>
   </li>
 </template>
 
@@ -41,6 +46,7 @@ export default {
       return this.gigService.createCatergories();
     },
     gigRate() {
+<<<<<<< HEAD
       //   const gig = this.gig;
       //   const rateAvg = [];
 
@@ -61,11 +67,23 @@ export default {
       // gig.reviewers.forEach(reviewer => {
       //     reviewer.rate
       // });
+=======
+      const res =
+        this.gig.reviewers.reduce((acc, review) => {
+          acc += +review.rate;
+          return acc;
+        }, 0) / this.gig.reviewers.length;
+      return res.toFixed(1);
+>>>>>>> f6e495797edaa8be4b3861372a1d6c3ce0da9237
     },
     gigReviewersLength() {
       return this.gig.reviewers.length;
     },
-    methods: {},
+  },
+  methods: {
+    goToDetail() {
+      this.$router.push(`/gig/${this.gig._id}`);
+    },
   },
 };
 </script>
