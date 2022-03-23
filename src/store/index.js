@@ -1,7 +1,6 @@
 import { createStore } from 'vuex';
-import gigStore from './gig.store.js';
-import userStore from './user.store.js'
-
+import gigStore from './modules/gig.store.js';
+import userStore from './modules/user.store.js'
 const store = createStore({
     strict: true,
     state: {

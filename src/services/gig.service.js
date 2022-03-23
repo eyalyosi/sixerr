@@ -20,8 +20,8 @@ export const gigService = {
     createCatergories
 }
 
-function query() {
-    return storageService.query(GIGS_KEY);
+function query(filterBy = {}) {
+    return storageService.query(GIGS_KEY, filterBy);
 }
 
 
@@ -205,7 +205,7 @@ function _createGigs() {
 }
 
 function createCatergories() {
-     const categories = [{
+    const categories = [{
         name: 'Arts and Crafts',
         txt: 'Outsource your arts and crafts.',
         img: 'https://upload.wikimedia.org/wikipedia/commons/b/b4/William_Morris_design_for_Trellis_wallpaper_1862.jpg'
