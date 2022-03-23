@@ -11,7 +11,34 @@ export default {
       return state.categories;
     },
     getGigs({ gigs, filterBy }) {
+      console.log(gigs);
       if (!filterBy) return gigs
+    //  const filter = JSON.parse(JSON.stringify(filterBy))
+      console.log(filterBy);
+      if (filterBy === "Data Entry") {
+        return gigs.filter((gig) => gig.category = filterBy)
+      }
+      if (filterBy === "Arts and Crafts") {
+        return gigs.filter((gig) => gig.category = filterBy)
+      }
+      if (filterBy === "Data Entry") {
+        return gigs.filter((gig) => gig.category = filterBy)
+      }
+      if (filterBy === "Marketing") {
+        return gigs.filter((gig) => gig.category = filterBy)
+      }
+      if (filterBy === "Translation") {
+        return gigs.filter((gig) => gig.category = filterBy)
+      }
+      if (filterBy === "Research and Summeries") {
+        return gigs.filter((gig) => gig.category = filterBy)
+      }
+      if (filterBy === "video-explainers") {
+        return gigs.filter((gig) => gig.category = filterBy)
+      }
+      if (filterBy === "write linkedin profile") {
+        return gigs.filter((gig) => gig.category = filterBy)
+      }
       const regex = new RegExp(filterBy.title, 'i')
       return gigs.filter((gig) => regex.test(gig.title))
     },
@@ -45,7 +72,6 @@ export default {
       commit({ type: 'setFilter', filterBy })
       dispatch({ type: 'loadGigs' })
     },
-
   }
 }
 

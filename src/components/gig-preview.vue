@@ -1,7 +1,4 @@
 <template>
-  <section>
-
-  </section>
    <!-- <li class="gig-preview-box" @click="goToDetail">
     <div class="gig-img-box">
       <img :src="gigImg" alt="gig image" />
@@ -9,8 +6,8 @@
     <div class="seller-info">
       <img :src="gigSellerImg" alt="seller image" />
       <div class="seller-name-level">
-        <div>{{ gig.fullname }}</div>
-        <div>{{ gig.level }}</div>
+        <div>{{ gig.owner.fullname }}</div>
+        <div>{{ gig.owner.level }}</div>
       </div>
     </div>
     <div class="gig-title">{{ gig.title }}</div>
@@ -43,21 +40,21 @@ export default {
       return this.gig.image;
     },
     gigSellerImg() {
-      return this.gig.imgUrl;
+      return this.gig.owner.imgUrl;
     },
     category() {
       return this.gigService.createCatergories();
     },
     gigRate() {
-      const res =
-        this.gig.reviewers.reduce((acc, review) => {
-          acc += +review.rate;
-          return acc;
-        }, 0) / this.gig.reviewers.length;
-      return res.toFixed(1);
+      // const res =
+      //   this.gig.reviewers.reduce((acc, review) => {
+      //     acc += +review.rate;
+      //     return acc;
+      //   }, 0) / this.gig.reviewers.length;
+      // return res.toFixed(1);
     },
     gigReviewersLength() {
-      return this.gig.reviewers.length;
+      // return this.gig.reviewers.length;
     },
   },
   methods: {
