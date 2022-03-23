@@ -46,16 +46,16 @@ export default {
       //   const gig = this.gig;
       //   const rateAvg = [];
 
-      const res =
-        this.gig.reviewers.reduce((a, b) => {
-          console.log(rate);
-          const rate = reviewers.rate;
-            console.log(rate);
-          b = rate;
-          a + b;
-        }, 0) / arr.length;
+    //   const res =
+    //     this.gig.reviewers.reduce((a, b) => {
+    //       console.log(rate);
+    //       const rate = reviewers.rate;
+    //         console.log(rate);
+    //       b = rate;
+    //       a + b;
+    //     }, 0) / arr.length;
 
-      return res;
+    //   return res;
       //   const average = (arr) => arr.reduce((a, b) => a + b, 0) / arr.length;
 
       //   average([99, 45, 26, 7, 11, 122, 22]);
