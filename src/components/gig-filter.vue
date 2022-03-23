@@ -1,6 +1,6 @@
 <template>
     <section class="gig-filter">
-        <input @change="setFilter" v-model="filterBy.title" type="text" placeholder="Title" />
+        <input @change="setFilter" v-model="filterBy.category" type="text" placeholder="Try logo" />
     </section>
 </template>
 <script>
@@ -8,19 +8,14 @@ export default {
     data() {
         return {
             filterBy: {
-                category: ""
-            }
+                category: "",
+            },
         };
     },
     methods: {
         setFilter() {
-            this.$emit(
-                "setFilter",
-                JSON.parse(JSON.stringify(this.filterBy))
-            );
+            this.$emit("setFilter", JSON.parse(JSON.stringify(this.filterBy)));
         },
-
-    }
-
-}
+    },
+};
 </script>

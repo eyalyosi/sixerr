@@ -3,6 +3,7 @@ import { gigService } from '../services/gig.service.js';
 export default {
   state: {
     gigs: null,
+    filterBy: null,
     categories: gigService.createCatergories()
   },
   getters: {
@@ -30,10 +31,12 @@ export default {
     setGigs(state, { gigs }) {
       state.gigs = gigs;
     },
+    setFilter(state, { filterBy }) {
+      state.filterBy = filterBy;
+    },
     reviwersLength(state) {
       return state.gigs
     },
-
   },
   actions: {
     // async loadGigs({ commit, state }) {
@@ -49,6 +52,11 @@ export default {
       gigService.query().then((gigs) => {
         commit({ type: 'setGigs', gigs })
       })
-    }
+    },
+    filterBy({ commit }, { filterBy }) {
+      console.log(filterBy);
+      commit({ type: 'setFilter', filterBy });
+
+    },
   }
 }
