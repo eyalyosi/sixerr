@@ -62,7 +62,7 @@ function _createGigs() {
                 lastDelivery: "1 week",
                 daysToMake: 3,
                 about: "Hi reader, thanks for your time. I'm an experienced young artist and i specialize in 3D animation, graphic designing and pencil Art. I'm familiar with word processing application. Kindly hit me up if if you need any of my services.",
-                category: "arts and crafts",
+                category: "Arts and Crafts",
                 tags: [
                     "pencil drawing",
                     "realistic drawing",
@@ -96,7 +96,7 @@ function _createGigs() {
                 lastDelivery: "1 week",
                 daysToMake: 3,
                 about: "Hi reader, thanks for your time. I'm an experienced young artist and i specialize in 3D animation, graphic designing and pencil Art. I'm familiar with word processing application. Kindly hit me up if if you need any of my services.",
-                category: "arts and crafts",
+                category: "Arts and Crafts",
                 tags: [
                     "pencil drawing",
                     "realistic drawing",
@@ -130,7 +130,7 @@ function _createGigs() {
                 lastDelivery: "3 days",
                 daysToMake: 1,
                 about: "Hello! I'm a brazilian artist specialized in hyperrealistic drawings and paintings of human figures and animals, i use a diversity of techniques like Oil painting, dry pastel drawing and pencil. I have over 30 years of experience, check out my portfolio.",
-                category: "arts and crafts",
+                category: "Arts and Crafts",
                 tags: [
                     "pencil",
                     "drawing",
@@ -164,7 +164,7 @@ function _createGigs() {
                 lastDelivery: "about 12 hours",
                 daysToMake: 1,
                 about: "Hello! This is Rashin Faria, a Data Entry Specialist & Virtual Assistant at your service. I have excellent experience in Data Entry, Data Processing, Data Uploading, MS Word/Excel, Google Spreadsheet, PDF, Web Research, Ecommerce Product Entry, Data Scraping and others. With a 24/7 supporting team we work together for the betterment of the projects. We have extensive experience to do our project very fast and professionally. Client satisfaction is our first priority. Order Now! Regards Rashin Faria",
-                category: "data entry",
+                category: "Data Entry",
                 tags: [
                     "web research",
                     "manual typing",
@@ -196,7 +196,7 @@ function _createGigs() {
                 lastDelivery: "3 days",
                 daysToMake: 1,
                 about: "Hello fiverr community,my name is Muhammad Waqar and i'm here to help you with your lead generation, web research and data entry projects. We are a group of experts which work together for the betterment of the projects we take from our clients. So don't forget to reach out me for your next project. Thank you very much",
-                category: "data entry",
+                category: "Data Entry",
                 tags: [
                     "web research",
                     "data entry",
@@ -229,7 +229,7 @@ function _createGigs() {
                 lastDelivery: "3 days",
                 daysToMake: 1,
                 about: "I've been working as a Data entry operator for many years. I have a big team with so many professional people for managing data entry tasks. We believe that high quality and customer satisfaction is the most important thing for us. Feel free to drop a message for discussing your needs and objectives.",
-                category: "data entry",
+                category: "Data Entry",
                 tags: [
                     "typing job",
                     "excel data entry",
@@ -263,7 +263,7 @@ function _createGigs() {
                 lastDelivery: "3 days",
                 daysToMake: 1,
                 about: "I'm glad you're here! My name is Abrar Hussain. I’m a professional Transcriptionist and data entry expert. I’ve a BS degree in Mechanical engineering. From last more than three years, I’ve been working as a Data entry operator and English language transcriptionist. To me, customer satisfaction and providing the best quality work are always my top priorities. I’m really good at MS Office and Transcript. Get yourselves a skillful creator and professional Assistant by simply contacting me. So, drop a message, and let's get started. I am also available for long term projects. Thanks!",
-                category: "data entry",
+                category: "Data Entry",
                 tags: [
                     "excel data entry",
                     "virtual assistant",
@@ -292,7 +292,7 @@ function _createGigs() {
                 lastDelivery: "about 23 hours",
                 daysToMake: 3,
                 about: "Welcome! My name is Gregoria. I am an experienced Marketer that loves to spice up whatever you bring to the table. With many years of marketing, and over 8 years of Video Advertising, I will help your enterprise get a high level of Attraction, Interaction, and of course, Sales; through Animation. I and my team work FULL TIME on Fiverr to guarantee quick, and excellent Animation videos.",
-                category: "video explainers",
+                category: "video-explainers",
                 tags: [
                     "whiteboard video",
                     "explainer video",
@@ -319,7 +319,7 @@ function _createGigs() {
                 lastDelivery: "about 9 hours",
                 daysToMake: 2,
                 about: "Hello Welcome to AMA Studio. If You are looking for Explainer video or Want to share your Story With World in Creative Way Or Maybe you launched a music and thinking about a video for it well you came to the right place, here in ama studio we provide professional animation with 3 different styles, we also provide scriptwriting and professional voiceovers with multiple gender and multiple accents so what are you waiting for Contact us Now.",
-                category: "video explainers",
+                category: "video-explainers",
                 tags: [
                     "explainer video",
                     "2d animation",
@@ -348,7 +348,7 @@ function _createGigs() {
                 lastDelivery: "1 day",
                 daysToMake: 1,
                 about: "Hi my name is Arnold! I enjoy marketing, i specialize in graphics, especially memes, white board animation and explainer videos. Check out my gigs and feel free to contact me for any other needs! Customer Satisfaction over everything! 100% Rating!!!",
-                category: "video explainers",
+                category: "video-explainers",
                 tags: [
                     "whiteboard video",
                     "explainer video",
@@ -377,7 +377,7 @@ function _createGigs() {
                 lastDelivery: "about 2 hours",
                 daysToMake: 2,
                 about: "Online Marketing professional with 20 years of experience. After running websites, paid-ads, blogs, and e-shops, in 2012 it was clear that video was essential for Internet Marketing and I began creating whiteboard and animated explainers, which quickly became a passion. I decided to start offering those services to others on Fiverr and since then I have gathered a great team of artists in order to provide quality animation work at affordable prices.",
-                category: "video explainers",
+                category: "video-explainers",
                 tags: [
                     "doodle",
                     "explainer video",
@@ -404,7 +404,7 @@ function _createGigs() {
                 lastDelivery: "1 week",
                 daysToMake: 2,
                 about: "Hi guys! I am a native level speaker (reader, writer, typer, dreamer) of Hebrew and English, and I live in beautiful Israel. I can translate English to Hebrew and Hebrew to English, for any type of content you need - articles, blog posts, social media posts, ads, books, presentation, reports and many more. I am SUPER organised and LOVE what I do. So let's start working on your projects! Contact me :)",
-                category: "translation",
+                category: "Translation",
                 tags: [
                     "hebrew to english",
                     "accurate translation",
@@ -433,7 +433,7 @@ function _createGigs() {
                 lastDelivery: "about 14 hours",
                 daysToMake: 2,
                 about: "In 2014, I joined Fiverr to offer professional Russian to English and English to Russian translation services. I hold a Master of Arts degree in Spanish and English and graduated from Russian Military University in 2009. I worked in Uganda, Thailand, Russia, and several other countries, and I'm open to all cultures and nations. I have huge experience in the field of Russian and English philology. I really love dogs because they are my life and my passion... especially Dobermans ^__^. Hire me and unleash the power of Russian military translator and interpreter.",
-                category: "translation",
+                category: "Translation",
                 tags: [
                     "english to russian",
                     "russian to english",
@@ -462,7 +462,7 @@ function _createGigs() {
                 lastDelivery: "about 2 hours",
                 daysToMake: 2,
                 about: "French native translator/copywriter born in Paris & I grew up in the U.S. If you've been looking for a writer that'll actually get you results, you've just found him. Some of my clients: Kayak, L’Express (black Friday event), Viral launch, publishing companies, etc...",
-                category: "translation",
+                category: "Translation",
                 tags: [
                     "french to english",
                     "translate french",
@@ -490,7 +490,7 @@ function _createGigs() {
                 lastDelivery: "5 days",
                 daysToMake: 2,
                 about: "We are a small team consisting of bilingual English, French and Spanish speakers. We have extensive experience translating all kinds of documents ranging from academic essays to business reports, subtitles and scripts to short novels. We ensure all of our projects are completed with the highest degree of quality and our dedicated approach means that your translated document will be a perfect version, with attention paid over the register and vocabulary used.",
-                category: "translation",
+                category: "Translation",
                 tags: ["french to english", "english translation", "translation", "french translation",],
                 likedByUsers: ['mini-user'] // for user-wishlist : use $in
             },
@@ -518,7 +518,7 @@ function _createGigs() {
                 lastDelivery: "about 3 hours",
                 daysToMake: 3,
                 about: "Hello! My name is VD. I am a connoisseur of art and music. I love being around nature and my pets. I have a team of professional graphic designers with an experience of 8+ years. We specialize in logo designing. We're available exclusively on fiverr to rock your world with our designing skills. Come and experience it for yourself!",
-                category: "logo",
+                category: "Logo design",
                 tags: ["minimalist", "flat", "logo design", "modern", "unique", "logo maker"],
                 likedByUsers: ["mini user"]
             },
@@ -545,7 +545,7 @@ function _createGigs() {
                 avgResponceTime: "1 hour",
                 lastDelivery: "about 25 minutes",
                 about: "I am a professional graphics designer from PakIsTaN... Designing is not only my job, it's my Passion. All I need from you is a rough sketch of your idea. Then you can just relax and see the magic happening. Not only you'll get stunning and professional designs, but also you'll have top class custome",
-                category: "logo",
+                category: "Logo design",
                 tags: ["minimalist", "flat", "logo design", "modern", "unique", "logo maker"],
                 likedByUsers: ["mini user"]
             },
@@ -567,7 +567,7 @@ function _createGigs() {
                 avgResponceTime: "2 hours",
                 lastDelivery: "about 22 minutes",
                 about: "I am a professional artist having rich experience in hand sketched and digital artwork. I have served tons of businesses with smarter business solutions. I am here to get the global exposure and would like to contribute more towards our creative community. Thanks.",
-                category: "logo",
+                category: "Logo design",
                 tags: ["minimalist", "flat", "logo design", "modern", "unique", "logo maker"],
                 likedByUsers: ["mini user"]
             },
@@ -595,7 +595,7 @@ function _createGigs() {
                 avgResponceTime: "1 hour",
                 lastDelivery: "about 23 hours",
                 about: "Thanks for stopping by! I'm a Social Media Specialist with 8+ years experience. I can help with all your Social Media related tasks! Send me a message. Let's get it done!",
-                category: "marketing",
+                category: "Marketing",
                 tags: ["bio", "instagram marketing", "instagram", "social media", "social network"],
                 likedByUsers: ["mini user"]
             },
@@ -622,7 +622,7 @@ function _createGigs() {
                 avgResponceTime: "3 hours",
                 lastDelivery: "about 1 hour",
                 about: "Hello! My name is Tommy. I am a multi-displinary marketer with experience in both the Western and Chinese digital marketing landscape. I am passionate about crafting impactful experiences and digital marketing strategies at the intersection of brand and product. I have worked in London, Hong Kong and in Shanghai for companies such as the Adidas, L'Oreal, Pfizer and Danone I currently offer Instagram growth and TikTok marketing strategies on Fiverr",
-                category: "marketing",
+                category: "Marketing",
                 tags: ["bio", "instagram marketing", "instagram", "social media", "social network"],
                 likedByUsers: ["mini user"]
             },
@@ -648,7 +648,7 @@ function _createGigs() {
                 avgResponceTime: "1 hour",
                 lastDelivery: "about 4 hours",
                 about: "I am trained in online marketing, and I have studied SEO, Ads (Google, Facebook, Bing...), I have 6 years of experience in digital marketing, in which time working at fiverr is 3 years, with more than 2000 completed orders, the main work that I do is: - Youtube seo and promotion - SEO - Website traffics - Spotify promotion - Instagram promotion Contact me if you have any questions!",
-                category: "marketing",
+                category: "Marketing",
                 tags: ["youtube", "monetization", "youtube channel", "youtube promotion"],
                 likedByUsers: ["mini user"]
             },
@@ -673,7 +673,7 @@ function _createGigs() {
                 avgResponceTime: "2 hours",
                 lastDelivery: "4 days",
                 about: "I am a current Doctoral Researcher with a strong research and scientific history, having published academic papers and presented at numerous international conferences. I have a BSc (Hons), a MScR, and have nearly finished my PhD. My experience has given me excellent research and written communication skills, as well as knowledge of how to present and illustrate data digitally. I am highly experienced in the use of the Microsoft Office and Adobe suite of apps. Outside of my career I am very interested in applying my scientific training to aspects of fitness and nutrition.",
-                category: "research and summeries",
+                category: "Research and Summeries",
                 tags: ["online research", "research", "internet researcher"],
                 likedByUsers: ["mini user"]
             },
@@ -698,7 +698,7 @@ function _createGigs() {
                 avgResponceTime: "1 hour",
                 lastDelivery: "about 16 hours",
                 "about": "I am an enthusiastic and proficient writer with 4+ years of research related experience. My journey in the writing industry kicked off at the University where I did countless research and gained more experience. I will assist you with any kind of research and solve your different business needs. Please reach out for excellent and timely work.",
-                category: "research and summeries",
+                category: "Research and Summeries",
                 tags: ["reports", "articles", "internet researcher, summaries"],
                 likedByUsers: ["mini user"]
             },
@@ -723,7 +723,7 @@ function _createGigs() {
                 avgResponceTime: "1 hour",
                 lastDelivery: "about 2 hours",
                 about: "I am a professional and diligent writer with more than 6 years experience as a freelance writer. My goal is your satisfaction and to deliver work that you will appreciate. Writing is my passion and I aim to do excellent work for all my clients that will meet the set goals and standards.",
-                category: "research and summeries",
+                category: "Research and Summeries",
                 tags: ["research and summary", "case study", "research", "summary", "articles"],
                 likedByUsers: ["mini user"]
             },
