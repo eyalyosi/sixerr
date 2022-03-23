@@ -1,7 +1,7 @@
 <template>
   <section>
     <gig-list :gigs="gigs" />
-    <category-list />
+    <category-list :category="categories"/>
   </section>
 </template>
 
@@ -18,7 +18,9 @@ export default {
       gigs() {
         return this.$store.getters.getGigs;
       },
-
+      categories() {
+        return this.$store.getters.getCategories;
+      },
       components: {
         gigList,
         categoryList,

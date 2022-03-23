@@ -3,6 +3,7 @@ import { gigService } from '../services/gig.service.js';
 export default {
   state: {
     gigs: null,
+    categories: gigService.createCatergories()
   },
   getters: {
     getGigs(state) {
@@ -10,6 +11,9 @@ export default {
     },
     reviwersLength(state) {
       return state.gig
+    },
+    getCategories(state) {
+      return state.categories
     }
     // getLabels(state) {
     //   return state.labels;
@@ -24,7 +28,8 @@ export default {
     },
     reviwersLength(state) {
       return state.gigs
-    }
+    },
+    
   },
   actions: {
     // async loadGigs({ commit, state }) {
