@@ -3,11 +3,15 @@ import { gigService } from '../services/gig.service.js';
 export default {
   state: {
     gigs: null,
+    filterBy: null,
     categories: gigService.createCatergories()
   },
   getters: {
-    getGigs(state) {
-      return state.gigs;
+    getGigs({ gigs, filterBy }) {
+      console.log(filterBy);
+      if (!filterBy) return gigs
+      const regex = new RegExp(filterBy.category, 'i')
+      return gigs.filter((gig) => regex.test(gig.category))
     },
     reviwersLength(state) {
       return state.gig
@@ -26,10 +30,12 @@ export default {
     setGigs(state, { gigs }) {
       state.gigs = gigs;
     },
+    setFilter(state, { filterBy }) {
+      state.filterBy = filterBy;
+    },
     reviwersLength(state) {
       return state.gigs
     },
-    
   },
   actions: {
     // async loadGigs({ commit, state }) {
@@ -45,6 +51,11 @@ export default {
       gigService.query().then((gigs) => {
         commit({ type: 'setGigs', gigs })
       })
-    }
+    },
+    filterBy({ commit }, { filterBy }) {
+      console.log(filterBy);
+      commit({ type: 'setFilter', filterBy });
+
+    },
   }
 }

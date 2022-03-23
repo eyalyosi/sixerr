@@ -3,19 +3,19 @@ import { gigService } from '../../services/gig.service.js'
 export default {
   state: {
     gigs: null,
-    filterBy: null
+    filterBy: null,
+    categories: gigService.createCatergories()
   },
   getters: {
-    // getGigs(state) {
-    //   return state.gigs;
-    // },
+    getCategories(state) {
+      return state.categories;
+    },
     getGigs({ gigs, filterBy }) {
       if (!filterBy) return gigs
       const regex = new RegExp(filterBy.title, 'i')
       return gigs.filter((gig) => regex.test(gig.title))
     },
   },
-
 
   mutations: {
     setGigs(state, { gigs }) {

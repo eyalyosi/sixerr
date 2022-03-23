@@ -1,7 +1,8 @@
 <template>
   <li class="category-preview-box">
-      
-      <img src="categoryImg" alt="">
+    <p class="category-name">{{category.name}}</p>
+    <p class="category-txt">{{category.txt}}</p>
+    <img :src="categoryImg" alt="" />
   </li>
 </template>
 
@@ -11,16 +12,12 @@ export default {
   props: {
     category: Object,
   },
-  components: {
-  },
+  components: {},
   computed: {
-      categoryImg() {
-          console.log(this.category);
+    categoryImg() {
       return this.category.img;
     },
   },
-  methods: {
-
-  },
+  methods: {},
 };
 </script>

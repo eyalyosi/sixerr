@@ -1,24 +1,26 @@
 <template>
-    <section class="gig-filter">
-        <input @change="setFilter" v-model="filterBy.title" type="text" placeholder="Title" />
-    </section>
+  <section class="gig-filter">
+    <input
+      @change="setFilter"
+      v-model="filterBy.category"
+      type="text"
+      placeholder='Try "logo"'
+    />
+  </section>
 </template>
 <script>
 export default {
-    data() {
-        return {
-            filterBy: {
-                title: ""
-            }
-        };
+  data() {
+    return {
+      filterBy: {
+        category: "",
+      },
+    };
+  },
+  methods: {
+    setFilter() {
+      this.$emit("setFilter", JSON.parse(JSON.stringify(this.filterBy)));
     },
-    methods: {
-        setFilter() {
-            console.log(this.filterBy);
-            this.$emit("setFilter", JSON.parse(JSON.stringify(this.filterBy)));
-        },
-
-    }
-
-}
+  },
+};
 </script>

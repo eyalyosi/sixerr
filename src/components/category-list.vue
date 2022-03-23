@@ -1,6 +1,6 @@
 <template>
     <section>
-        <ul>
+        <ul class="category-list">
             <category-preview v-for="category in categories" :category="category" :key="category.name" />
         </ul>
     </section>
@@ -24,6 +24,7 @@ export default {
   methods: {},
   computed: {},
   created() {
+    console.log(this.categories);
   },
 }
 </script>

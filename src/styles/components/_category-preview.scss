@@ -1,0 +1,29 @@
+.category-preview-box {
+  height: 300px;
+  width: 200px;
+  border-radius: 5px;
+  position: relative;
+  img {
+    //   object-fit:scale-down;
+    height: 100%;
+    width: 100%;
+  }
+  color: white;
+  list-style: none;
+  .category-name {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+  }
+  .category-txt {
+    position: absolute;
+    top: 40px;
+    left: 16px;
+  }
+}
+
+.category-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
