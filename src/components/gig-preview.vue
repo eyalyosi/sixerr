@@ -3,8 +3,9 @@
     <article class="gig-preview-box" @click="goToDetail">
       <div class="gig-img-box">
         <!-- <carusel-gigpreview :images="images"></carusel-gigpreview> -->
-        <img src="{{images}}" alt="" />
-      </div>{{images}}
+        <img :src="images" alt="" />
+      </div>
+      <!-- {{images}} -->
       <section class="preview-card">
         <div class="seller-info flex">
           <img :src="gigSellerImg" alt="seller image" />
@@ -12,7 +13,7 @@
             <div class="seller-name flex flex-start">
               {{ gig.owner.fullname }}
             </div>
-            <div>Level {{ gig.owner.level }} Seller</div>
+            <div class="seller-level">Level {{ gig.owner.level }} Seller</div>
           </span>
         </div>
       </section>
@@ -20,10 +21,10 @@
       <div class="gig-title">{{ gig.title }}</div>
       <div class="gig-rate flex">
         <p class="rating">⭐{{ gigRate }}</p>
-        <p>({{ gigReviewersLength }})</p>
+        <p class="rating-length">({{ gigReviewersLength }})</p>
       </div>
       <section class="footer-preview flex space-between">
-        <span>❤</span>
+        <span class="like">❤</span>
         <div class="price flex column">
           <small class="small">Starting at</small>
           <span>{{ gig.price }}</span>
@@ -56,8 +57,8 @@ export default {
       return this.gigService.createCatergories();
     },
     images() {
-       console.log(this.gig.image[0])
       return this.gig.image[0];
+      // return this.gig.image;
     },
     gigRate() {
       // const res =
