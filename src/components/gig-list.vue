@@ -1,8 +1,6 @@
 <template>
-  <section>
-    <ul>
-      <gig-preview v-for="gig in gigs" :gig="gig" :key="gig._id" />
-    </ul>
+  <section class="main-grid">
+    <gig-preview v-for="gig in gigs" :gig="gig" :key="gig._id" />
   </section>
 </template>
 
@@ -24,10 +22,10 @@ export default {
     gigPreview,
   },
   methods: {
-    
+
   },
   computed: {
-    
+
   },
   created() {
   },
