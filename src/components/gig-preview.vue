@@ -1,30 +1,30 @@
 <template>
-  <duv class="gig-preview">
+  <duv class="gig-preview flex">
     <article class="gig-preview-box" @click="goToDetail">
       {{ gig.category }}
       <div class="gig-img-box">
         <img :src="gigImg" alt="gig image" />
       </div>
       <section class="preview-card">
-        <div class="seller-info">
+        <div class="seller-info flex">
           <img :src="gigSellerImg" alt="seller image" />
           <span class="seller-name-level">
-            <div class="seller-name">{{ gig.owner.fullname }}</div>
+            <div class="seller-name flex flex-start">{{ gig.owner.fullname }}</div>
             <div>Level {{ gig.owner.level }} Seller</div>
           </span>
         </div>
       </section>
 
       <div class="gig-title">{{ gig.title }}</div>
-      <div class="gig-rate">
+      <div class="gig-rate flex">
         <p class="rating">⭐{{ gigRate }}</p>
         <p>({{ gigReviewersLength }})</p>
       </div>
-      <section class="footer-preview flex">
+      <section class="footer-preview flex space-between">
         <span>❤</span>
-        <div>
+        <div class="price flex column">
           <small class="small">Starting at</small>
-          <span class>{{ gig.price }}</span>
+          <span>{{ gig.price }}</span>
         </div>
       </section>
     </article>
