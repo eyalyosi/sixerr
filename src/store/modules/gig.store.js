@@ -29,10 +29,10 @@ export default {
       if (filterBy === "Research and Summeries") {
         return gigsDisplay.filter((gig) => gig.category === filterBy)
       }
-      if (filterBy === "video-explainers") {
+      if (filterBy === "Write & Translation") {
         return gigsDisplay.filter((gig) => gig.category === filterBy)
       }
-      if (filterBy === "write linkedin profile") {
+      if (filterBy === "Video explainers") {
         return gigsDisplay.filter((gig) => gig.category === filterBy)
       }
       if (filterBy === "Logo design") {
