@@ -11,7 +11,6 @@ export default {
       return state.categories;
     },
     getGigs({ gigs, filterBy }) {
-      console.log(filterBy);
       if (!filterBy) return gigs
       const gigsDisplay = JSON.parse(JSON.stringify(gigs))
       if (filterBy === "Data Entry") {

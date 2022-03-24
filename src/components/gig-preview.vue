@@ -1,16 +1,17 @@
 <template>
   <div class="gig-preview flex">
     <article class="gig-preview-box" @click="goToDetail">
-      {{ gig.category }}
       <div class="gig-img-box">
-        <!-- <carusel-gigpreview></carusel-gigpreview> -->
-        <img :src="gigImg" alt="gig image" />
-      </div>
+        <!-- <carusel-gigpreview :images="images"></carusel-gigpreview> -->
+        <img src="{{images}}" alt="" />
+      </div>{{images}}
       <section class="preview-card">
         <div class="seller-info flex">
           <img :src="gigSellerImg" alt="seller image" />
           <span class="seller-name-level">
-            <div class="seller-name flex flex-start">{{ gig.owner.fullname }}</div>
+            <div class="seller-name flex flex-start">
+              {{ gig.owner.fullname }}
+            </div>
             <div>Level {{ gig.owner.level }} Seller</div>
           </span>
         </div>
@@ -34,7 +35,7 @@
 
 <script>
 import { gigService } from "../services/gig.service.js";
-// import caruselGigpreview from '../components/carusel-gigpreview.vue'
+import caruselGigpreview from "../components/carusel-gigpreview.vue";
 export default {
   name: "gig-preview",
   props: {
@@ -42,7 +43,7 @@ export default {
   },
   components: {
     gigService,
-    // caruselGigpreview
+    caruselGigpreview,
   },
   computed: {
     gigImg() {
@@ -53,6 +54,10 @@ export default {
     },
     category() {
       return this.gigService.createCatergories();
+    },
+    images() {
+       console.log(this.gig.image[0])
+      return this.gig.image[0];
     },
     gigRate() {
       // const res =
