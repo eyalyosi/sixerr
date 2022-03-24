@@ -22,12 +22,42 @@ header {
 
 .logo {
     text-decoration: none;
-    font-family: 'Cabin', sans-serif;
+    font-family: sans-serif;
+    color: black;
+    letter-spacing: -1.5px;
+    font-size: 32px;
+}
 
+.logo-part {
+    p{
+        margin: 0;
+
+    }
+}
+.search {
+    height: 35px;
+    font-size: 15px;
+    border: none;
+    padding: 7px 7px 7px ;
+    
+}
+
+.search-section{
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    border: 1px solid #c2c2c2 ;
+    border-radius: 3px;
+    
+    img {
+        width: 16px;
+        margin-left: 7px;
+    }
 }
 
 .search-header {
     height: 35px;
+
 }
 
 .main-header h1 {
@@ -36,40 +66,45 @@ header {
     .point {
          color: #1dbf73;
         border-radius: 50%;
+        font-family: 'Courier New', Courier, monospace;
     }      
 }
 
 nav {
     display: flex;
-    gap: 22px;
+    gap: 24px;
     font-size: .875rem;
     font-weight: 700;
     line-height: 100%;    
-    font-family: 'Cabin', sans-serif;
+    font-family: 'helvetica';
     align-items: center;
 
     
     a {
         text-decoration: none;
-        color: black;
+        color: #74767e;
+        font-weight: 600;
+        font-size: 16px;
 
     }
 }
 
 .join {
-    border: 1px solid black;
+    border: 1px solid #1dbf73;
     border-radius: 4px;
-    font-size: .875rem;
+    font-size: 16px;
     font-weight: 700;
     line-height: 100%;
     // margin-left: 1em;
     padding: 7px 20px;
     transition: all .2s ease;
+    color: #1dbf73;
 }
 
 .join:hover {
     background-color: #1dbf73;
     border-color: #1dbf73;
+    color: white;
 }
 
 footer {

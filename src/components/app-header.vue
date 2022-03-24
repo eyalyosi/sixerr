@@ -4,8 +4,9 @@
       <div class="logo-and-search">
         <h1 to="/">
           <router-link class="logo" to="/">
-            Sixerr
-            <span class="point">.</span>
+            <div class="logo-part">
+             <p>Sixerr<span class="point">.</span></p> 
+            </div>
           </router-link>
         </h1>
         <gig-filter @setFilter="setFilter" />
