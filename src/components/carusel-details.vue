@@ -1,17 +1,13 @@
 
 <template>
   <div>
-    <!-- <vueper-slides>
-      <vueper-slide v-for="image in images" :key="image" :title="slide.title" :content="slide.content"/>
-      <img :src="image" alt="">
-    </vueper-slides> -->
+
 
   </div>
 </template>
 
 <script>
-import { VueperSlides, VueperSlide } from 'vueperslides'
-import 'vueperslides/dist/vueperslides.css'
+
 
 export default {
   props: ["images"],
@@ -29,8 +25,7 @@ export default {
     console.log(this.images);
   },
   components: {
-    VueperSlides,
-    VueperSlide,
+
 
   },
   methods: {

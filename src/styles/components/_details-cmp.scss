@@ -5,7 +5,7 @@
 .gig-page {
     // padding-left: 32px;
     // padding-right: 32px;
-    padding: 32px 24px 0;
+    padding: 32px 0 0;
     display: flex;
     line-height: 150%;
     font-family: 'Cabin', sans-serif;
@@ -18,7 +18,7 @@
 
 .details-title-info {
     margin-bottom: 24px;
-    color: #62646a;
+    color: #404145;
 
     h1 {
         font-size: 28px;
@@ -70,7 +70,7 @@
 .reviews {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
     border-bottom: 1px solid #dadbdd;
 
 
@@ -94,9 +94,9 @@
 .check-out-part {
     position: sticky;
     top: 50px;
-    height: 474px;
     width: 393px;
     border: 1px solid #dadbdd;
+    padding: 24px;
 }
 
 .about-title {
@@ -190,7 +190,8 @@
         margin: 0;
     }
     li {
-        padding-bottom: 16px;
+        padding-right: 40px;;
+        padding-bottom: 40px;;
 
         b {
             color:#62646a;
@@ -206,5 +207,80 @@
 
 }
 
+.checkout-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #404145;
+    
+    .price {
+        font-size: 20px;
+        margin: 0;
+    }
+    .service {
+        font-size: 16px;
+        font-weight: bold;
+        margin: 0;
+    }
+}
 
+.additional-info {
+    display: flex;
+    // justify-content: space-between;
+    // margin-right: 8px;
+    align-items: center;
+    margin-bottom: 20px;
+
+
+    .img-clock{
+        align-items: center;
+        display: flex;
+
+    }
+
+    img {
+        max-width: 16px;
+    }
+    
+    .delivery-wrapper {
+        display: flex ;
+        align-items: center;
+        font-weight: bold;
+        color: #62646a;
+        
+        
+        p{
+            margin-left: 8px;
+        }
+    }
+    .revision-wrapper {
+        display: flex ;
+        align-items: center;
+        margin-left: 16px;
+        font-weight: bold;
+        color: #62646a;
+        
+        p{
+            margin-left: 8px; 
+        }
+        
+    }     
+}
+
+.buy-btn {
+    text-align: center;
+    margin: auto 0;
+
+    button {
+        width: 100%;
+        padding: 12px 24px;
+        border: none;
+        background-color: #1dbf73;
+        font-weight: bold;
+        color: white;
+        font-size: 16px;
+        border-radius: 4px;
+    }
+
+}
 
