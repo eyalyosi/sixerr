@@ -1,39 +1,26 @@
-
 <template>
-  <div>
-
-
-  </div>
+  <div></div>
 </template>
 
 <script>
-
-
 export default {
   props: ["images"],
   data() {
     return {
       slides: [
         {
-          title: 'Slide #1',
-          content: 'Slide content.'
-        }
-      ]
-    }
+          title: "Slide #1",
+          content: "Slide content.",
+        },
+      ],
+    };
   },
   created() {
     console.log(this.images);
   },
-  components: {
-
-
-  },
-  methods: {
-
-  }
-}
-
-
+  components: {},
+  methods: {},
+};
 </script>
 
 <style scoped>
@@ -44,11 +31,3 @@ img {
   width: 20px;
 }
 </style>
-
-
-
-
-
-
-
-      
