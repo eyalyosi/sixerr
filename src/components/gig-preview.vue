@@ -1,8 +1,9 @@
 <template>
-  <duv class="gig-preview flex">
+  <div class="gig-preview flex">
     <article class="gig-preview-box" @click="goToDetail">
       {{ gig.category }}
       <div class="gig-img-box">
+        <!-- <carusel-gigpreview></carusel-gigpreview> -->
         <img :src="gigImg" alt="gig image" />
       </div>
       <section class="preview-card">
@@ -28,11 +29,12 @@
         </div>
       </section>
     </article>
-  </duv>
+  </div>
 </template>
 
 <script>
 import { gigService } from "../services/gig.service.js";
+// import caruselGigpreview from '../components/carusel-gigpreview.vue'
 export default {
   name: "gig-preview",
   props: {
@@ -40,6 +42,7 @@ export default {
   },
   components: {
     gigService,
+    // caruselGigpreview
   },
   computed: {
     gigImg() {
