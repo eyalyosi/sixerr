@@ -35,11 +35,13 @@ export default {
       if (filterBy === "write linkedin profile") {
         return gigsDisplay.filter((gig) => gig.category === filterBy)
       }
+      if (filterBy === "Logo design") {
+        return gigsDisplay.filter((gig) => gig.category === filterBy)
+      }
       const regex = new RegExp(filterBy.title, 'i')
       return gigsDisplay.filter((gig) => regex.test(gig.title))
     },
   },
-
   mutations: {
     setGigs(state, { gigs }) {
       state.gigs = gigs;
@@ -48,7 +50,6 @@ export default {
       state.filterBy = filterBy
     },
   },
-
   actions: {
     // async loadGigs({ commit, state }) {
     //   try {
