@@ -9,11 +9,15 @@
           </div>
           <p class="owner-name">{{ gig.owner.fullname }}</p>
           <p>Level {{ gig.owner.level }} Seller</p>|
-          <p>⭐ ({{ gig.owner.rate }})</p>
+          <div v-if="gig.owner.rate">
+            <p>⭐ ({{ gig.owner.rate }})</p>
+          </div>
         </div>
       </div>
-      <div class="carusel-img">
-        <img :src="gigImg" />
+      <!-- <div class="carusel-img" v-for="image in images" :key="gig.image">
+      <img :src="image" />-->
+      <div>
+        <!-- <carusel-details :images="images"></carusel-details> -->
       </div>
       <div class="reviews">
         <p>What people loved about this seller</p>
@@ -64,10 +68,31 @@
         </div>
         <div class="seller-description">{{ gig.description }}</div>
       </div>
+      <div class="rate-section">
+        <progress-bar-details :rates="rates"></progress-bar-details>
+      </div>
     </div>
     <div class="check-out-section">
       <div class="check-out-part">
-        <button>PURCHASE</button>
+        <div class="checkout-title">
+          <p class="service">{{ gig.category }}</p>
+          <p class="price">${{ gig.price }}</p>
+        </div>
+        <div class="additional-info">
+          <div class="delivery-wrapper">
+            <div class="img-clock">
+              <img src="../assets/logo/clock.png" alt />
+              <p>{{ gig.daysToMake }} Days Delivery</p>
+            </div>
+          </div>
+          <div class="revision-wrapper">
+            <img src="../assets/logo/cycle.png" alt />
+            <p>{{ gig.daysToMake }} Revisions</p>
+          </div>
+        </div>
+        <div class="buy-btn">
+          <button>Continue (${{ gig.price }})</button>
+        </div>
       </div>
     </div>
   </section>
@@ -75,20 +100,25 @@
 
 <script>
 import { gigService } from "../services/gig.service.js";
-import caruselCmp from "../components/carusel-cmp.vue";
+import caruselDetails from "../components/carusel-details.vue";
+import progressBarDetails from "../components/progress-bar-details.vue";
 
 export default {
   name: "gig-detail",
   data() {
     return {
       gig: null,
+      images: '',
+      rates: ''
     };
   },
   created() {
     const { _id } = this.$route.params;
     gigService.getById(_id).then((gig) => {
-      console.log('gig:', gig);
       this.gig = gig;
+      this.images = gig.image
+      this.rates = gig.owner.rate
+      console.log('rates:', this.rates);
     })
   },
   methods: {},
@@ -98,12 +128,11 @@ export default {
     },
     gigImg() {
       return this.gig.image
-
-
     },
   },
   components: {
-    caruselCmp
+    caruselDetails,
+    progressBarDetails
   },
 };
 </script>
