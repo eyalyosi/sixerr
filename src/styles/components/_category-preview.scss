@@ -6,7 +6,7 @@
   position: relative;
   color: #ffffff;
   list-style: none;
-  padding: 0 18px;
+  // padding: 0 18px;
   
   :hover {
     cursor: pointer;
@@ -34,9 +34,9 @@
   }
 }
 .carousel__track {
-  li {
-    width: auto;
-  }
+  // li {
+  //   width: auto;
+  // }
 }
 
 .carousel {

@@ -3,7 +3,7 @@
 
     <carousel-category v-if="categories" :categories="categories" @explore="explore"/>
 
-    <category-list v-if="categories" :categories="categories" @explore="explore"/>
+    <!-- <category-list v-if="categories" :categories="categories" @explore="explore"/> -->
     
   </section>
 </template>
