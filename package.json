@@ -10,9 +10,12 @@
   "dependencies": {
     "axios": "^0.26.1",
     "element-plus": "^2.1.4",
+    "lodash": "^4.17.21",
     "socket.io-client": "^4.4.1",
     "vue": "^3.2.31",
+    "vue-agile": "^2.0.0",
     "vue-router": "^4.0.12",
+    "vueperslides": "^3.3.2",
     "vuex": "^4.0.2",
     "webkit-npm": "^3.1.1"
   },
