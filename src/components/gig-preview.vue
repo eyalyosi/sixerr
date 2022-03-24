@@ -1,29 +1,34 @@
 <template>
-   <li class="gig-preview-box" @click="goToDetail">
-   {{gig.category}}
-    <div class="gig-img-box">
-      <img :src="gigImg" alt="gig image" />
-    </div>
-    <div class="seller-info">
-      <img :src="gigSellerImg" alt="seller image" />
-      <div class="seller-name-level">
-        <div>{{ gig.owner.fullname }}</div>
-        <div>{{ gig.owner.level }}</div>
+  <duv class="gig-preview flex">
+    <article class="gig-preview-box" @click="goToDetail">
+      {{ gig.category }}
+      <div class="gig-img-box">
+        <img :src="gigImg" alt="gig image" />
       </div>
-    </div>
-    <div class="gig-title">{{ gig.title }}</div>
-    <div class="gig-rate">
-      <p>⭐{{ gigRate }}</p>
-      <p>({{ gigReviewersLength }})</p>
-    </div>
-    <div>
-      <span>❤</span>
-      <div>
-        <span>Starting at</span>
-        <span>{{ gig.price }}</span>
+      <section class="preview-card">
+        <div class="seller-info flex">
+          <img :src="gigSellerImg" alt="seller image" />
+          <span class="seller-name-level">
+            <div class="seller-name flex flex-start">{{ gig.owner.fullname }}</div>
+            <div>Level {{ gig.owner.level }} Seller</div>
+          </span>
+        </div>
+      </section>
+
+      <div class="gig-title">{{ gig.title }}</div>
+      <div class="gig-rate flex">
+        <p class="rating">⭐{{ gigRate }}</p>
+        <p>({{ gigReviewersLength }})</p>
       </div>
-    </div>
-  </li>
+      <section class="footer-preview flex space-between">
+        <span>❤</span>
+        <div class="price flex column">
+          <small class="small">Starting at</small>
+          <span>{{ gig.price }}</span>
+        </div>
+      </section>
+    </article>
+  </duv>
 </template>
 
 <script>
