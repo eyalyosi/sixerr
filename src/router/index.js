@@ -21,6 +21,7 @@ const router = createRouter({
       name: 'gig-details',
       component: gigDetails
     },
+    
   ]
 })
 

@@ -12,8 +12,10 @@
           <p>⭐ ({{ gig.owner.rate }})</p>
         </div>
       </div>
-      <div class="carusel-img">
-        <img :src="gigImg" />
+      <!-- <div class="carusel-img" v-for="image in images" :key="gig.image">
+      <img :src="image" />-->
+      <div>
+        <!-- <carusel-details :images="images"></carusel-details> -->
       </div>
       <div class="reviews">
         <p>What people loved about this seller</p>
@@ -67,7 +69,11 @@
     </div>
     <div class="check-out-section">
       <div class="check-out-part">
-        <button>PURCHASE</button>
+        <div class="checkout-title">
+          <p>Order Details</p>
+          <p>${{gig.price}}</p>
+        </div>
+        <!-- <button>PURCHASE</button> -->
       </div>
     </div>
   </section>
@@ -75,20 +81,21 @@
 
 <script>
 import { gigService } from "../services/gig.service.js";
-import caruselCmp from "../components/carusel-cmp.vue";
-
+import caruselDetails from "../components/carusel-details.vue";
 export default {
   name: "gig-detail",
   data() {
     return {
       gig: null,
+      images: ''
     };
   },
   created() {
     const { _id } = this.$route.params;
     gigService.getById(_id).then((gig) => {
-      console.log('gig:', gig);
       this.gig = gig;
+      this.images = gig.image
+      console.log('image:', this.images);
     })
   },
   methods: {},
@@ -103,7 +110,7 @@ export default {
     },
   },
   components: {
-    caruselCmp
+    caruselDetails
   },
 };
 </script>

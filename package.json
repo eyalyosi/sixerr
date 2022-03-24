@@ -10,11 +10,16 @@
   "dependencies": {
     "axios": "^0.26.1",
     "element-plus": "^2.1.4",
+    "lodash": "^4.17.21",
     "socket.io-client": "^4.4.1",
     "vue": "^3.2.31",
     "vue-agile": "^2.0.0",
     "vue-router": "^4.0.12",
+<<<<<<< HEAD
+    "vueperslides": "^3.3.2",
+=======
     "vue3-carousel": "^0.1.38",
+>>>>>>> e11ca5e6a570468d472424fa7c27c11c262e1b24
     "vuex": "^4.0.2",
     "webkit-npm": "^3.1.1"
   },
