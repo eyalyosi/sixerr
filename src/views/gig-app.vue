@@ -1,5 +1,8 @@
 <template>
   <section>
+
+    <carousel-category v-if="categories" :categories="categories" @explore="explore"/>
+
     <category-list v-if="categories" :categories="categories" @explore="explore"/>
     
   </section>
@@ -8,7 +11,7 @@
 <script>
 
 import categoryList from "../components/category-list.vue";
-
+import carouselCategory from "../components/carousel-category.vue";
 export default {
   name: "gig-app",
   data() {
@@ -26,7 +29,8 @@ export default {
     },
   },
   components: {
-    categoryList
+    categoryList,
+    carouselCategory
   },
 };
 </script>

@@ -7,10 +7,19 @@
   color: #ffffff;
   list-style: none;
   padding: 0 18px;
-
+  
+  :hover {
+    cursor: pointer;
+  }
   .category-txt-name-box {
     position: absolute;
     padding: 16px;
+    width: 232px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+    
   }
   img {
     height: 100%;
@@ -24,9 +33,41 @@
     font-size: 14px;
   }
 }
+.carousel__track {
+  li {
+    width: auto;
+  }
+}
+
+.carousel {
+  text-align: left;
+  .carousel__prev {
+    background-color: #ffffff;
+    height: 48px;
+    width: 48px;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 15%);
+    .carousel__icon {
+      color: black;
+      height: 35px;
+      width: 35px;
+    }
+  }
+  .carousel__next {
+    background-color: #ffffff;
+    height: 48px;
+    width: 48px;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 15%);
+    .carousel__icon {
+      color: black;
+      height: 35px;
+      width: 35px;
+    }
+  }
+}
+
 
 .category-list {
-  display: flex;
-  justify-content: center;
+  display: flex;  
   flex-wrap: wrap;
+  gap: 10px;
 }

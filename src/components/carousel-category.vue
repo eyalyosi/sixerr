@@ -1,0 +1,61 @@
+<template>
+  <Carousel :items-to-show="5" :wrap-around="true">
+    <Slide v-for="category in categories" :key="category.name" >
+    <li class="category-preview-box " @click="explore(category.name)">
+    <div class="category-txt-name-box">
+      <small class="category-txt">{{ category.txt }}</small>
+      <h4 class="category-name">{{ category.name }}</h4>
+    </div>
+
+    <img :src="category.img" alt="" />
+  </li>
+      <!-- <div class="carousel__item">{{ category.name }}</div> -->
+    </Slide>
+
+    <template #addons>
+      <Navigation />
+    </template>
+  </Carousel>
+
+ 
+  <!-- <category-preview
+    v-for="category in categories"
+    :category="category"
+    :key="category.name"
+    @explore="explore"
+  /> -->
+</template>
+
+<script>
+import { defineComponent } from "vue";
+import { Carousel, Navigation, Slide } from "vue3-carousel";
+import categoryPreview from "./category-preview.vue";
+
+import "vue3-carousel/dist/carousel.css";
+
+export default defineComponent({
+  name: "WrapAround",
+  props: {
+    categories: {
+      type: Array,
+      //   required: true,
+    },
+  },
+  computed: {
+    categoryImg() {
+      return this.category.img;
+    },
+  },
+  methods: {
+    explore(filter) {
+      this.$emit("explore", filter);
+    },
+  },
+  components: {
+    categoryPreview,
+    Carousel,
+    Slide,
+    Navigation,
+  },
+});
+</script>

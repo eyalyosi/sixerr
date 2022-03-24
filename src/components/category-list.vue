@@ -1,6 +1,7 @@
 <template>
   <section>
-    <ul class="category-list">
+  
+    <ul class="category-list"> 
       <category-preview
         v-for="category in categories"
         :category="category"
@@ -12,6 +13,7 @@
 </template>
 <script>
 import categoryPreview from "./category-preview.vue";
+
 export default {
   name: "category-list",
   props: {
