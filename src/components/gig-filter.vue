@@ -4,7 +4,7 @@
       @change="setFilter"
       v-model="filterBy.title"
       type="text"
-      placeholder='Try "logo"'
+      placeholder='Try "logo"' class="search-header"
     />
   </section>
 </template>

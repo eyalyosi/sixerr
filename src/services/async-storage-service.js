@@ -12,9 +12,10 @@ function query(entityType) {
     return Promise.resolve(entities);
 }
 
-function get(entityType, entityId) {
-    return query(entityType)
-        .then(entities => entities.find(entity => entity.id === entityId))
+async function get(entityType, entityId) {
+    const entities = await query(entityType);
+    console.log('entities:',entities);
+    return entities.find(entity => entity._id === entityId);
 }
 
 function post(entityType, newEntity) {

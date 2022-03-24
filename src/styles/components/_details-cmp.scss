@@ -1,0 +1,210 @@
+* {
+    box-sizing: border-box;
+  }
+
+.gig-page {
+    // padding-left: 32px;
+    // padding-right: 32px;
+    padding: 32px 24px 0;
+    display: flex;
+    line-height: 150%;
+    font-family: 'Cabin', sans-serif;
+
+}
+
+.info-side {
+    margin-right: 9.15%;
+}
+
+.details-title-info {
+    margin-bottom: 24px;
+    color: #62646a;
+
+    h1 {
+        font-size: 28px;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding-bottom: 16px;
+        // margin-bottom: 24px;
+    }
+}
+
+.seller-info {
+    display: flex;
+    flex-wrap: wrap;    
+    align-items: center;
+    font-size: 14px;
+    line-height: 21px;
+    font-family: 'Cabin', sans-serif;
+    gap: 11px;
+    
+    
+    .owner-name {
+        font-weight: 700;
+        color: #404145;
+
+    }
+
+}
+
+.profile-img {
+    width: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.seller-img {
+    border-radius: 50%;
+    max-width: 100%;
+}
+
+.carusel-img {
+    width: 630px;
+    height: 459px;
+
+    img {
+        width: 100%;
+    }
+}
+
+.reviews {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #dadbdd;
+
+
+
+    p {
+        font-family: 'Cabin', sans-serif;
+        color: #404145;
+        font-size: 20px;
+        font-weight: 700;
+        
+    } a {
+        color: #1dbf73;
+        font-weight: 400;
+        font-size: 14px;
+        cursor: pointer;
+
+        
+    }
+}
+
+.check-out-part {
+    position: sticky;
+    top: 50px;
+    height: 474px;
+    width: 393px;
+    border: 1px solid #dadbdd;
+}
+
+.about-title {
+    font-family: 'Cabin', sans-serif;
+    color: #404145;
+    font-size: 20px;
+    font-weight: 700;
+    
+}
+
+.about-text {
+    font-family: 'Cabin', sans-serif;
+    font-size: 16px;
+    color: #62646a;
+}
+
+.about-gig {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #dadbdd;
+    color: #62646a;
+}
+
+.profile-img-about {
+    display: flex;
+    align-items: center;
+    width: 110px;
+    img {
+        width: 100%;
+    }
+}
+
+.about-seller {
+    display: flex;
+    align-items: center;
+    padding-bottom: 24px;
+    
+    p {
+        color: #62646a;
+        font-weight: 700;
+        font-size: 16px;
+        margin: 0;
+        padding-bottom: 5px;
+
+
+    }
+}
+.rate-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 15px;
+    font-family: 'Cabin', sans-serif;
+    
+    a {
+        font-size: 14px;
+        height: 40px;
+        color: #62646a;
+        width: 130px;
+        margin-top: 20px;
+        font-family: 'Cabin', sans-serif;
+        border: 1px solid #62646a ;
+        border-radius: 4px;
+        text-align: center;
+        font-weight: 600;
+        line-height: 100%;
+        padding: 12px 24px;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+
+    }
+}
+
+.seller-info-details {
+    border: 1px solid #dadbdd ;
+    padding: 24px
+
+
+}
+
+.info-table {
+    border-bottom: 1px solid #dadbdd ;
+    
+    ul {
+        columns: 2;
+        -webkit-columns: 2;
+        -moz-columns: 2;
+        list-style: none;
+        color: #74767e;
+        padding: 0;
+        margin: 0;
+    }
+    li {
+        padding-bottom: 16px;
+
+        b {
+            color:#62646a;
+
+        }
+    }
+}
+
+.seller-description {
+    padding-top: 15px;
+    line-height: 150%;
+    color: #62646a;
+
+}
+
+
+

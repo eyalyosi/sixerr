@@ -31,6 +31,7 @@ function save(gig) {
     else return storageService.post(GIGS_KEY, gig);
 }
 function getById(gigId) {
+    console.log('gigId:', gigId);
     return storageService.get(GIGS_KEY, gigId);
 }
 

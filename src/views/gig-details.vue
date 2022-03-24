@@ -1,21 +1,81 @@
 <template>
-  <section v-if="gig">
-    <h1>{{ gig.title }}</h1>
-    <div class="seller-info-details">
-      <img :src="gigSellerImg" alt="seller image" />
-      <div>{{ gig.owner.fullname }}</div>
-      <div>{{ gig.owner.level }}</div>
+  <section v-if="gig" class="gig-page">
+    <div class="info-side">
+      <div class="details-title-info">
+        <h1>{{ gig.title }}</h1>
+        <div class="seller-info">
+          <div class="profile-img">
+            <img :src="gigSellerImg" alt="seller image" class="seller-img" />
+          </div>
+          <p class="owner-name">{{ gig.owner.fullname }}</p>
+          <p>Level {{ gig.owner.level }} Seller</p>|
+          <p>⭐ ({{ gig.owner.rate }})</p>
+        </div>
+      </div>
+      <div class="carusel-img">
+        <img :src="gigImg" />
+      </div>
+      <div class="reviews">
+        <p>What people loved about this seller</p>
+        <a href>See all reviews</a>
+      </div>
+      <div class="about-gig">
+        <p class="about-title">About This Gig</p>
+        <p class="about-text">{{ gig.about }}</p>
+      </div>
+      <p class="about-title">About The Seller</p>
+
+      <div class="about-seller">
+        <div class="seller-profile">
+          <div class="profile-img-about">
+            <img :src="gigSellerImg" alt="seller image" class="seller-img" />
+          </div>
+        </div>
+        <div class="rate-profile">
+          <p>{{ gig.owner.fullname }}</p>
+          <p>⭐ ({{ gig.owner.rate }})</p>
+          <a>Contact Me</a>
+        </div>
+      </div>
+      <div class="seller-info-details">
+        <div class="info-table">
+          <ul>
+            <li>
+              From
+              <br />
+              <b>{{ gig.loc }}</b>
+            </li>
+            <li>
+              Avg. response time
+              <br />
+              <b>{{ gig.avgResponceTime }}</b>
+            </li>
+            <li>
+              Member since
+              <br />
+              <b>{{ gig.avgResponceTime }}</b>
+            </li>
+            <li>
+              Last delivery
+              <br />
+              <b>{{ gig.lastDelivery }}</b>
+            </li>
+          </ul>
+        </div>
+        <div class="seller-description">{{ gig.description }}</div>
+      </div>
     </div>
-    <div class="gig-rate-details">
-      <p>⭐{{ gig.owner.rate }}</p>
-      <!-- <p>({{ gigReviewersLength }})</p> -->
-      {{gig.about}}
+    <div class="check-out-section">
+      <div class="check-out-part">
+        <button>PURCHASE</button>
+      </div>
     </div>
   </section>
 </template>
 
 <script>
 import { gigService } from "../services/gig.service.js";
+import caruselCmp from "../components/carusel-cmp.vue";
 
 export default {
   name: "gig-detail",
@@ -25,28 +85,25 @@ export default {
     };
   },
   created() {
-    const id = this.$route.params.gigId;
-    gigService.getById(id).then((gig) => {
+    const { _id } = this.$route.params;
+    gigService.getById(_id).then((gig) => {
+      console.log('gig:', gig);
       this.gig = gig;
-    });
+    })
   },
   methods: {},
   computed: {
     gigSellerImg() {
-      return this.gig.imgUrl;
+      return this.gig.owner.imgUrl;
     },
-    gigRate() {
-      // const res =
-      //   this.gig.reviewers.reduce((acc, review) => {
-      //     acc += +review.rate;
-      //     return acc;
-      //   }, 0) / this.gig.reviewers.length;
-      // return res.toFixed(1);
-    },
-    gigReviewersLength() {
-      // return this.gig.reviewers.length;
+    gigImg() {
+      return this.gig.image
+
+
     },
   },
-  components: {},
+  components: {
+    caruselCmp
+  },
 };
 </script>
