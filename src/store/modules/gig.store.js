@@ -48,6 +48,11 @@ export default {
     setFilter(state, { filterBy }) {
       state.filterBy = filterBy
     },
+    saveToy(state, { gig }) {
+      const idx = state.gigs.findIndex((currGig) => currGig._id === gig._id)
+      if (idx !== -1) state.gigs.splice(idx, 1, gig)
+      else state.gigs.push(gig)
+  },
   },
   actions: {
     // async loadGigs({ commit, state }) {
@@ -64,6 +69,11 @@ export default {
         commit({ type: 'setGigs', gigs })
       })
     },
+    saveToy({ commit, dispatch }, { gig }) {
+      gigService.save(gig).then((gig) => {
+          commit({ type: 'saveGig', gig })
+      })
+  },
     setFilter({ dispatch, commit }, { filterBy }) {
       commit({ type: 'setFilter', filterBy })
       dispatch({ type: 'loadGigs' })

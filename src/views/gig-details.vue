@@ -90,7 +90,7 @@
           </div>
         </div>
         <div class="buy-btn">
-          <button>Continue (${{ gig.price }})</button>
+          <button @click="saveOrder">Continue (${{ gig.price }})</button>
         </div>
       </div>
     </div>
@@ -106,7 +106,8 @@ export default {
     return {
       gig: null,
       images: '',
-      rates: ''
+      rates: '',
+      orderToSeller: null
     };
   },
   created() {
@@ -118,7 +119,17 @@ export default {
       console.log('rates:', this.rates);
     })
   },
-  methods: {},
+  methods: {
+    saveOrder() {
+      const { _id } = this.$route.params;
+      console.log(_id);
+      this.$store.dispatch({ type: 'saveOrder', order: this.orderToSeller, id: _id }).then(() => {
+        this.$router.push('/order-app')
+      })
+    },
+
+
+  },
   computed: {
     gigSellerImg() {
       return this.gig.owner.imgUrl;

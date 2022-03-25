@@ -21,26 +21,27 @@ async function get(entityType, entityId) {
 function post(entityType, newEntity) {
     newEntity.id = _makeId()
     return query(entityType)
-        .then(entities => {
-            entities.push(newEntity);
-            _save(entityType, entities)
-            return newEntity;
-        })
+    .then(entities => {
+        entities.push(newEntity);
+        _save(entityType, entities)
+        return newEntity;
+    })
 }
 
 function postMany(entityType, newEntities) {
     return query(entityType)
-        .then(entities => {
-            entities.push(...newEntities);
-            _save(entityType, entities)
-            return entities;
-        })
+    .then(entities => {
+        entities.push(...newEntities);
+        _save(entityType, entities)
+        return entities;
+    })
 }
 
 function put(entityType, updatedEntity) {
+    
     return query(entityType)
-        .then(entities => {
-            const idx = entities.findIndex(entity => entity.id === updatedEntity.id);
+    .then(entities => {
+            const idx = entities.findIndex(entity => entity._id === updatedEntity.id);
             entities.splice(idx, 1, updatedEntity)
             _save(entityType, entities)
             return updatedEntity;
@@ -54,11 +55,11 @@ function remove(entityType, entityId) {
             entities.splice(idx, 1)
             _save(entityType, entities)
         })
-}
-
-function _save(entityType, entities) {
-    localStorage.setItem(entityType, JSON.stringify(entities))
-}
+    }
+    
+    function _save(entityType, entities) {
+        localStorage.setItem(entityType, JSON.stringify(entities))
+    }
 
 function _makeId(length = 8) {
     var text = "";

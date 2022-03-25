@@ -18,7 +18,7 @@
         <router-link to="/explore">
           <a href>Explore</a>
         </router-link>
-        <router-link to>Become A Seller</router-link>
+        <router-link to="/order-app">Become A Seller</router-link>
         <router-link to="/">Login</router-link>
         <router-link class="join" to>Join</router-link>
       </nav>
@@ -50,12 +50,12 @@ export default {
     },
   },
 
-  mounted() {
-    this.headerObserver = new IntersectionObserver(this.onHeaderObserved, {
-      rootMargin: "-91px 0px 0px",
-    });
-    this.headerObserver.observe(this.$refs.header);
-  },
+  // mounted() {
+  //   this.headerObserver = new IntersectionObserver(this.onHeaderObserved, {
+  //     rootMargin: "-91px 0px 0px",
+  //   });
+  //   this.headerObserver.observe(this.$refs.header);
+  // },
 
   components: {
   }

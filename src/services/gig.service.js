@@ -24,10 +24,9 @@ function query(filterBy) {
     return storageService.query(GIGS_KEY);
 }
 
-
-
 function save(gig) {
-    if (gig.id) return storageService.put(GIGS_KEY, gig);
+    console.log(gig);
+    if (gig._id) return storageService.put(GIGS_KEY, gig);
     else return storageService.post(GIGS_KEY, gig);
 }
 function getById(gigId) {
