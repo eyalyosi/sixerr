@@ -1,6 +1,6 @@
 <template>
   <hero-cmp />
-  <section>
+  <section class="main-layout">
     <carousel-category v-if="categories" :categories="categories" @explore="explore" />
 
     <!-- <category-list v-if="categories" :categories="categories" @explore="explore"/> -->

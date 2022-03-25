@@ -2,7 +2,7 @@
   <section>
     <app-header />
 
-    <div class="main-layout">
+    <div>
       <router-view />
     </div>
     <app-footer />
