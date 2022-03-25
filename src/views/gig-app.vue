@@ -1,7 +1,5 @@
 <template>
   <section>
-    <hero-cmp />
-
     <carousel-category v-if="categories" :categories="categories" @explore="explore" />
 
     <!-- <category-list v-if="categories" :categories="categories" @explore="explore"/> -->
@@ -12,7 +10,6 @@
 
 import categoryList from "../components/category-list.vue";
 import carouselCategory from "../components/carousel-category.vue";
-import heroCmp from "../components/hero-cmp.vue";
 
 export default {
   name: "gig-app",
@@ -33,7 +30,7 @@ export default {
   components: {
     categoryList,
     carouselCategory,
-    heroCmp
+
   },
 };
 </script>

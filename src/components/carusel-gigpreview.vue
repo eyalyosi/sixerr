@@ -1,14 +1,12 @@
 <template>
   <div class="image-preview">
     <!-- <el-carousel indicator-position="none"> -->
-      <!-- <el-carousel-item v-for="image in images" :key="item"> -->
-      <!-- <el-carousel-item v-for="image in images" :key="item">
-        <img src="image" alt="" /> -->
-        <!-- {{image}} -->
-      <!-- </el-carousel-item> -->
+    <!-- <el-carousel-item v-for="image in images" :key="item"> -->
+    <!-- <el-carousel-item v-for="image in images" :key="item">
+    <img src="image" alt="" />-->
+    <!-- {{image}} -->
+    <!-- </el-carousel-item> -->
     <!-- </el-carousel> -->
-
-
   </div>
 </template>
 
@@ -21,9 +19,9 @@ export default {
   components: {},
   computed: {
     gigImg() {
-      console.log(this.images);
+      console.log(gig);
       //   return this.gig.image;
     },
-  },
-};
+  };
+}
 </script>
