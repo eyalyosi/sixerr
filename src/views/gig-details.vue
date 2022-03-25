@@ -14,6 +14,7 @@
           </div>
         </div>
       </div>
+      <carusel-details :images="images"></carusel-details>
       <!-- <div class="carusel-img" v-for="image in images" :key="gig.image">
       <img :src="image" />-->
       <div>
@@ -68,26 +69,24 @@
         </div>
         <div class="seller-description">{{ gig.description }}</div>
       </div>
-      <div class="rate-section">
-        <progress-bar-details :rates="rates"></progress-bar-details>
-      </div>
+      <div class="rate-section"></div>
     </div>
     <div class="check-out-section">
       <div class="check-out-part">
         <div class="checkout-title">
           <p class="service">{{ gig.category }}</p>
-          <p class="price">${{ gig.price }}</p>
+          <p class="price">$&nbsp;{{ gig.price }}</p>
         </div>
         <div class="additional-info">
           <div class="delivery-wrapper">
             <div class="img-clock">
               <img src="../assets/logo/clock.png" alt />
-              <p>{{ gig.daysToMake }} Days Delivery</p>
+              <p>{{ gig.daysToMake }} &nbsp;Days Delivery</p>
             </div>
           </div>
           <div class="revision-wrapper">
             <img src="../assets/logo/cycle.png" alt />
-            <p>{{ gig.daysToMake }} Revisions</p>
+            <p>{{ gig.daysToMake }} &nbsp;Revisions</p>
           </div>
         </div>
         <div class="buy-btn">
@@ -100,9 +99,7 @@
 
 <script>
 import { gigService } from "../services/gig.service.js";
-import caruselDetails from "../components/carusel-details.vue";
-import progressBarDetails from "../components/progress-bar-details.vue";
-
+import caruselDetails from "../components/carusel-details.vue"
 export default {
   name: "gig-detail",
   data() {
@@ -131,8 +128,7 @@ export default {
     },
   },
   components: {
-    caruselDetails,
-    progressBarDetails
+    caruselDetails
   },
 };
 </script>
