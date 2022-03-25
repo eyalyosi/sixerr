@@ -13,7 +13,8 @@
 }
 
 .info-side {
-    margin-right: 9.15%;
+    margin-right: 115px;
+    max-width: 710px;
 }
 
 .details-title-info {
@@ -91,10 +92,15 @@
     }
 }
 
+.check-out-section {
+    width: 100%;
+
+}
+
 .check-out-part {
     position: sticky;
     top: 50px;
-    width: 393px;
+    width: 100%;
     border: 1px solid #dadbdd;
     padding: 24px;
 }
@@ -280,7 +286,14 @@
         color: white;
         font-size: 16px;
         border-radius: 4px;
+
+    
+    }
+    button:hover {
+        background-color: #1da164;
+        cursor: pointer;
     }
 
 }
+
 
