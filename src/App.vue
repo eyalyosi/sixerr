@@ -1,7 +1,6 @@
 <template>
   <section>
     <app-header />
-    <hero-cmp />
 
     <div class="main-layout">
       <router-view />
@@ -13,7 +12,6 @@
 <script>
 import appHeader from "./components/app-header.vue";
 import appFooter from "./components/app-footer.vue";
-import heroCmp from "./components/hero-cmp.vue";
 
 export default {
   name: "App",
@@ -23,7 +21,7 @@ export default {
   components: {
     appHeader,
     appFooter,
-    heroCmp
+
 
   },
   computed: {},

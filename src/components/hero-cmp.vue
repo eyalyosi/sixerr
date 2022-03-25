@@ -7,9 +7,8 @@
                 <br />services for your business
             </h1>
         </div>
-        <div class="hero-search flex">
+        <div class="hero-search">
             <gig-filter @setFilter="setFilter" />
-            <button class="search-btn">Search</button>
         </div>
 
         <img class="hero-img" :src="image" alt="hero image" />
@@ -38,10 +37,7 @@ export default {
             var i = 0;
             const that = this;
             setInterval(function () {
-                console.log(that.images);
-                console.log(that.image);
                 that.image = that.images[i];
-                console.log('i', i);
                 i = i + 1;
                 if (i === that.images.length) {
                     i = 0;

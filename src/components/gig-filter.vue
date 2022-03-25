@@ -1,9 +1,16 @@
 <template>
     <section class="gig-filter">
-        <div class="search-section">
-            <img src="../assets/logo/magnifying-glass.png" alt="">
-            <input @change="setFilter" v-model="filterBy.title" type="text" placeholder="Try logo" class="search" />
-        </div>
+        <form class="search-section">
+            <img src="../assets/logo/magnifying-glass.png" alt />
+            <input
+                @change="setFilter"
+                v-model="filterBy.title"
+                type="text"
+                placeholder="Try logo"
+                class="search"
+            />
+            <button class="search-btn">Search</button>
+        </form>
     </section>
 </template>
 <script>

@@ -22,6 +22,6 @@ export default {
       console.log(gig);
       //   return this.gig.image;
     },
-  };
+  },
 }
 </script>
