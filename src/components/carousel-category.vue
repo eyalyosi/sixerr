@@ -1,4 +1,7 @@
-<template>
+<template >
+<section class="main-layout">
+  <h2 class="category-title">Popular professional services</h2>
+
   <Carousel :items-to-show="5" :wrap-around="true">
     <Slide v-for="category in categories" :key="category.name">
       <li class="category-preview-box" @click="explore(category.name)">
@@ -16,6 +19,8 @@
       <Navigation />
     </template>
   </Carousel>
+
+</section>
 
   <!-- <category-preview
     v-for="category in categories"
