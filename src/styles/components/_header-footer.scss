@@ -1,7 +1,16 @@
 header {
-    border-bottom: 1px solid #e4e5e7;
+    // border-bottom: 1px solid #e4e5e7;
+    width:100%;
+    height:100px;
+    position:fixed;
+    top:0px;
+    z-index:3;
+    
     
 }
+
+
+
 
 .main-header {
     display: flex;
@@ -23,7 +32,7 @@ header {
 .logo {
     text-decoration: none;
     font-family: sans-serif;
-    color: black;
+    color: white;
     letter-spacing: -1.5px;
     font-size: 32px;
 }
@@ -34,31 +43,8 @@ header {
 
     }
 }
-.search {
-    height: 33px;
-    font-size: 15px;
-    border: none;
-    padding: 7px 7px 7px ;
-    
-}
 
-.search-section{
-    display: flex;
-    align-items: center;
-    gap: 2px;
-    border: 1px solid #c2c2c2 ;
-    border-radius: 3px;
-    
-    img {
-        width: 16px;
-        margin-left: 7px;
-    }
-}
 
-.search-header {
-    height: 35px;
-
-}
 
 .main-header h1 {
     font-family: 'Cabin', sans-serif;
@@ -112,6 +98,7 @@ footer {
     position: relative;
     bottom: 0px;
     width: 100%;
+    
 
     h1 {
         font-size: .875rem;

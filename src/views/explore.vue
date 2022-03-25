@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="main-layout">
     <gig-list v-if="gigs" :gigs="gigs" />
   </section>
 </template>
@@ -14,8 +14,8 @@ export default {
   computed: {
     gigs() {
       return this.$store.getters.getGigs;
-    //   const x = this.$store.getters.getGigs;
-    //   console.log(x);
+      //   const x = this.$store.getters.getGigs;
+      //   console.log(x);
     },
   },
   components: {

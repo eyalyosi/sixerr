@@ -1,5 +1,5 @@
 <template>
-  <section v-if="gig" class="gig-page">
+  <section v-if="gig" class="gig-page main-layout">
     <div class="info-side">
       <div class="details-title-info">
         <h1>{{ gig.title }}</h1>

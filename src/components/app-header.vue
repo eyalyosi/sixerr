@@ -1,15 +1,18 @@
 <template>
   <header>
-    <main class="main-header">
+    <main class="main-header" ref="nav" v-bind:style="{ position: stickyNav ? 'fixed' : 'static' }">
       <div class="logo-and-search">
         <h1 to="/">
           <router-link class="logo" to="/">
             <div class="logo-part">
-             <p>Sixerr<span class="point">.</span></p> 
+              <p>
+                Sixerr
+                <span class="point">.</span>
+              </p>
             </div>
           </router-link>
         </h1>
-        <gig-filter @setFilter="setFilter" />
+        <!-- <gig-filter @setFilter="setFilter" /> -->
       </div>
       <nav class="nav">
         <router-link to="/explore">
@@ -24,15 +27,39 @@
 </template>
 
 <script>
-import gigFilter from "./gig-filter.vue";
+// import gigFilter from "./gig-filter.vue";
 export default {
+  data() {
+    return {
+      stickyNav: null,
+      headerObserver: null,
+
+
+
+    }
+  },
+
   methods: {
-    setFilter(filterBy) {
-      this.$store.dispatch({ type: "setFilter", filterBy });
+    // setFilter(filterBy) {
+    //   this.$store.dispatch({ type: "setFilter", filterBy });
+    // },
+    onHeaderObserved(entries) {
+      entries.forEach((entry) => {
+        this.stickyNav = entry.isIntersecting ? false : true;
+      });
     },
   },
-  components: {
-    gigFilter,
+
+  mounted() {
+    this.headerObserver = new IntersectionObserver(this.onHeaderObserved, {
+      rootMargin: "-91px 0px 0px",
+    });
+    this.headerObserver.observe(this.$refs.header);
   },
-};
+
+  components: {
+  }
+
+}
+
 </script>

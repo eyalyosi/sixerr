@@ -1,10 +1,9 @@
 <template>
-  <section>
-
-    <carousel-category v-if="categories" :categories="categories" @explore="explore"/>
+  <hero-cmp />
+  <section class="main-layout">
+    <carousel-category v-if="categories" :categories="categories" @explore="explore" />
 
     <!-- <category-list v-if="categories" :categories="categories" @explore="explore"/> -->
-    
   </section>
 </template>
 
@@ -12,6 +11,8 @@
 
 import categoryList from "../components/category-list.vue";
 import carouselCategory from "../components/carousel-category.vue";
+import heroCmp from "../components/hero-cmp.vue";
+
 export default {
   name: "gig-app",
   data() {
@@ -30,7 +31,9 @@ export default {
   },
   components: {
     categoryList,
-    carouselCategory
+    carouselCategory,
+    heroCmp
+
   },
 };
 </script>
