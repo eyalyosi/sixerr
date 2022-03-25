@@ -40,7 +40,7 @@ function _createGigs() {
     if (!gigs || !gigs.length) {
         gigs = [
             {
-                _id: "100",
+                _id: "u100",
                 image: ["https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/231682055/original/77cc585046a1ceb81a809218fef35ee8252bbb3b.jpg",
                     "https://portraitdraw.com/wp-content/uploads/2021/05/003.jpg",
                     "https://i.pinimg.com/originals/95/ba/14/95ba14518596e7891ca3fa7ff36704eb.jpg",
@@ -74,7 +74,7 @@ function _createGigs() {
                 likedByUsers: ['mini-user'] // for user-wishlist : use $in
             },
             {
-                _id: "101",
+                _id: "u101",
                 image: ["https://www.boredpanda.com/blog/wp-content/uploads/2020/03/More-Hyper-Realistic-Colored-Pencil-Drawings-5e753b9049bbd__880.jpg",
                     "https://i.pinimg.com/originals/95/2f/2f/952f2fe9a355428762175c392f9563fb.jpg",
                     "https://static.boredpanda.com/blog/wp-content/uploads/2021/02/1-602e41f2d42d0__700.jpg",
@@ -140,7 +140,7 @@ function _createGigs() {
                 likedByUsers: ['mini-user'] // for user-wishlist : use $in
             },
             {
-                _id: "103",
+                _id: "u103",
                 image: ["https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/155512325/original/9d62fbdec2b0bffd0318f9af43c2de023b62f5f0.jpg",
                     "https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs3/155512325/original/d3dae576b9abcc7f25ff755d5e18120fd3b1c67a/draw-a-hyperrealistic-portrait-of-face-or-entire-body-and-animals.jpg",
                     "https://static.boredpanda.com/blog/wp-content/uploads/2021/03/BobxzqGjJZP-png__880.jpg",
@@ -174,7 +174,7 @@ function _createGigs() {
                 likedByUsers: ['mini-user'] // for user-wishlist : use $in
             },
             {
-                _id: "104",
+                _id: "u104",
                 image: ["https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/128385654/original/7409f9154c0c92f1376f1c090f614aa6ed22b3f2/do-data-entry-macros-in-excel.jpg",
                     "https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs2/128385654/original/b35185bc2ec0760e68658863e3def7a653b922d4/do-data-entry-macros-in-excel.png",
                     "https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs3/128385654/original/172c50f3c8f0be4ff746171721832115ca6c4c80/do-data-entry-macros-in-excel.png"
@@ -416,7 +416,7 @@ function _createGigs() {
                     _id: "u111",
                     fullname: "shiranmor17",
                     imgUrl: "https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/2077b8d6eeb98061673b868ec51a9267-1636915857681/b31b149f-5e31-46bd-9a2e-27e94cc3e5e2.jpeg",
-                    level: 2,
+                    level: 3,
                     rate: 4
                 },
                 loc: "Israel",
@@ -542,7 +542,7 @@ function _createGigs() {
                     _id: "u201",
                     fullname: "frederickkessie",
                     imgUrl: "https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/4abf6f5b58e4d78cfb7c410cf8d7a9ac-1626111679444/4a04b77c-22ee-4ce8-b4be-747fd059e9ff.jpg",
-                    level: 4,
+                    level: 2,
                     rate: 3
                 },
                 loc: "India",
@@ -570,13 +570,14 @@ function _createGigs() {
                     _id: "u202",
                     fullname: "soduzai_gfx1",
                     imgUrl: "https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/a2dd1a0482bbfe54e61c6c2d6e64696e-1640431251801/943f73b5-dc43-4fe4-9728-9a58f0aafdbc.jpg",
-                    level: 4,
+                    level: 2,
                     rate: 3
                 },
                 loc: "Pakistan",
                 memberSince: "Oct 2017",
                 avgResponceTime: "1 hour",
                 lastDelivery: "about 25 minutes",
+                daysToMake: 3,
                 about: "I am a professional graphics designer from PakIsTaN... Designing is not only my job, it's my Passion. All I need from you is a rough sketch of your idea. Then you can just relax and see the magic happening. Not only you'll get stunning and professional designs, but also you'll have top class custome",
                 category: "Logo design",
                 tags: ["minimalist", "flat", "logo design", "modern", "unique", "logo maker"],
@@ -596,13 +597,14 @@ function _createGigs() {
                     _id: "u203",
                     fullname: "modernmarvel",
                     imgUrl: "https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/d366617946e54cbc9aa114f27259e3ef-1552848300306/3c155f72-15c9-47d0-8f68-b75a519a7999.jpg",
-                    level: 4,
+                    level: 2,
                     rate: 3
                 },
                 loc: "India",
                 memberSince: "Mar 2019",
                 avgResponceTime: "2 hours",
                 lastDelivery: "about 22 minutes",
+                daysToMake: 3,
                 about: "I am a professional artist having rich experience in hand sketched and digital artwork. I have served tons of businesses with smarter business solutions. I am here to get the global exposure and would like to contribute more towards our creative community. Thanks.",
                 category: "Logo design",
                 tags: ["minimalist", "flat", "logo design", "modern", "unique", "logo maker"],
@@ -623,14 +625,15 @@ function _createGigs() {
                 owner: {
                     _id: "u204",
                     fullname: "bellavida123",
-                    imgUrl: "https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/9e2d7f453419c08e138fbfe9e65347df-696051281638594671.588431/DD8E6DDC-C231-47D3-B61A-97274452D3BF",
-                    level: 4,
+                    imgUrl: "https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_profile_small/v1/attachments/profile/photo/f5e3944f37ecd11f0ea18503379dafca-1620745529349/04d08dfb-b55f-4281-9efc-2d2d724cbd73.jpg",
+                    level: 3,
                     rate: 3
                 },
                 loc: "Jamaica",
                 memberSince: "May 2018",
                 avgResponceTime: "1 hour",
                 lastDelivery: "about 23 hours",
+                daysToMake: 1,
                 about: "Thanks for stopping by! I'm a Social Media Specialist with 8+ years experience. I can help with all your Social Media related tasks! Send me a message. Let's get it done!",
                 category: "Marketing",
                 tags: ["bio", "instagram marketing", "instagram", "social media", "social network"],
@@ -658,6 +661,7 @@ function _createGigs() {
                 memberSince: "Aug 2016",
                 avgResponceTime: "3 hours",
                 lastDelivery: "about 1 hour",
+                daysToMake: 1,
                 about: "Hello! My name is Tommy. I am a multi-displinary marketer with experience in both the Western and Chinese digital marketing landscape. I am passionate about crafting impactful experiences and digital marketing strategies at the intersection of brand and product. I have worked in London, Hong Kong and in Shanghai for companies such as the Adidas, L'Oreal, Pfizer and Danone I currently offer Instagram growth and TikTok marketing strategies on Fiverr",
                 category: "Marketing",
                 tags: ["bio", "instagram marketing", "instagram", "social media", "social network"],
@@ -684,6 +688,7 @@ function _createGigs() {
                 memberSince: "Nov 2019",
                 avgResponceTime: "1 hour",
                 lastDelivery: "about 4 hours",
+                daysToMake: 1,
                 about: "I am trained in online marketing, and I have studied SEO, Ads (Google, Facebook, Bing...), I have 6 years of experience in digital marketing, in which time working at fiverr is 3 years, with more than 2000 completed orders, the main work that I do is: - Youtube seo and promotion - SEO - Website traffics - Spotify promotion - Instagram promotion Contact me if you have any questions!",
                 category: "Marketing",
                 tags: ["youtube", "monetization", "youtube channel", "youtube promotion"],
@@ -702,13 +707,14 @@ function _createGigs() {
                     _id: "u207",
                     fullname: "struhenderson",
                     imgUrl: "https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/eb6eef20969192eca1d8b1301e91cb4f-1630440851285/60f03cc4-71f2-437b-a241-f9423b6e2728.jpg",
-                    level: 4,
+                    level: 3,
                     rate: 5
                 },
                 loc: "United Kingdom",
                 memberSince: "Aug 2021",
                 avgResponceTime: "2 hours",
                 lastDelivery: "4 days",
+                daysToMake: 1,
                 about: "I am a current Doctoral Researcher with a strong research and scientific history, having published academic papers and presented at numerous international conferences. I have a BSc (Hons), a MScR, and have nearly finished my PhD. My experience has given me excellent research and written communication skills, as well as knowledge of how to present and illustrate data digitally. I am highly experienced in the use of the Microsoft Office and Adobe suite of apps. Outside of my career I am very interested in applying my scientific training to aspects of fitness and nutrition.",
                 category: "Research and Summeries",
                 tags: ["online research", "research", "internet researcher"],
@@ -727,14 +733,15 @@ function _createGigs() {
                     _id: "u208",
                     fullname: "victoriaeva610",
                     imgUrl: "https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/34a47e49caa09a703d81ef0621ad0ac1-1626197544385/3cb9eb7a-2163-4722-a1b0-0ddb9eb04d4e.png",
-                    level: 4,
+                    level: 1,
                     rate: 5
                 },
                 loc: "Kenya",
                 memberSince: "Jul 2021",
                 avgResponceTime: "1 hour",
                 lastDelivery: "about 16 hours",
-                "about": "I am an enthusiastic and proficient writer with 4+ years of research related experience. My journey in the writing industry kicked off at the University where I did countless research and gained more experience. I will assist you with any kind of research and solve your different business needs. Please reach out for excellent and timely work.",
+                daysToMake: 3,
+                about: "I am an enthusiastic and proficient writer with 4+ years of research related experience. My journey in the writing industry kicked off at the University where I did countless research and gained more experience. I will assist you with any kind of research and solve your different business needs. Please reach out for excellent and timely work.",
                 category: "Research and Summeries",
                 tags: ["reports", "articles", "internet researcher, summaries"],
                 likedByUsers: ["mini user"]
@@ -752,13 +759,14 @@ function _createGigs() {
                     _id: "u209",
                     fullname: "angela_637",
                     imgUrl: "https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/03e667c26a63c20863e016917c423eb0-1622910916319/85930fed-bb45-4b01-b117-3913f19b77d7.PNG",
-                    level: 4,
+                    level: 2,
                     rate: 5
                 },
                 loc: "Kenya",
                 memberSince: "Apr 2021",
                 avgResponceTime: "1 hour",
                 lastDelivery: "about 2 hours",
+                daysToMake: 3,
                 about: "I am a professional and diligent writer with more than 6 years experience as a freelance writer. My goal is your satisfaction and to deliver work that you will appreciate. Writing is my passion and I aim to do excellent work for all my clients that will meet the set goals and standards.",
                 category: "Research and Summeries",
                 tags: ["research and summary", "case study", "research", "summary", "articles"],
@@ -829,7 +837,7 @@ function _createGigs() {
                 description: "Are you want to make your LinkedIn profile, resume, and cover letter attractive so that the right employers can find you? I am here to assist you.\nI will revamp, create, and optimize your LinkedIn profile with the right choice of keywords. I know the importance of an attractive and professional Linkedin profile and summary that can help you get the job of your dreams.\nWhat you will get?\nEye-catching Headline title that will make you stand out\nKiller bio/summary to grab attention\nEducation, Certifications & Awards\nProfessional Experience\nLinkedIn profile optimization\nHighlight your skills\n100% satisfaction guarantee\nAts resume writing and cover letter\nNote: If you have any questions or special requirements, send me a message. I will be happy to assist you.\nBest Regards!\nHina",
                 price: 50.52,
                 owner: {
-                    _id: "u3002",
+                    _id: "u302",
                     fullname: "haniwritertech",
                     imgUrl: "https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/profile/photos/61541793/original/11244715_10152945510593546_3370670516541097530_n.jpg",
                     level: 1,
@@ -856,7 +864,7 @@ function _createGigs() {
                 descripsion: "You've got one chance to make a first impression.\nYour LinkedIn profile is that chance. Are you leaving potential employers with the best impression you can?\nAre you hire-able?\nI'm here to make sure your LinkedIn profile is branded and optimized to it's full potential! I will spend time analyzing, researching and rebranding your profile to help you get noticed.\nI'm back on Fiverr and ready to bring my expertise to help you reach your goals. I was one of the Original Top-Rated Sellers and my ratings speak for themselves. Over 8k gigs completed, and most all of my completed reviews are 5 star!\nI have 3 packages to choose from depending on the level of help you need.\nI hold a Bachelor's Degree in Communication from University of Southern California and have been writing in a professional capacity for over 10 years. I have extensive SEO knowledge and I am a trained copy writer, creative writer and content creation master. Let me help market you for your dream job!",
                 price: 134.71,
                 owner: {
-                    _id: "u3003",
+                    _id: "u303",
                     fullname: "mediagirl",
                     imgUrl: "https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/e3f2db9a69a2cc7b69c653d3185b6ba9-1592756841572/fbdf1383-4893-4f94-a3c9-a324c68aca4f.jpg",
                     level: 1,
@@ -966,169 +974,4 @@ function createCatergories() {
 //         url: ''
 //     };
 // }
-
-// {
-//     _id: "101",
-//     category: 'Arts & Crafts',
-//     image: "https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/231682055/original/77cc585046a1ceb81a809218fef35ee8252bbb3b.jpg",
-//     title: "I will do hyper realistic pencil portrait by hand drawing",
-//     description: "Hello ! Much obliged for visiting my gig :)\nIn this gig I'm offering you an exceptionally 3 one of a kind, best and reasonable bundles.\nIn case you are thinking for giving somebody uncommon an extremely delightful, eye getting gift( hyper practical hand drawing pencil sketch picture)?\nKindly select the helpful bundle and submit your request at this moment and I'll give you an ideal picture sketch, hand drawing, practical drawing, pencil attracting high goal JPEG/PNG advanced document.\nI will give hand-drawn dark and White or hued reasonable pictures.\nSympathetically give me clear reference photograph however much as could be expected.\nThe material I utilized for Creating pencil representations are:\nDrawing materials: graphite pencil, charcoal, Bristol paper, mono eraser, brush, mixing stump, mechanical pencil, graphite powder and so on .\nYou can give me anything:\nPicture photographs\nFamily photographs\nCreature photographs\nAny item photographs\nScene photographs\nEngineering photographs\nAnything you envision\nKindly reach me prior to submitting your request! Much appreciated.\nI DO NOT DELIVER ORIGINAL PHYSICAL COPY BUT A HIGH RESOLUTION JPEG DIGITA",
-//     price: "₪16.84",
-//     level: "Level 2 seller",
-//     daysToMake: "2 Days Delivery",
-//     fullname: "frederick kessie",
-//     imgUrl: "https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/4abf6f5b58e4d78cfb7c410cf8d7a9ac-1626111679444/4a04b77c-22ee-4ce8-b4be-747fd059e9ff.jpg",
-//     loc: "Ghana",
-//     memberSince: "Jul 2021",
-//     avgResponceTime: "1 hour",
-//     lastDelivery: "1 week",
-//     rate: "4",
-//     about: "Hi reader, thanks for your time. I'm an experienced young artist and i specialize in 3D animation, graphic designing and pencil Art. I'm familiar with word processing application. Kindly hit me up if if you need any of my services.",
-//     reviewers: [
-//         {
-//             name: "tobiaspille300",
-//             country: "Thailand",
-//             flag: "https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1f9-1f1ed.png",
-//             review: "frederickkessie ist a super kind artist doing the process he was super professional and only took him 1 shot to deliver a perfect result ! Highly recommended work with this guy !",
-//             reviewedAt: "Published 2 months ago",
-//             rate: "5"
-//         },
-//         {
-//             name: "liam31",
-//             country: "United Kingdom",
-//             flag: "https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1ec-1f1e7.png",
-//             review: "I requested a slightly earlier delivery on this and once again Frederick came through and provided a fantastic delivery. Thanks so much!",
-//             reviewedAt: "Published 3 weeks ago",
-//             rate: "5"
-//         },
-//         {
-//             name: "liam31",
-//             country: "United Kingdom",
-//             flag: "https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1ec-1f1e7.png",
-//             review: "Frederick is amazing and extremely talented. This is the second time working with him and he has been a pleasure yet again!",
-//             reviewedAt: "Published 3 weeks ago",
-//             rate: "4"
-//         },
-//     ],
-//     tags: [
-//         {
-//             name: "pencil drawing"
-//         },
-//         {
-//             name: "realistic drawing"
-//         },
-//         {
-//             name: "hand drawing"
-//         },
-//         {
-//             name: "portrait drawing"
-//         },
-//         {
-//             name: "pencil sketch"
-//         }
-//     ]
-// },
-// {
-//     _id: "102",
-//     image: "https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/197422311/original/1907136f4b9684daa164acfa5cfedc6035b771b1.jpg",
-//     title: "I will do hyper realistic pencil sketch portrait by hand drawing",
-//     description: "Hey ! Thanks for visiting my gig :)\nIn this gig i'm offering you a very 3 unique, preferable and affordable packages.\nIf you are thinking for giving someone special a very beautiful, eye catching gift( hyper realistic hand drawing pencil sketch portrait)?\nPlease select the desirable package and place your order right now and i'll give you a perfect portrait sketch, hand drawing, realistic drawing,pencil drawing in high resolution JPEG/PNG digital file.\nI will provide hand-drawn black & White or colored realistic portraits.\nKindly provide me clear reference photo as much as possible.\nThe material I used for Creating pencil portraits are:\nDrawing materials: graphite pencil, charcoal, Bristol paper, tombomono eraser, brush, blending stump, mechanical pencil, graphite powder etc .\nYou can give me anything:\nPortrait photos\nFamily photos\nAnimal photos\nAny product photos\nLandscape photos\nArchitecture photos\nAnything you imagine\nPlease contact me before placing your order! Thanks.\nI DO NOT DELIVER ORIGINAL PHYSICAL COPY BUT A HIGH RESOLUTION JPEG DIGITAL FILE, IF YOU WANT THE ORIGINAL ONE THEN MESSAGE ME FOR DETAILS.\nFeel free to ask me anything! :)\nThank You...\nvividstore",
-//     price: "₪67.37",
-//     level: "Level 1 seller",
-//     daysToMake: "3 Days Delivery",
-//     fullname: "vividstore",
-//     imgUrl: "https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/83cc7c97f9873bdb052590a94d32f84c-1576419363871/ed47443e-0f9b-42ab-beaf-ec0a0acccfe8.jpeg",
-//     loc: "Bangladesh",
-//     memberSince: "Dec 2019",
-//     avgResponceTime: "1 hour",
-//     lastDelivery: "about 16 hours",
-//     about: "Hello, this is Masuk, stand up for vividstore,I am a young and enthusiastic graphic artist and realistic pencil sketch artist. I am certified as graphic designer from George Washington University, USA. I have almost 11 years experience in this field since my university life. I really love to work with Adobe Illustrator, Adobe Photoshop, and so on as a full time online freelancer. And also passionate about sketching. Thank you.",
-//     reviewers: [
-//         {
-//             name: "Eli ohane",
-//             country: "Thailand",
-//             flag: "https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1f9-1f1ed.png",
-//             review: "vividstore ist a super kind artist doing the process he was super professional and only took him 1 shot to deliver a perfect result ! Highly recommended work with this guy !",
-//             reviewedAt: "Published 1 months ago",
-//             rate: "4"
-//         },
-//     ],
-//     tags: [
-//         {
-//             name: "pencil drawing"
-//         },
-//         {
-//             name: "realistic drawing"
-//         },
-//         {
-//             name: "pencil portrait"
-//         },
-//         {
-//             name: "sketch"
-//         },
-//         {
-//             name: "pencil sketch"
-//         }
-//     ]
-// },
-// {
-//     _id: "103",
-//     image: "https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/155512325/original/9d62fbdec2b0bffd0318f9af43c2de023b62f5f0.jpg",
-//     title: "I will draw a hyperrealistic portrait of face or entire body and animals",
-//     description: "Desenho de lápis hiperrealista da sua foto, posso adicionar detalhes de fundo e personalizar o desenho do jeito que você quiser.",
-//     price: "₪202.11",
-//     level: "Level 2 seller",
-//     daysToMake: "14 Days Delivery",
-//     fullname: "andreacarvalho_",
-//     imgUrl: "https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/5344c10fd4820db3626c4fc24968783d-1588608774469/1e4a3bd9-b71d-48ce-8ac0-0ff6d667caf4.jpeg",
-//     loc: "Brazil",
-//     memberSince: "May 2020",
-//     avgResponceTime: "1 hour",
-//     lastDelivery: "3 days",
-//     about: "Hello! I'm a brazilian artist specialized in hyperrealistic drawings and paintings of human figures and animals, i use a diversity of techniques like Oil painting, dry pastel drawing and pencil. I have over 30 years of experience, check out my portfolio.",
-//     reviewers: [
-//         {
-//             name: "rachelrbarnes1",
-//             country: "United States",
-//             flag: "https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1fa-1f1f8.png",
-//             review: "Incredibly grateful for the amazing experience working with you . You are so talented and a kind soul! I highly recommend if you want high quality art to work with her every time",
-//             reviewedAt: "Published 1 month ago",
-//             rate: "5"
-//         },
-//         {
-//             name: "mark001994",
-//             country: "Austria",
-//             flag: "https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1e6-1f1f9.png",
-//             review: "The artist was very kind and polite also very fast at the communication. The delivery of the project was on time. And her work is worth the money. I'm really excited about the painting she did. I can truely recommend the Aritst and her work. Big Thanks! :)",
-//             reviewedAt: "Published 1 month ago",
-//             rate: "4"
-//         },
-//         {
-//             name: "thurstonrobby",
-//             country: "United States",
-//             flag: "https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1fa-1f1f8.png",
-//             review: "incredible on how precise that art is, picture perfect. 100% amazing job and I will use your services again ...",
-//             reviewedAt: "Published 3 weeks ago",
-//             rate: "4"
-//         },
-//     ],
-//     tags: [
-//         {
-//             name: "pencil"
-//         },
-//         {
-//             name: "drawing"
-//         },
-//         {
-//             name: "portrait"
-//         },
-//         {
-//             name: "realistic"
-//         },
-//         {
-//             name: "painting"
-//         }
-//     ]
-// },
-// ];
 
