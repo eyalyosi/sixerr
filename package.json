@@ -8,6 +8,7 @@
     "test:unit": "vitest --environment jsdom"
   },
   "dependencies": {
+    "@dongido/vue-viaudio": "^0.3.5",
     "agile": "^0.0.2",
     "axios": "^0.26.1",
     "element-plus": "^2.1.4",
