@@ -1,6 +1,6 @@
 <template>
   <section>
-    <app-header class="app-header" :class="{ change_color: scrollPosition > 50 }" />
+    <app-header :class="$route.meta.headerClass" />
 
     <div>
       <router-view />
@@ -17,7 +17,6 @@ export default {
   name: "App",
   data() {
     return {
-      scrollPosition: null
 
     }
   },
@@ -32,12 +31,11 @@ export default {
   },
   computed: {},
   methods: {
-    updateScroll() {
-      this.scrollPosition = window.scrollY
-    }
+
+
   },
   mounted() {
-    window.addEventListener('scroll', this.updateScroll);
+
 
   }
 }

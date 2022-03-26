@@ -139,7 +139,8 @@ export default {
     },
   },
   components: {
-    caruselDetails
+    caruselDetails,
+
   },
 };
 </script>
