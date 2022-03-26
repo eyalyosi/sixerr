@@ -10,6 +10,21 @@
         <div class="hero-search">
             <gig-filter @setFilter="setFilter" />
         </div>
+        <div class="popular-categories">
+            <p>Popular:</p>
+            <span>
+                <a>Website Design</a>
+            </span>
+            <span>
+                <a>Wordpress</a>
+            </span>
+            <span>
+                <a>Logo Design</a>
+            </span>
+            <span>
+                <a>Music</a>
+            </span>
+        </div>
 
         <img class="hero-img" :src="image" alt="hero image" />
         <p class="stars-hero">⭐⭐⭐⭐⭐</p>
