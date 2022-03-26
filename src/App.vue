@@ -1,6 +1,9 @@
 <template>
   <section>
-    <app-header class="app-header" :class="{ change_color: scrollPosition > 50 }" />
+    <app-header
+      class="app-header"
+      :class="{ change_color: scrollPosition > 50 }"
+    />
 
     <div>
       <router-view />
@@ -17,29 +20,25 @@ export default {
   name: "App",
   data() {
     return {
-      scrollPosition: null
-
-    }
+      scrollPosition: null,
+    };
   },
   created() {
     this.$store.dispatch({ type: "loadGigs" });
+    this.$store.dispatch({ type: "loadUsers" });
   },
   components: {
     appHeader,
     appFooter,
-
-
   },
   computed: {},
   methods: {
     updateScroll() {
-      this.scrollPosition = window.scrollY
-    }
+      this.scrollPosition = window.scrollY;
+    },
   },
   mounted() {
-    window.addEventListener('scroll', this.updateScroll);
-
-  }
-}
-
+    window.addEventListener("scroll", this.updateScroll);
+  },
+};
 </script>

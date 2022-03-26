@@ -5,6 +5,7 @@
     <main-info-cmp />
     <!-- <category-list v-if="categories" :categories="categories" @explore="explore"/> -->
   </section>
+  {{getUsers}}
 </template>
 
 <script>
@@ -29,6 +30,11 @@ export default {
       return this.$store.getters.getCategories;
 
     },
+    // getUsers() {
+    // //  return this.$store.getters.users;
+    //   const users = this.$store.getters.getUsers;
+    //   console.log(users);
+    // }
   },
   components: {
     categoryList,
