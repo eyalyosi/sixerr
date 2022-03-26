@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header class="main-navbar header-transparent sticky">
     <main class="main-header" ref="nav">
       <div class="logo-and-search">
         <h1 to="/">
