@@ -1,12 +1,8 @@
-.hero-section {
-   
 
-
-
-  }
 
  .hero-img{
      width: 100%;
+    //  max-width: 100%;
  }
 
 .hero-content{
@@ -23,23 +19,53 @@
         }
 }
 
+.hero-box{
+display: flex;
+justify-content: flex-start;
+flex-direction: column;
+// z-index: 80;
 
-.seller-name-hero{
-    font-family: 'Roboto', sans-serif;
-    font-size: 1em;
-    font-weight: bold;
-    position: absolute;
-    bottom: 20%;
-    right: 5%;
-    color: white;
 
 }
 
-.stars-hero{
-    position: absolute;
-    bottom: 23%;
-    right: 8%;
+.seller-star-name{
+    display: flex;
+    max-width: 1340px;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 100%;
+    flex-direction: column;
+    // position: absolute;
+    // top: 72%;
+    // left: 82%;
+    .seller-name-hero{
+        font-family: 'Roboto', sans-serif;
+        font-size: 1em;
+        font-weight: bold;
+        position: absolute;
+        bottom: 22%;
+        right: 5%;
+        color: white;
+        margin: 0
+    
+    }
+
+    .stars-hero{
+        margin: 0;
+        position: absolute;
+        bottom: 25%;
+        right: 8%;
+    }
 }
+
+
+
+
+// .stars-hero{
+//     position: absolute;
+//     bottom: 23%;
+//     right: 45%;
+// }
 
 .popular-categories{
     display: flex;
@@ -49,7 +75,7 @@
     font-size: 1.2em;
     position: absolute;
     top: 55%;
-    left: 33%;
+    left: 25.5%;
     transform: translate(-50%, -50%); 
     color: white;
     p{  
@@ -81,7 +107,7 @@
 .hero-search{
     position: absolute;
     top: 45%;
-    left: 35%;
+    left: 20.5%;
     transform: translate(-50%, -50%);  
 
 
@@ -108,9 +134,11 @@ form>* {
     display: block;
     margin: 10px 0;
     width: 200px;
+
 }
 
 .search-section {
+
   
         input {
             border: none;
@@ -118,8 +146,10 @@ form>* {
             height: 100%;
             margin: 0;
             width: 100%;
-            padding: 15px;
+            padding: 14px;
             padding-left:30px;
+            flex: 0 0 auto;
+
 
 
     };
@@ -129,7 +159,7 @@ form>* {
 .search-section{
     button{
         font-size: 16px;
-    height: 48px;
+    height: 46px;
     padding: 12px 24px;
     text-shadow: none;
     background-color: #1dbf73;
@@ -195,7 +225,3 @@ form>* {
 
 // }
 
-.seller-star-name{
-    display: flex;
-    max-width: 1340px;
-}

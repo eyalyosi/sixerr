@@ -1,6 +1,6 @@
 <template>
     <div class="hero-section main-layout flex space-between">
-        <div>
+        <div class="hero-box">
             <div class="hero-content">
                 <h1>
                     Find the perfect
@@ -33,7 +33,9 @@
             <p class="seller-name-hero">{{ sellerName }}</p>
         </div>
     </div>
-    <img class="hero-img" :src="image" alt="hero image" />
+    <Transition>
+        <img class="hero-img" :src="image" alt="hero image" />
+    </Transition>
 </template>
 <script>
 import gigFilter from "./gig-filter.vue";

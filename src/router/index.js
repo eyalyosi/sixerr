@@ -12,7 +12,8 @@ const router = createRouter({
       name: 'gig-app',
       component: gigApp,
       meta: {
-        headerClass: 'fixed'
+        headerClass: 'fixed',
+        logoClass: 'white'
       }
 
 
@@ -21,6 +22,9 @@ const router = createRouter({
       path: '/explore',
       name: 'explore',
       component: explore,
+      meta: {
+        headerClass: 'border'
+      }
 
 
 
@@ -30,12 +34,18 @@ const router = createRouter({
       path: '/gig/:_id',
       name: 'gig-details',
       component: gigDetails,
+      meta: {
+        headerClass: 'border'
+      }
 
     },
     {
       path: '/order-app/:_id',
       name: 'order-app',
       component: orderApp,
+      meta: {
+        headerClass: 'border'
+      }
 
 
     },

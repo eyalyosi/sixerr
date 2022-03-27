@@ -6,14 +6,14 @@
           <h1 to="/">
             <router-link class="logo" to="/">
               <div class="logo-part">
-                <p>
+                <p :class="$route.meta.logoClass">
                   Sixerr
                   <span class="point">.</span>
                 </p>
               </div>
             </router-link>
           </h1>
-          <form class="search-bar-header hidden" :class="{ 'search-header': scrollPosition > 50 }">
+          <form class="search-bar-header" :class="{ 'search-header': scrollPosition > 100 }">
             <div>
               <div class="sticky-search">
                 <img src="../assets/logo/magnifying-glass.png" alt />
