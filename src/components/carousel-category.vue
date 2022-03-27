@@ -1,33 +1,32 @@
 <template >
-<section class="main-layout">
-  <h2 class="category-title">Popular professional services</h2>
+  <section>
+    <h2 class="category-title">Popular professional services</h2>
 
-  <Carousel :items-to-show="5" :wrap-around="true">
-    <Slide v-for="category in categories" :key="category.name">
-      <li class="category-preview-box" @click="explore(category.name)">
-        <div class="category-txt-name-box">
-          <small class="category-txt">{{ category.txt }}</small>
-          <h4 class="category-name">{{ category.name }}</h4>
-        </div>
+    <Carousel :items-to-show="5" :wrap-around="true">
+      <Slide v-for="category in categories" :key="category.name">
+        <li class="category-preview-box" @click="explore(category.name)">
+          <div class="category-txt-name-box">
+            <small class="category-txt">{{ category.txt }}</small>
+            <h4 class="category-name">{{ category.name }}</h4>
+          </div>
 
-        <img :src="category.img" alt="" />
-      </li>
-      <!-- <div class="carousel__item">{{ category.name }}</div> -->
-    </Slide>
+          <img :src="category.img" alt />
+        </li>
+        <!-- <div class="carousel__item">{{ category.name }}</div> -->
+      </Slide>
 
-    <template #addons>
-      <Navigation />
-    </template>
-  </Carousel>
-
-</section>
+      <template #addons>
+        <Navigation />
+      </template>
+    </Carousel>
+  </section>
 
   <!-- <category-preview
     v-for="category in categories"
     :category="category"
     :key="category.name"
     @explore="explore"
-  /> -->
+  />-->
 </template>
 
 <script>

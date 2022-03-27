@@ -1,40 +1,42 @@
 <template>
-  <header class="app-header" :class="{ 'change-color': scrollPosition > 50 }">
+  <header class="app-header full" :class="{ 'change-color': scrollPosition > 50 }">
     <main class="main-header" ref="nav">
-      <div class="logo-and-search">
-        <h1 to="/">
-          <router-link class="logo" to="/">
-            <div class="logo-part">
-              <p>
-                Sixerr
-                <span class="point">.</span>
-              </p>
+      <div class="main-layout header-flex">
+        <div class="logo-and-search">
+          <h1 to="/">
+            <router-link class="logo" to="/">
+              <div class="logo-part">
+                <p>
+                  Sixerr
+                  <span class="point">.</span>
+                </p>
+              </div>
+            </router-link>
+          </h1>
+          <form class="search-bar-header hidden" :class="{ 'search-header': scrollPosition > 50 }">
+            <div>
+              <div class="sticky-search">
+                <img src="../assets/logo/magnifying-glass.png" alt />
+                <input type="text" value="Try Logo" />
+                <button class="search-header-btn">Search</button>
+              </div>
             </div>
-          </router-link>
-        </h1>
-        <form class="search-bar-header hidden" :class="{ 'search-header': scrollPosition > 50 }">
-          <div>
-            <div class="sticky-search">
-              <img src="../assets/logo/magnifying-glass.png" alt />
-              <input type="text" value="Try Logo" />
-              <button class="search-header-btn">Search</button>
-            </div>
-          </div>
-        </form>
-        <!-- <gig-filter
+          </form>
+          <!-- <gig-filter
           @setFilter="setFilter"
           class="hidden"
           :class="{ 'search-header-box': scrollPosition > 50 }"
-        />-->
+          />-->
+        </div>
+        <nav class="nav">
+          <router-link to="/explore">
+            <a href>Explore</a>
+          </router-link>
+          <router-link to="/order-app">Become A Seller</router-link>
+          <router-link to="/">Login</router-link>
+          <router-link class="join" to>Join</router-link>
+        </nav>
       </div>
-      <nav class="nav">
-        <router-link to="/explore">
-          <a href>Explore</a>
-        </router-link>
-        <router-link to="/order-app">Become A Seller</router-link>
-        <router-link to="/">Login</router-link>
-        <router-link class="join" to>Join</router-link>
-      </nav>
     </main>
   </header>
 </template>

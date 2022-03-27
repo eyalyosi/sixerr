@@ -1,5 +1,5 @@
 <template>
-  <section class="main-layout">
+  <section>
     <gig-list v-if="gigs" :gigs="gigs" />
   </section>
 </template>

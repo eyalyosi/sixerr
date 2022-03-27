@@ -1,12 +1,15 @@
 <template>
   <!-- <app-header class="app-header" :class="{ 'change-color': scrollPosition > 50 }" /> -->
   <hero-cmp />
-  <section>
-    <carousel-category v-if="categories.length" :categories="categories" @explore="explore" />
-    <main-info-cmp />
-    <!-- <category-list v-if="categories" :categories="categories" @explore="explore"/> -->
-  </section>
-  {{getUsers}}
+  <carousel-category
+    v-if="categories.length"
+    :categories="categories"
+    @explore="explore"
+    class="main-layout"
+  />
+  <main-info-cmp />
+  <!-- <category-list v-if="categories" :categories="categories" @explore="explore"/> -->
+  {{ getUsers }}
 </template>
 
 <script>

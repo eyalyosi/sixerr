@@ -1,8 +1,8 @@
 <template>
-  <section>
+  <section class="main-section">
     <app-header :class="$route.meta.headerClass" />
 
-    <div>
+    <div class="main-content-container">
       <router-view />
     </div>
     <app-footer />

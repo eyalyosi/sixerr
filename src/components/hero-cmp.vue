@@ -27,8 +27,10 @@
         </div>
 
         <img class="hero-img" :src="image" alt="hero image" />
-        <p class="stars-hero">⭐⭐⭐⭐⭐</p>
-        <p class="seller-name">{{ sellerName }}</p>
+        <div class="seller-star-name">
+            <p class="stars-hero">⭐⭐⭐⭐⭐</p>
+            <p class="seller-name-hero">{{ sellerName }}</p>
+        </div>
     </div>
 </template>
 <script>
