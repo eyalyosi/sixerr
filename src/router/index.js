@@ -10,24 +10,36 @@ const router = createRouter({
     {
       path: '/',
       name: 'gig-app',
-      component: gigApp
+      component: gigApp,
+      meta: {
+        headerClass: 'fixed'
+      }
+
+
     },
     {
       path: '/explore',
       name: 'explore',
-      component: explore
+      component: explore,
+
+
+
+
     },
     {
       path: '/gig/:_id',
       name: 'gig-details',
-      component: gigDetails
+      component: gigDetails,
+
     },
     {
       path: '/order-app/:_id',
       name: 'order-app',
-      component: orderApp
+      component: orderApp,
+
+
     },
-    
+
   ]
 })
 

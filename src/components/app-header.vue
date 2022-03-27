@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header class="app-header" :class="{ 'change-color': scrollPosition > 50 }">
     <main class="main-header" ref="nav">
       <div class="logo-and-search">
         <h1 to="/">
@@ -12,12 +12,20 @@
             </div>
           </router-link>
         </h1>
-        <div class="search-bar-header">
-          <div class="sticky-search">
-            <input type="text" value="search-header" />
+        <form class="search-bar-header hidden" :class="{ 'search-header': scrollPosition > 50 }">
+          <div>
+            <div class="sticky-search">
+              <img src="../assets/logo/magnifying-glass.png" alt />
+              <input type="text" value="Try Logo" />
+              <button class="search-header-btn">Search</button>
+            </div>
           </div>
-        </div>
-        <!-- <gig-filter @setFilter="setFilter" /> -->
+        </form>
+        <!-- <gig-filter
+          @setFilter="setFilter"
+          class="hidden"
+          :class="{ 'search-header-box': scrollPosition > 50 }"
+        />-->
       </div>
       <nav class="nav">
         <router-link to="/explore">
@@ -42,7 +50,12 @@ export default {
 
 
 
+
     }
+  },
+  created() {
+    window.addEventListener('scroll', this.updateScroll);
+
   },
 
   methods: {
@@ -54,18 +67,16 @@ export default {
     //     this.stickyNav = entry.isIntersecting ? false : true;
     //   });
     // },
+
     updateScroll() {
-      this.scrollPosition = window.scrollY
-    },
-    handleScroll: function (evt, el) {
-      if (window.scrollY > 50) {
-        el.setAttribute(
-          'style',
-          'background-color=#fffff'
-        )
+      if (!this.isHome) {
+        console.log('isnt home');
+        return
       }
-      return window.scrollY > 100
-    }
+      this.scrollPosition = window.scrollY
+      // console.log(this.scrollPosition);
+    },
+
   },
 
 
@@ -77,6 +88,23 @@ export default {
     // this.headerObserver.observe(this.$refs.header);
     window.addEventListener('scroll', this.updateScroll);
   },
+  computed: {
+    isHome() {
+      return this.$route.path === '/'
+    }
+  },
+  // watch: {
+  //   '$route.path': {
+  //     immediate: true,
+  //     handler() {
+  //       console.log(this.$route.path);
+  //       this.scrollPosition > 50
+
+  //     }
+
+  //   },
+
+  // },
 
   components: {
     gigFilter

@@ -30,6 +30,61 @@
         }
 }
 
+
+.seller-name{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    position: absolute;
+    bottom: 20%;
+    right: 5%;
+    color: white;
+
+}
+
+.stars-hero{
+    position: absolute;
+    bottom: 23%;
+    right: 8%;
+}
+
+.popular-categories{
+    display: flex;
+    gap: 1em;
+    padding-top: 24px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2em;
+    position: absolute;
+    top: 55%;
+    left: 33%;
+    transform: translate(-50%, -50%); 
+    color: white;
+    p{  
+        transform: translate(-5%, -80%); 
+    }
+    a{
+        color: inherit;
+        background-color: inherit;
+        text-decoration: none;
+        border: 1px solid white;
+        border-radius: 20px;
+        font-size: .7em;
+        font-weight: 700;
+        line-height: 100%;
+        padding: 7px 20px;
+        transition: all 0.2s ease;
+    &:hover{
+        cursor: pointer;
+        background-color: white;
+        border-color: white;
+        color: grey;
+    }
+    }
+
+}
+
+
+
 .hero-search{
     position: absolute;
     top: 45%;
