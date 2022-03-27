@@ -37,17 +37,6 @@
           <router-link class="join" to>Join</router-link>
         </nav>
       </div>
-<<<<<<< HEAD
-=======
-      <nav class="nav">
-        <router-link to="/explore">
-          <a href>Explore</a>
-        </router-link>
-        <router-link to="/order-app/:_id">Become A Seller</router-link>
-        <router-link to="/">Login</router-link>
-        <router-link class="join" to>Join</router-link>
-      </nav>
->>>>>>> 9edd6e05b92a7c0d0d4419c5ea5dd89487745c52
     </main>
   </header>
 </template>

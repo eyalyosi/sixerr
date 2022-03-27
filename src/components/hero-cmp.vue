@@ -1,37 +1,39 @@
 <template>
-    <div class="hero-section">
-        <div class="hero-content">
-            <h1>
-                Find the perfect
-                <span>freelance</span>
-                <br />services for your business
-            </h1>
-        </div>
-        <div class="hero-search">
-            <gig-filter @setFilter="setFilter" />
-        </div>
-        <div class="popular-categories">
-            <p>Popular:</p>
-            <span>
-                <a>Website Design</a>
-            </span>
-            <span>
-                <a>Wordpress</a>
-            </span>
-            <span>
-                <a>Logo Design</a>
-            </span>
-            <span>
-                <a>Music</a>
-            </span>
+    <div class="hero-section main-layout flex space-between">
+        <div>
+            <div class="hero-content">
+                <h1>
+                    Find the perfect
+                    <span>freelance</span>
+                    <br />services for your business
+                </h1>
+            </div>
+            <div class="hero-search">
+                <gig-filter @setFilter="setFilter" />
+            </div>
+            <div class="popular-categories">
+                <p>Popular:</p>
+                <span>
+                    <a>Website Design</a>
+                </span>
+                <span>
+                    <a>Wordpress</a>
+                </span>
+                <span>
+                    <a>Logo Design</a>
+                </span>
+                <span>
+                    <a>Music</a>
+                </span>
+            </div>
         </div>
 
-        <img class="hero-img" :src="image" alt="hero image" />
         <div class="seller-star-name">
             <p class="stars-hero">⭐⭐⭐⭐⭐</p>
             <p class="seller-name-hero">{{ sellerName }}</p>
         </div>
     </div>
+    <img class="hero-img" :src="image" alt="hero image" />
 </template>
 <script>
 import gigFilter from "./gig-filter.vue";
