@@ -1,6 +1,6 @@
 <template>
   <section>
-    <app-header class="app-header" :class="{ change_color: scrollPosition > 50 }" />
+    <app-header :class="$route.meta.headerClass" />
 
     <div>
       <router-view />

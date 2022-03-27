@@ -74,7 +74,7 @@ export default {
         return
       }
       this.scrollPosition = window.scrollY
-      console.log(this.scrollPosition);
+      // console.log(this.scrollPosition);
     },
 
   },
