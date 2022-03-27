@@ -1,12 +1,7 @@
-.hero-section {
-   
-
-
-
-  }
 
  .hero-img{
      width: 100%;
+    //  max-width: 100%;
  }
 
 .hero-content{
@@ -23,23 +18,53 @@
         }
 }
 
+.hero-box{
+display: flex;
+justify-content: flex-start;
+flex-direction: column;
+// z-index: 80;
 
-.seller-name-hero{
-    font-family: 'Roboto', sans-serif;
-    font-size: 1em;
-    font-weight: bold;
-    position: absolute;
-    bottom: 20%;
-    right: 5%;
-    color: white;
 
 }
 
-.stars-hero{
-    position: absolute;
-    bottom: 23%;
-    right: 8%;
+.seller-star-name{
+    display: flex;
+    max-width: 1340px;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 100%;
+    flex-direction: column;
+    // position: absolute;
+    // top: 72%;
+    // left: 82%;
+    .seller-name-hero{
+        font-family: 'Roboto', sans-serif;
+        font-size: 1em;
+        font-weight: bold;
+        position: absolute;
+        bottom: 22%;
+        right: 5%;
+        color: white;
+        margin: 0
+    
+    }
+
+    .stars-hero{
+        margin: 0;
+        position: absolute;
+        bottom: 25%;
+        right: 8%;
+    }
 }
+
+
+
+
+// .stars-hero{
+//     position: absolute;
+//     bottom: 23%;
+//     right: 45%;
+// }
 
 .popular-categories{
     display: flex;
@@ -52,8 +77,8 @@
     left: 25.5%;
     transform: translate(-50%, -50%); 
     color: white;
-    p{  
-        transform: translate(-5%, -80%); 
+    p{
+        transform: translate(-5%, -80%);
     }
     a{
         color: inherit;
@@ -76,8 +101,6 @@
 
 }
 
-
-
 .hero-search{
     position: absolute;
     top: 45%;
@@ -87,30 +110,31 @@
 
 }
 
-
-// .search-btn{
-//     font-size: 16px;
-//     height: 48px;
-//     padding: 12px 24px;
-//     text-shadow: none;
-//     background-color: #1dbf73;
-//     color: #fff;
-//     border: 1px solid transparent;
-//     transition: 70ms cubic-bezier(.75,0,.25,1);
-//     line-height: 100%;
-//     text-decoration: none;
-//     text-align: center;
-//     cursor: pointer;
-//     border-top-right-radius: 4px;
-//     border-bottom-right-radius: 4px;
-// }
+.search-btn{
+    font-size: 16px;
+    height: 48px;
+    padding: 12px 24px;
+    text-shadow: none;
+    background-color: #1dbf73;
+    color: #fff;
+    border: 1px solid transparent;
+    transition: 70ms cubic-bezier(.75,0,.25,1);
+    line-height: 100%;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
 form>* {
     display: block;
     margin: 10px 0;
     width: 200px;
+
 }
 
 .search-section {
+
   
         input {
             border: none;
@@ -118,8 +142,9 @@ form>* {
             height: 100%;
             margin: 0;
             width: 100%;
-            padding: 15px;
+            padding: 14px;
             padding-left:30px;
+            flex: 0 0 auto;
 
 
     };
@@ -129,7 +154,7 @@ form>* {
 .search-section{
     button{
         font-size: 16px;
-    height: 48px;
+    height: 46px;
     padding: 12px 24px;
     text-shadow: none;
     background-color: #1dbf73;
@@ -145,16 +170,13 @@ form>* {
     }
 }
 
-
-
-
 .search-section{
     display: flex;
     align-items: center;
-    
-    // gap: 2px;
-    // border: 1px solid #c2c2c2 ;
-    // border-radius: 3px;
+
+    gap: 2px;
+    border: 1px solid #c2c2c2 ;
+    border-radius: 3px;
     img {
         margin-left: 4px;
         position:absolute;
@@ -164,38 +186,32 @@ form>* {
     }
 
 }
-    
-  
 
-// .search {
-   
-//     align-items: center;
-//     background-color: #fff;
-//     display: flex;
-//     justify-content: center;
-//     margin: 0;
-//     width: 100%;
-//     font-size: 16px;
-//     height: 47px;
-//     flex: 1 1 auto;
-//     padding: 7px 7px 7px 44px;
-//     border-radius: 3px;
-//     border: 1px solid #c5c6c9;
-//     border-color: #dadbdd;
-//     box-shadow: none;
-//     margin-bottom: 0;
-//     border-radius: 4px 0 0 4px;
-//     border-right: 0;
-//     outline: none;
-    
-// }
+.search {
 
-// .search-header {
-//     height: 35px;
-
-// }
-
-.seller-star-name{
+    align-items: center;
+    background-color: #fff;
     display: flex;
-    max-width: 1340px;
+    justify-content: center;
+    margin: 0;
+    width: 100%;
+    font-size: 16px;
+    height: 47px;
+    flex: 1 1 auto;
+    padding: 7px 7px 7px 44px;
+    border-radius: 3px;
+    border: 1px solid #c5c6c9;
+    border-color: #dadbdd;
+    box-shadow: none;
+    margin-bottom: 0;
+    border-radius: 4px 0 0 4px;
+    border-right: 0;
+    outline: none;
+
 }
+
+.search-header {
+    height: 35px;
+
+}
+

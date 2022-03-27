@@ -12,7 +12,8 @@ const router = createRouter({
       name: 'gig-app',
       component: gigApp,
       meta: {
-        headerClass: 'fixed'
+        headerClass: 'fixed',
+        logoClass: 'white'
       }
 
 
@@ -45,6 +46,8 @@ const router = createRouter({
       meta: {
         headerClass: 'border'
       }
+
+
     },
     // {
     //   path: '/order-app',
