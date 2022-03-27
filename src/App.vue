@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
   <!-- <section> -->
 
     <!-- //OFIR, I COMMENT THE HEADER FUNCTION UP BECAUSE I COULDNT 
@@ -6,6 +7,12 @@
     <!-- <app-header class="app-header" :class="{ change_color: scrollPosition > 50 }" /> -->
     <app-header class="app-header"/>
     <div>
+=======
+  <section class="main-section">
+    <app-header :class="$route.meta.headerClass" />
+
+    <div class="main-content-container">
+>>>>>>> ab6c45e58c6e879049f1a041ca570be3d3f2d6ea
       <router-view />
     </div>
     <app-footer />
@@ -20,9 +27,8 @@ export default {
   name: "App",
   data() {
     return {
-      scrollPosition: null
 
-    }
+    };
   },
   created() {
     this.$store.dispatch({ type: "loadGigs" });
@@ -30,19 +36,15 @@ export default {
   components: {
     appHeader,
     appFooter,
-
-
   },
   computed: {},
   methods: {
     updateScroll() {
-      this.scrollPosition = window.scrollY
-    }
+      this.scrollPosition = window.scrollY;
+    },
   },
   mounted() {
-    window.addEventListener('scroll', this.updateScroll);
-
-  }
+    window.addEventListener("scroll", this.updateScroll);
+  },
 }
-
 </script>

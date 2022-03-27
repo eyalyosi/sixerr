@@ -4,5 +4,24 @@
 
 body {
     margin: 0;
+    height: 100%;
+
 
 }
+
+// .main-section{
+//     display: grid;
+//     grid-template-columns: 20px 1fr 20px;
+//     > * {
+//         grid-column: 2;
+//     }
+
+//     > *.full {
+//         grid-column: 1 / -1;
+//     }
+    
+// }
+
+// .main-content-container{
+//     grid-column: 2;
+// }

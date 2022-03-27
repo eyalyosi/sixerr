@@ -149,6 +149,15 @@ export default {
   },
   components: {
     caruselDetails,
+<<<<<<< HEAD
   }
+=======
+<<<<<<< HEAD
+  }
+=======
+
+  },
+>>>>>>> 060c98fc050c8d410c81626aaf116614a6458750
+>>>>>>> ab6c45e58c6e879049f1a041ca570be3d3f2d6ea
 };
 </script>

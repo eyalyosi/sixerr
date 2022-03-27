@@ -1,24 +1,44 @@
 <template>
-  <header>
+  <header class="app-header full" :class="{ 'change-color': scrollPosition > 50 }">
     <main class="main-header" ref="nav">
-      <div class="logo-and-search">
-        <h1 to="/">
-          <router-link class="logo" to="/">
-            <div class="logo-part">
-              <p>
-                Sixerr
-                <span class="point">.</span>
-              </p>
+      <div class="main-layout header-flex">
+        <div class="logo-and-search">
+          <h1 to="/">
+            <router-link class="logo" to="/">
+              <div class="logo-part">
+                <p>
+                  Sixerr
+                  <span class="point">.</span>
+                </p>
+              </div>
+            </router-link>
+          </h1>
+          <form class="search-bar-header hidden" :class="{ 'search-header': scrollPosition > 50 }">
+            <div>
+              <div class="sticky-search">
+                <img src="../assets/logo/magnifying-glass.png" alt />
+                <input type="text" value="Try Logo" />
+                <button class="search-header-btn">Search</button>
+              </div>
             </div>
-          </router-link>
-        </h1>
-        <div class="search-bar-header">
-          <div class="sticky-search">
-            <input type="text" value="search-header" />
-          </div>
+          </form>
+          <!-- <gig-filter
+          @setFilter="setFilter"
+          class="hidden"
+          :class="{ 'search-header-box': scrollPosition > 50 }"
+          />-->
         </div>
-        <!-- <gig-filter @setFilter="setFilter" /> -->
+        <nav class="nav">
+          <router-link to="/explore">
+            <a href>Explore</a>
+          </router-link>
+          <router-link to="/order-app">Become A Seller</router-link>
+          <router-link to="/">Login</router-link>
+          <router-link class="join" to>Join</router-link>
+        </nav>
       </div>
+<<<<<<< HEAD
+=======
       <nav class="nav">
         <router-link to="/explore">
           <a href>Explore</a>
@@ -27,6 +47,7 @@
         <router-link to="/">Login</router-link>
         <router-link class="join" to>Join</router-link>
       </nav>
+>>>>>>> 9edd6e05b92a7c0d0d4419c5ea5dd89487745c52
     </main>
   </header>
 </template>
@@ -42,7 +63,12 @@ export default {
 
 
 
+
     }
+  },
+  created() {
+    window.addEventListener('scroll', this.updateScroll);
+
   },
 
   methods: {
@@ -54,18 +80,16 @@ export default {
     //     this.stickyNav = entry.isIntersecting ? false : true;
     //   });
     // },
+
     updateScroll() {
-      this.scrollPosition = window.scrollY
-    },
-    handleScroll: function (evt, el) {
-      if (window.scrollY > 50) {
-        el.setAttribute(
-          'style',
-          'background-color=#fffff'
-        )
+      if (!this.isHome) {
+        console.log('isnt home');
+        return
       }
-      return window.scrollY > 100
-    }
+      this.scrollPosition = window.scrollY
+      // console.log(this.scrollPosition);
+    },
+
   },
 
 
@@ -77,6 +101,23 @@ export default {
     // this.headerObserver.observe(this.$refs.header);
     window.addEventListener('scroll', this.updateScroll);
   },
+  computed: {
+    isHome() {
+      return this.$route.path === '/'
+    }
+  },
+  // watch: {
+  //   '$route.path': {
+  //     immediate: true,
+  //     handler() {
+  //       console.log(this.$route.path);
+  //       this.scrollPosition > 50
+
+  //     }
+
+  //   },
+
+  // },
 
   components: {
     gigFilter

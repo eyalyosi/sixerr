@@ -1,5 +1,9 @@
 <template>
+<<<<<<< HEAD
     <section class="order-app main-layout">
+=======
+    <section class="main-layout">
+>>>>>>> ab6c45e58c6e879049f1a041ca570be3d3f2d6ea
         <table>
             <tr>
                 <th>Order ID</th>
