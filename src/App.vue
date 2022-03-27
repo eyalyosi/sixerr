@@ -1,12 +1,15 @@
 <template>
-  <section>
-    <app-header class="app-header" :class="{ change_color: scrollPosition > 50 }" />
+  <!-- <section> -->
 
+    <!-- //OFIR, I COMMENT THE HEADER FUNCTION UP BECAUSE I COULDNT 
+//SEE WHAT IM RENDERING, OR -->
+    <!-- <app-header class="app-header" :class="{ change_color: scrollPosition > 50 }" /> -->
+    <app-header class="app-header"/>
     <div>
       <router-view />
     </div>
     <app-footer />
-  </section>
+  <!-- </section> -->
 </template>
 
 <script>
