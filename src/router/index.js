@@ -21,6 +21,9 @@ const router = createRouter({
       path: '/explore',
       name: 'explore',
       component: explore,
+      meta: {
+        headerClass: 'border'
+      }
 
 
 
@@ -30,15 +33,28 @@ const router = createRouter({
       path: '/gig/:_id',
       name: 'gig-details',
       component: gigDetails,
+      meta: {
+        headerClass: 'border'
+      }
 
     },
     {
       path: '/order-app/:_id',
       name: 'order-app',
       component: orderApp,
-
-
+      meta: {
+        headerClass: 'border'
+      }
     },
+    // {
+    //   path: '/order-app',
+    //   name: 'order-app',
+    //   component: orderApp,
+    //   meta: {
+    //     headerClass: 'border'
+    //   }
+    // },
+    
 
   ]
 })

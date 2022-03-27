@@ -10,7 +10,8 @@ export const userService = {
     signup,
     logout,
     getLoggedinUser,
-    query
+    query,
+    getById
 };
 _createUsers()
 

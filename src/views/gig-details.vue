@@ -69,8 +69,38 @@
         </div>
         <div class="seller-description">{{ gig.description }}</div>
       </div>
-      <div class="rate-section"></div>
+      <div v-if="user" class="reviews-wrap" v-for="review in user.reviews" :key="review">
+        <ul class="review-list">
+          <li class="review-user">
+            <div class="user-profile-image">
+              <img :src="review.by.imgUrl" alt />
+            </div>
+            <div class="header-info">
+              <div class="reviewer-details">
+                <p>{{ review.by.fullname }}</p>
+                <div class="review-rating">
+                  <span class="star">⭐</span>
+                  <p>{{ review.rate }}</p>
+                </div>
+              </div>
+              <div class="reviewer-sub-details">
+                <div class="country">
+                  <img :src="review.by.flag" alt="" class="country-flag">
+                  <p>{{review.by.country}}</p>
+                </div>
+              </div>
+            </div>
+            <div class="review-description">
+              <p>{{review.txt}}</p>
+            </div>
+            <div class="review-published">
+              <p>{{review.reviewedAt}}</p>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
+
     <div class="check-out-section">
       <div class="check-out-part">
         <div class="checkout-title">
@@ -101,6 +131,7 @@
 import { gigService } from "../services/gig.service.js";
 import caruselDetails from "../components/carusel-details.vue";
 import { orderService } from "../services/order.service.js";
+import { userService } from "../services/user.service.js";
 export default {
   name: "gig-detail",
   data() {
@@ -108,7 +139,8 @@ export default {
       gig: null,
       images: '',
       rates: '',
-      orderToAdd: null
+      orderToAdd: null,
+      user: null
     };
   },
   created() {
@@ -124,12 +156,22 @@ export default {
       this.orderToAdd.seller = gig.owner.fullname
       // this.orderToAdd. = gig.price
       console.log('ORDER PRICE', this.orderToAdd.gig.price);
+
+      const userId = this.gig.owner._id
+      userService.getById(userId).then((user) => {
+        console.log(userId);
+        this.user = user
+        console.log(this.user);
+      })
     })
 
   },
   computed: {
     gigSellerImg() {
       return this.gig.owner.imgUrl;
+    },
+    userImg() {
+      return this.user.imgUrl;
     },
     gigImg() {
       return this.gig.image
@@ -144,7 +186,10 @@ export default {
     addOrder() {
       this.$store.dispatch({ type: 'addOrder', order: this.orderToAdd })
       this.$router.push(`/order-app/${this.gig._id}`);
-    }
+    },
+    // getUserById() {
+
+    // }
 
   },
   components: {
