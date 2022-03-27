@@ -1,12 +1,12 @@
 import { orderService } from '../../services/order.service'
 // import { socketService, SOCKET_EVENT_ORDER_ADDED, SOCKET_EVENT_ORDER_ABOUT_YOU } from '../../services/socket.service.js'
 
-export const orderStore = {
+export default {
     state: {
-        orders: []
+        orders: orderService.query()
     },
     getters: {
-        getOrders(state) {
+        orders(state) {
             return state.orders
         },
     },
@@ -14,7 +14,7 @@ export const orderStore = {
         setOrders(state, { orders }) {
             state.orders = orders;
         },
-        saveOrder(state, { order }) {
+        addOrder(state, { order }) {
             state.orders.push(order)
         },
         removeOrder(state, { orderId }) {
@@ -22,16 +22,16 @@ export const orderStore = {
         },
     },
     actions: {
-        loadOrders({ commit, state }) {
+        getOrders({ commit, state }) {
             orderService.query().then((orders) => {
                 commit({ type: 'setOrders', orders })
                 console.log(orders);
             })
         },
 
-        saveOrder({ commit, dispatch }, { order }) {
+        addOrder({ commit, dispatch }, { order }) {
             orderService.addOrder(order).then((order) => {
-                commit({ type: 'saveOrder', order })
+                commit({ type: 'addOrder', order })
             })
         },
 

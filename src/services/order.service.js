@@ -1,13 +1,14 @@
 // import { httpService } from './http-service'
 import { storageService } from './async-storage-service.js'
 import { utilService } from './util-service.js'
-const ORDER_KEY = 'order'
+const ORDER_KEY = 'orders'
 
 export const orderService = {
     query,
     addOrder,
     removeOrder,
-    getOrderById
+    getOrderById,
+    getEmptyOrder
 }
 
 _createOrders()
@@ -22,8 +23,7 @@ function getOrderById(orderId) {
 }
 
 function addOrder(order) {
-    if (order._id) return storageService.put(ORDER_KEY, order);
-    else return storageService.post(ORDER_KEY, order);
+    return storageService.post(ORDER_KEY, order);
 }
 
 function removeOrder(orderId) {
@@ -53,4 +53,20 @@ function _createOrders() {
         utilService.saveToStorage(ORDER_KEY, orders);
     }
     return orders;
+}
+
+
+
+function getEmptyOrder() {
+    return {
+        _id: '',
+        createdAt: new Date(),
+        buyer: '',
+        gig: {
+            _id: '',
+            name: '',
+            price: ''
+        },
+        status: 'pending'
+    };
 }

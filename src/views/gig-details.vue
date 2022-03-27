@@ -90,7 +90,7 @@
           </div>
         </div>
         <div class="buy-btn">
-          <button @click="saveOrder">Continue (${{ gig.price }})</button>
+          <button @click="addOrder">Continue (${{ gig.price }})</button>
         </div>
       </div>
     </div>
@@ -99,7 +99,8 @@
 
 <script>
 import { gigService } from "../services/gig.service.js";
-import caruselDetails from "../components/carusel-details.vue"
+import caruselDetails from "../components/carusel-details.vue";
+import { orderService } from "../services/order.service.js";
 export default {
   name: "gig-detail",
   data() {
@@ -107,7 +108,7 @@ export default {
       gig: null,
       images: '',
       rates: '',
-      orderToSeller: null
+      orderToAdd: null
     };
   },
   created() {
@@ -116,18 +117,14 @@ export default {
       this.gig = gig;
       this.images = gig.image
       this.rates = gig.owner.rate
-      console.log('rates:', this.rates);
+      this.orderToAdd = orderService.getEmptyOrder()
+      this.orderToAdd.gig._id = gig._id
+      this.orderToAdd.gig.name = gig.category
+      this.orderToAdd.gig.price = gig.price
+      this.orderToAdd.seller = gig.owner.fullname
+      // this.orderToAdd. = gig.price
+      console.log('ORDER PRICE', this.orderToAdd.gig.price);
     })
-  },
-  methods: {
-    saveOrder() {
-      const { _id } = this.$route.params;
-      console.log(_id);
-      this.$store.dispatch({ type: 'saveOrder', order: this.orderToSeller, id: _id }).then(() => {
-        this.$router.push('/order-app')
-      })
-    },
-
 
   },
   computed: {
@@ -137,9 +134,21 @@ export default {
     gigImg() {
       return this.gig.image
     },
+    orders() {
+      return this.$store.getters.orders
+    },
+
+  },
+
+  methods: {
+    addOrder() {
+      this.$store.dispatch({ type: 'addOrder', order: this.orderToAdd })
+      this.$router.push(`/order-app/${this.gig._id}`);
+    }
+
   },
   components: {
-    caruselDetails
-  },
+    caruselDetails,
+  }
 };
 </script>
