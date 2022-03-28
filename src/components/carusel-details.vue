@@ -115,10 +115,14 @@ export default {
 .vueperslides__arrow {
     max-width: 40px;
     opacity: none;
+    /* background-color: white; */
 }
 
 .vueperslides__arrow--next {
     right: -15px;
+    opacity: none;
+
+    
     
 }
 
