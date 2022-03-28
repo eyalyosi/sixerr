@@ -1,7 +1,7 @@
 .main-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(246px, 308px));
+    grid-template-columns: repeat(auto-fill, minmax(246px, 310px));
     grid-auto-rows: max-content;
-    gap: 25px;
+    gap: 32px;
     margin-top: 20px;
 }
