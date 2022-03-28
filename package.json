@@ -8,6 +8,8 @@
     "test:unit": "vitest --environment jsdom"
   },
   "dependencies": {
+    "@coreui/coreui": "^4.1.3",
+    "@coreui/vue": "^4.2.0",
     "@dongido/vue-viaudio": "^0.3.5",
     "agile": "^0.0.2",
     "axios": "^0.26.1",
