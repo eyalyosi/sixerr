@@ -1,5 +1,5 @@
 <template>
-    <div class="hero-section main-layout flex space-between">
+    <div class="hero-section main-layout grid">
         <div class="hero-box">
             <div class="hero-content">
                 <h1>
@@ -34,7 +34,9 @@
         </div>
     </div>
     <Transition>
-        <img class="hero-img" :src="image" alt="hero image" />
+        <div class="hero-img">
+            <img :src="image" alt="hero image" />
+        </div>
     </Transition>
 </template>
 <script>
@@ -43,18 +45,20 @@ export default {
     data() {
         return {
             images: [
-                'https://fiverr-res.cloudinary.com/image/upload/q_auto,f_auto/v1/attachments/generic_asset/asset/bb5958e41c91bb37f4afe2a318b71599-1599344049970/bg-hero-5-1792-x1.png',
-                'https://fiverr-res.cloudinary.com/image/upload/q_auto,f_auto/v1/attachments/generic_asset/asset/bb5958e41c91bb37f4afe2a318b71599-1599344049983/bg-hero-1-1792-x1.png',
-                'https://fiverr-res.cloudinary.com/image/upload/q_auto,f_auto/v1/attachments/generic_asset/asset/93085acc959671e9e9e77f3ca8147f82-1599427734108/bg-hero-4-1792-x1.png',
-                'https://fiverr-res.cloudinary.com/image/upload/q_auto,f_auto/v1/attachments/generic_asset/asset/2413b8415dda9dbd7756d02cb87cd4b1-1599595203045/bg-hero-2-1792-x1.png',
+                'https://ninerr.herokuapp.com/static/media/28-9-4.9d5e2f7a99fd2b32073a.jpg',
+                'https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?cs=srgb&dl=pexels-moose-photos-1036623.jpg&fm=jpg',
+                'https://higherr-app.herokuapp.com/img/4.d2278b78.jpg',
+                'https://images.unsplash.com/photo-1618086734768-dab4ca3c2c75?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80',
+                'https://images.unsplash.com/photo-1568604032475-10f1a56527c9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
 
             ],
-            image: 'https://fiverr-res.cloudinary.com/image/upload/q_auto,f_auto/v1/attachments/generic_asset/asset/bb5958e41c91bb37f4afe2a318b71599-1599344049970/bg-hero-5-1792-x1.png',
+            image: 'https://ninerr.herokuapp.com/static/media/28-9-4.9d5e2f7a99fd2b32073a.jpg',
             sellerNames: [
                 'Gabrielle, Video Editor',
                 'Andrea, Fashion Designer',
-                'Jonathan, Bar Owner',
-                'Moon, Marketing Expert',
+                'Suzan, Bar Owner',
+                'James, Marketing Expert',
+                'Christian, Mixing Engineer'
 
             ],
             sellerName: 'Gabrielle, Video Editor'
