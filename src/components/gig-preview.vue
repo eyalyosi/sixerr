@@ -63,7 +63,7 @@ export default {
       return this.gigService.createCatergories();
     },
     images() {
-      return this.gig.image;
+      return this.gig.image[0];
     },
     gigPrice(){
       return this.gig.price.toFixed(0)
