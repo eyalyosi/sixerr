@@ -1,16 +1,20 @@
 <template>
-    <div class="hero-section main-layout grid">
-        <div class="hero-box">
-            <div class="hero-content">
-                <h1>
-                    Find the perfect
-                    <span>freelance</span>
-                    <br />services for your business
-                </h1>
-            </div>
-            <div class="hero-search">
-                <gig-filter @setFilter="setFilter" />
-            </div>
+    <div class="hero-section main-layout">
+        <div class="hero-img">
+            <img :src="image" alt="hero image" />
+        </div>
+        <div class="hero-box main-layout">
+            <!-- <div class="hero-container flex column space-between"> -->
+            <!-- <div class="hero-content"> -->
+            <h1>
+                Find the perfect
+                <span>freelance</span>
+                <br />services for your business
+            </h1>
+            <!-- </div> -->
+            <!-- <div class="hero-search"> -->
+            <gig-filter @setFilter="setFilter" />
+            <!-- </div> -->
             <div class="popular-categories">
                 <p>Popular:</p>
                 <span>
@@ -26,18 +30,14 @@
                     <a>Music</a>
                 </span>
             </div>
-        </div>
+            <!-- </div> -->
 
-        <div class="seller-star-name">
-            <p class="stars-hero">⭐⭐⭐⭐⭐</p>
-            <p class="seller-name-hero">{{ sellerName }}</p>
+            <div class="seller-star-name">
+                <p class="stars-hero">⭐⭐⭐⭐⭐</p>
+                <p class="seller-name-hero">{{ sellerName }}</p>
+            </div>
         </div>
     </div>
-    <Transition>
-        <div class="hero-img">
-            <img :src="image" alt="hero image" />
-        </div>
-    </Transition>
 </template>
 <script>
 import gigFilter from "./gig-filter.vue";
