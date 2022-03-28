@@ -74,13 +74,14 @@ export default {
     gigRate() {
       const userId = this.gig.owner._id
       userService.getById(userId).then((user) => {
-        
-        const res =
-          user.reviews.reduce((acc, review) => {
-          acc += +review.rate;
-          return acc;
-        }, 0) /user.reviews.length;
-      return res.toFixed(1);
+        // this.user = user
+        // console.log(this.user);
+      //   const res =
+      //     user.reviews.reduce((acc, review) => {
+      //     acc += +review.rate;
+      //     return acc;
+      //   }, 0) /user.reviews.length;
+      // return res.toFixed(1);
       })
     },
     gigReviewersLength() {
