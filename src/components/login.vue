@@ -5,12 +5,16 @@
             <button @click="logout">Logout</button>
         </div>
         <div class="login-container" v-if="!loggedinUser && !isSignUp">
-            <h3>Login</h3>
+            <h3>Sign In to Sixerr</h3>
             <form @submit.prevent="login" class="login-details">
                 <input type="text" v-model="username" placeholder="Enter username" />
                 <input type="text" v-model="password" placeholder="Enter password" />
-                <button>Login</button>
+                <button>Continue</button>
             </form>
+            <div class="login-footer flex">
+                <p>Not a member yet?</p>
+                <a href>Join Now</a>
+            </div>
         </div>
     </section>
 </template>

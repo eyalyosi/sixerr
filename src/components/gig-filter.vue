@@ -6,7 +6,7 @@
                 @change="setFilter"
                 v-model="filterBy.title"
                 type="text"
-                placeholder="Try building mobile app"
+                placeholder="Try &quot;building mobile app&quot; "
                 class="search"
             />
             <button class="search-btn">Search</button>
