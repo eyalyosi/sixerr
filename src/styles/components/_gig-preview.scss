@@ -70,10 +70,11 @@
 
 .rating-star-preview {
   color: #ffbe5b;
-  padding-inline-end: 3px;
-  padding-right: 5px;
+  padding-inline-end: 2px;
+  font-weight: 700;
   svg {
     vertical-align: -0.16em;
+    margin-right: 5px;
   }
 }
 
@@ -111,4 +112,55 @@
   // line-height: 0;
   position: relative;
   margin-left: 1px;
+}
+
+.rating-length {
+  font-size: 14px;
+  font-family: "macan-regular";
+  color: #b5b6ba;
+  font-weight: 400;
+  margin-left: 2px;
+}
+
+.dont-show {
+  display: none;
+}
+
+.el-carousel__indicator {
+  .el-carousel__button {
+    // padding: 0px;
+    border-radius: 50%;
+    width: 5px;
+    height: 5px;
+    color: white;
+  }
+  .active {
+    transform: scale(1.2);
+  }
+}
+
+.el-carousel__container {
+  .el-carousel__arrow--left {
+    left: 0;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+  .el-carousel__arrow--right {
+    right: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+
+  .el-carousel__arrow {
+    background-color: white;
+    color: black;
+    width: 25px;
+    height: 25px;
+  }
+  .el-carousel__arrow:hover {
+    background-color: white;
+    color: black;
+    width: 25px;
+    height: 25px;
+  }
 }

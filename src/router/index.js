@@ -25,10 +25,14 @@ const router = createRouter({
       meta: {
         headerClass: 'border relative'
       }
-
-
-
-
+    },
+    {
+      path: '/explore/:category',
+      name: 'explore-category',
+      component: explore,
+      meta: {
+        headerClass: 'border relative'
+      }
     },
     {
       path: '/gig/:_id',
@@ -46,8 +50,6 @@ const router = createRouter({
       meta: {
         headerClass: 'border relative'
       }
-
-
     },
     // {
     //   path: '/order-app',

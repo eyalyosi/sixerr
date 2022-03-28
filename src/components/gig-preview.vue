@@ -1,9 +1,9 @@
 <template>
-  <div class="gig-preview flex" v-if="gig">
+  <div class="gig-preview flex" v-if="gig && gigRate">
     <article class="gig-preview-box" @click="goToDetail">
       <div class="gig-img-box">
-        <!-- <carusel-gigpreview :images="images"></carusel-gigpreview> -->
-        <img :src="images" alt="" />
+        <carusel-gigpreview :images="images"></carusel-gigpreview>
+        <!-- <img :src="images" alt="" /> -->
       </div>
       <section class="preview-card">
         <div class="seller-info flex">
@@ -19,8 +19,8 @@
 
       <div class="gig-title">{{ gig.title }}</div>
       <div class="gig-rate flex">
-        <p class="rating-star-preview"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" width="15" height="15"><path fill="currentColor" d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"></path></svg>{{ gigRate }}</p>
-        <p class="rating-length">({{ gigReviewersLength }})</p>
+        <p class="rating-star-preview"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" width="15" height="15"><path fill="currentColor" d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"></path></svg>{{ avgRate }}</p>
+        <p class="rating-length">({{ totalReviews }})</p>
       </div>
       <section class="footer-preview flex space-between">
         <!-- <span class="like">❤</span> -->
@@ -29,8 +29,11 @@
           <small class="small">Starting at</small>
           <span>₪{{gigPrice}}<sup class="price-cent">{{gigCent}}</sup></span>
         </div>
-        
-      </section>
+       
+      </section> 
+     
+
+ 
     </article>
   </div>
 </template>
@@ -44,13 +47,20 @@ export default {
   name: "gig-preview",
   props: {
     gig: Object,
-    user: null,
-    avgRate: null,
-    reviews: null
+  },
+  data() {
+    return {
+       user: null,
+       avgRate:null,
+       totalReviews:null,
+    }
   },
   components: {
     gigService,
     caruselGigpreview,
+  },
+  created() {
+    this.gigRate()
   },
   computed: {
     gigImg() {
@@ -63,7 +73,7 @@ export default {
       return this.gigService.createCatergories();
     },
     images() {
-      return this.gig.image[0];
+      return this.gig.image;
     },
     gigPrice(){
       return this.gig.price.toFixed(0)
@@ -71,31 +81,24 @@ export default {
     gigCent(){
       return this.gig.price.toString().split('.')[1]
     },
-    gigRate() {
-      const userId = this.gig.owner._id
-      userService.getById(userId).then((user) => {
-        // this.user = user
-        // console.log(this.user);
-      //   const res =
-      //     user.reviews.reduce((acc, review) => {
-      //     acc += +review.rate;
-      //     return acc;
-      //   }, 0) /user.reviews.length;
-      // return res.toFixed(1);
-      })
-    },
-    gigReviewersLength() {
-      //  const userId = this.gig.owner._id
-      //  userService.getById(userId).then((user) => {
-      //    this.reviews = user.reviews.length
-      // })
-      // return this.gig.reviewers.length;
-    },
   },
   methods: {
     goToDetail() {
       this.$router.push(`/gig/${this.gig._id}`);
     },
+    async gigRate() {
+      const userId = this.gig.owner._id
+      const user = await userService.getById(userId)
+      this.user = user
+        if(!user) return
+         const res = user.reviews.reduce((acc, review) => {
+          acc += +review.rate;
+          return acc;
+        }, 0) /user.reviews.length;
+        this.totalReviews = user.reviews.length
+        this.avgRate = res.toFixed(1);
+      return res.toFixed(1);
+    }
   },
 };
 </script>

@@ -175,8 +175,6 @@ function _createGigs() {
             {
                 _id: "u104",
                 image: ["https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/128385654/original/7409f9154c0c92f1376f1c090f614aa6ed22b3f2/do-data-entry-macros-in-excel.jpg",
-                    "https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs2/128385654/original/b35185bc2ec0760e68658863e3def7a653b922d4/do-data-entry-macros-in-excel.png",
-                    "https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs3/128385654/original/172c50f3c8f0be4ff746171721832115ca6c4c80/do-data-entry-macros-in-excel.png",
                 "https://fiverr-res.cloudinary.com/images/t_smartwm/t_main1,q_auto,f_auto,q_auto,f_auto/attachments/delivery/asset/e8789aaabe4e46da1523448c2a7914c9-1629891941/Capture1/do-accurate-data-entry-web-research-and-data-conversion.PNG",
                 ],
                 title: "I will do data entry,web research and lead generation work in excel",
@@ -615,7 +613,6 @@ function _createGigs() {
                 image: ["https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/157827646/original/8f14f50a81ddd1a60b4af990ea5154a26975d150.jpg",
                     "https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/238318178/original/a91619b8820c722dbd20e77506bb2f12be35c314/write-an-attractive-instagram-bio-with-free-hashtags-for-you.png",
                     "https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs2/238318178/original/7a95376df49d1f75d75d78a625f0a53aa4533f23/write-an-attractive-instagram-bio-with-free-hashtags-for-you.png",
-                    "https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs3/175521564/original/16e7d2dc1c05af1f56ddef9399131329e4d473ce/write-you-a-smart-instagram-bio.jpg",
                     "https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs2/207255299/original/9304a69972a78f1224211c7fdb5d074f311fa7ee/write-and-optimised-attractive-bio-for-your-instagram-profile.png",
                     "https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs3/207255299/original/920c950327633ff2e6a7874f2044c7d1cf80f01b/write-and-optimised-attractive-bio-for-your-instagram-profile.png"
                 ],
@@ -1240,7 +1237,7 @@ function _createGigs() {
                     "https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs2/207255299/original/9304a69972a78f1224211c7fdb5d074f311fa7ee/write-and-optimised-attractive-bio-for-your-instagram-profile.png",
                     "https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs3/207255299/original/920c950327633ff2e6a7874f2044c7d1cf80f01b/write-and-optimised-attractive-bio-for-your-instagram-profile.png"
                 ],
-                title: "I will do viral youtube channel promotion and marketing to increase targeted audience",
+                title: "I will do viral youtube channel promotion and marketing increase",
                 description: "Welcome to my Professional YouTube Channel Promotion Service.... \n Are You Looking for Someone who can Do Organic Promotion of your YT Channel? Do You Think Your You Tube Channel is Not Profitable? Don’t Worried, you came to the right place I will help you grow your You Tube Channel. If you're looking to grow your brand with Natural Engagement, this is the perfect service for you!",
                 price: 118.11,
                 owner: {
@@ -1452,38 +1449,38 @@ function _createGigs() {
                 ],
                 likedByUsers: ['mini-user'] // for user-wishlist : use $in
             },
-            {
-                _id: "9999",
-                image: ["https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/105997354/original/a262c856d8b49afd3cbf5ac043fb9626c19b98ba/data-mining-and-web-scraping.jpg",
-                    "https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs2/105997354/original/76103c797f2a34b39be7a8124fb61bcdb21e20ef/data-mining-and-web-scraping.jpg",
-                    "https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs3/128385654/original/172c50f3c8f0be4ff746171721832115ca6c4c80/do-data-entry-macros-in-excel.png"
-                ],
-                title: "I will do data entry, web scraping and automation tasks",
-                description: "If you looking for an professional Data Collection specialist you are at right place. More than 5 years experience and 1k+ five-star reviews in Data Entry / Web scraping / Data mining / Data scraping.",
-                price: 50.62,
-                owner: {
-                    _id: "u9999",
-                    fullname: "ketulmakwana",
-                    imgUrl: "https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/e8e9835464607c795b09f15e34e0a13a-1581247410698/87851fa6-5bd7-4484-ae82-a1a9686e4fa0.JPG",
-                    level: 1,
-                    rate: 5
-                },
-                loc: "India",
-                memberSince: "Dec 2014",
-                avgResponceTime: "2 hours",
-                lastDelivery: "1 day",
-                daysToMake: 1,
-                about: "I have 5 years of experience in Data/Web scraping, Data collection, Data entry, Data mining and Web research. \n My goal is to provide accurate and high quality work at a competitively low cost.",
-                category: "Data Entry",
-                tags: [
-                    "web research",
-                    "data entry",
-                    "web scraping",
-                    "automation tasks",
-                    "data entry typing"
-                ],
-                likedByUsers: ['mini-user'] // for user-wishlist : use $in
-            },
+            // {
+            //     _id: "9999",
+            //     image: ["https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/105997354/original/a262c856d8b49afd3cbf5ac043fb9626c19b98ba/data-mining-and-web-scraping.jpg",
+            //         "https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs2/105997354/original/76103c797f2a34b39be7a8124fb61bcdb21e20ef/data-mining-and-web-scraping.jpg",
+            //         "https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs3/128385654/original/172c50f3c8f0be4ff746171721832115ca6c4c80/do-data-entry-macros-in-excel.png"
+            //     ],
+            //     title: "I will do data entry, web scraping and automation tasks",
+            //     description: "If you looking for an professional Data Collection specialist you are at right place. More than 5 years experience and 1k+ five-star reviews in Data Entry / Web scraping / Data mining / Data scraping.",
+            //     price: 50.62,
+            //     owner: {
+            //         _id: "u9999",
+            //         fullname: "ketulmakwana",
+            //         imgUrl: "https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/e8e9835464607c795b09f15e34e0a13a-1581247410698/87851fa6-5bd7-4484-ae82-a1a9686e4fa0.JPG",
+            //         level: 1,
+            //         rate: 5
+            //     },
+            //     loc: "India",
+            //     memberSince: "Dec 2014",
+            //     avgResponceTime: "2 hours",
+            //     lastDelivery: "1 day",
+            //     daysToMake: 1,
+            //     about: "I have 5 years of experience in Data/Web scraping, Data collection, Data entry, Data mining and Web research. \n My goal is to provide accurate and high quality work at a competitively low cost.",
+            //     category: "Data Entry",
+            //     tags: [
+            //         "web research",
+            //         "data entry",
+            //         "web scraping",
+            //         "automation tasks",
+            //         "data entry typing"
+            //     ],
+            //     likedByUsers: ['mini-user'] // for user-wishlist : use $in
+            // },
         ],
             utilService.saveToStorage(GIGS_KEY, gigs);
     }
@@ -1493,32 +1490,38 @@ function _createGigs() {
 function createCatergories() {
     const categories = [{
         name: 'Arts and Crafts',
+        type: 'arts-crafts',
         txt: 'Outsource your arts and crafts.',
         img: 'https://upload.wikimedia.org/wikipedia/commons/b/b4/William_Morris_design_for_Trellis_wallpaper_1862.jpg'
 
     },
     {
         name: 'Data Entry',
+        type: 'data-entry',
         txt: 'Learn your Business',
         img: 'https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_2.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741664/data-entry-2x.png'
     },
     {
         name: 'Logo design',
+        type: 'logo-design',
         txt: 'Build your brand',
         img: 'https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_2.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741678/logo-design-2x.png'
     },
     {
         name: 'Marketing',
+        type: 'marketing',
         txt: 'Build your brand. Grow your business.',
         img: 'https://www.salesforce.com/content/dam/blogs/ca/Blog%20Posts/10-Ways-to-Create-an-Email-Marketing-List-opengraph.png'
     },
     {
         name: 'Research and Summeries',
+        type: 'research-summeries',
         txt: 'Explore more',
         img: 'https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/192053463/original/d52627959e5a21f2f9a104c22c8005a2e898ec0a/write-effective-and-inspiring-articles.png'
     },
     {
         name: 'Write & Translation',
+        type: 'write-translation',
         txt: 'Go global',
         img: 'https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_2.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741674/translation-2x.png'
     },
@@ -1530,6 +1533,7 @@ function createCatergories() {
     // },
     {
         name: 'Video explainers',
+        type: 'video-explainers',
         txt: 'Engage your audience',
         img: 'https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_2.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741663/animated-explainer-2x.png'
     },

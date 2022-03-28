@@ -5,6 +5,7 @@ import store from './store/index.js'
 import './styles/styles.scss'
 import elementPlus from 'element-plus'
 import VueCarousel from '@chenfengyuan/vue-carousel';
+import 'element-plus/dist/index.css'
 
 const app = createApp(App)
 app.use(elementPlus)

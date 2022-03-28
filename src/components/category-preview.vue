@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   
   <li class="category-preview-box" @click="explore(category.name)">
     <div class="category-txt-name-box">
@@ -26,8 +26,9 @@ export default {
     explore(filter) {
       console.log(filter);
       this.$emit("explore", filter);
-      this.$router.push("/explore");
+      console.log(`/explore/${this.category.name}`);
+      this.$router.push(`/explore/${this.category.name}`);
     },
   },
 };
-</script>
+</script> -->

@@ -1,6 +1,9 @@
 <template>
-  <section class="main-grid main-layout">
-    <gig-preview v-for="gig in gigs" :gig="gig" :key="gig._id" />
+  <section class="main-layout">
+    
+    <div class="main-grid ">
+      <gig-preview v-for="gig in gigs" :gig="gig" :key="gig._id" />
+    </div>
   </section>
 </template>
 
@@ -21,13 +24,8 @@ export default {
   components: {
     gigPreview,
   },
-  methods: {
-
-  },
-  computed: {
-
-  },
-  created() {
-  },
+  methods: {},
+  computed: {},
+  created() {},
 };
 </script>

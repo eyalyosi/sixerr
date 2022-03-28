@@ -11,32 +11,38 @@ export default {
       return state.categories;
     },
     getGigs({ gigs, filterBy }) {
+      console.log(filterBy);
       if (!filterBy) return gigs
       const gigsDisplay = JSON.parse(JSON.stringify(gigs))
-      if (filterBy === "Data Entry") {
-        return gigsDisplay.filter((gig) => gig.category === filterBy)
+
+      if(filterBy.category) {
+        return gigsDisplay.filter((gig) => gig.category === filterBy.category)
       }
-      if (filterBy === "Arts and Crafts") {
-        return gigsDisplay.filter((gig) => gig.category === filterBy)
-      }
-      if (filterBy === "Marketing") {
-        return gigsDisplay.filter((gig) => gig.category === filterBy)
-      }
-      if (filterBy === "Translation") {
-        return gigsDisplay.filter((gig) => gig.category === filterBy)
-      }
-      if (filterBy === "Research and Summeries") {
-        return gigsDisplay.filter((gig) => gig.category === filterBy)
-      }
-      if (filterBy === "Write & Translation") {
-        return gigsDisplay.filter((gig) => gig.category === filterBy)
-      }
-      if (filterBy === "Video explainers") {
-        return gigsDisplay.filter((gig) => gig.category === filterBy)
-      }
-      if (filterBy === "Logo design") {
-        return gigsDisplay.filter((gig) => gig.category === filterBy)
-      }
+
+      // if (filterBy.category === "Data Entry") {
+      //   return gigsDisplay.filter((gig) => gig.category === filterBy.category)
+      // }
+      // if (filterBy.category === "Arts and Crafts") {
+      //   return gigsDisplay.filter((gig) => gig.category === filterBy)
+      // }
+      // if (filterBy.category === "Marketing") {
+      //   return gigsDisplay.filter((gig) => gig.category === filterBy)
+      // }
+      // if (filterBy.category === "Translation") {
+      //   return gigsDisplay.filter((gig) => gig.category === filterBy)
+      // }
+      // if (filterBy.category === "Research and Summeries") {
+      //   return gigsDisplay.filter((gig) => gig.category === filterBy)
+      // }
+      // if (filterBy.category === "Write & Translation") {
+      //   return gigsDisplay.filter((gig) => gig.category === filterBy)
+      // }
+      // if (filterBy.category === "Video explainers") {
+      //   return gigsDisplay.filter((gig) => gig.category === filterBy)
+      // }
+      // if (filterBy.category === "Logo design") {
+      //   return gigsDisplay.filter((gig) => gig.category === filterBy)
+      // }
       const regex = new RegExp(filterBy.title, 'i')
       return gigsDisplay.filter((gig) => regex.test(gig.title))
     },

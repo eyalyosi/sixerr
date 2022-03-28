@@ -1234,6 +1234,7 @@ function _createUsers() {
                         //reivew- on his gig
                         _id: "r1124",
                         txt: "Translated 3 different json files for me, quick and accurate service, and seller is very easy to communicate with. Will order again in the future",
+                        rate: 5,
                         reviewedAt: "Published 1 month ago",
                         by: {
                             //by who
