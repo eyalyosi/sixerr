@@ -1,7 +1,17 @@
 
+.hero-section{
+    height: 100vh;
+    position: relative;
+    max-width: 100%;
+}
+
+
+
+
+
  .hero-img{
     // height: auto;   
-    width: 100vw;
+    // width: 100vw;
     // object-fit: cover;
     height: 680px;
     img{
@@ -14,51 +24,74 @@
  }
 
 
-.hero-content{
-    font-family: 'Roboto', sans-serif;
-    position: absolute;
-    top: 30%;
-    left: 25%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 2em;
-        span {
-            font-family: 'Merienda One', cursive;
+// .hero-content{
+//     font-family: 'Roboto', sans-serif;
+//     position: absolute;
+//     top: 30%;
+//     left: 25%;
+//     transform: translate(-50%, -50%);
+//     color: white;
+//     font-size: 2em;
+//         span {
+//             font-family: 'Merienda One', cursive;
 
-            font-weight: 400;
-        }
-}
+//             font-weight: 400;
+//         }
+// }
 .hero-box{
-display: flex;
-justify-content: flex-start;
-flex-direction: column;
+// display: flex;
+// justify-content: flex-start;
+// flex-direction: column;
 // z-index: 80;
-}
+    color: #fff;
+    position: absolute;
+    top: 80px;
+    z-index: 2;
+    right: 53.5%;
+    h1{
+        font-family: 'macan-light';
+        font-size: 2.8em;
+        font-weight: 700;
+        line-height: 56px;
+        margin-top: 25vh;
+        padding-bottom: 24px;
+    }
+    span{
+    font-family: 'Merienda One', cursive;
+
+                font-weight: 400;
+    }
+
+    }
+
+
+
 .seller-star-name{
    display: flex;
    max-width: 1340px;
    justify-content: flex-end;
-   align-items: flex-start;
+   align-items: flex-end;
    width: 100%;
    flex-direction: column;
-   // position: absolute;
+   position: absolute;
+   right: 40px;
    // top: 72%;
    // left: 82%;
    .seller-name-hero{
        font-family: 'Roboto', sans-serif;
        font-size: 1em;
        font-weight: bold;
-       position: absolute;
-       bottom: 22%;
-       right: 5%;
+    //    position: absolute;
+    //    bottom: 22%;
+    //    right: 5%;
        color: white;
        margin: 0
    }
    .stars-hero{
        margin: 0;
-       position: absolute;
-       bottom: 25%;
-       right: 8%;
+    //    position: absolute;
+    //    bottom: 25%;
+    //    right: 8%;
    }
 }
 // .stars-hero{
@@ -79,10 +112,10 @@ flex-direction: column;
     padding-top: 24px;
     font-family: 'Roboto', sans-serif;
     // font-size: 1.2em;
-    position: absolute;
-    top: 55%;
-    left: 25.5%;
-    transform: translate(-50%, -50%); 
+    // position: absolute;
+    // top: 55%;
+    // left: 25.5%;
+    // transform: translate(-50%, -50%); 
     color: white;
   
     a{
@@ -103,7 +136,7 @@ flex-direction: column;
     background-color: transparent;
     line-height: 24px;
     font-weight: 600;
-    padding: 1px 12px 0;
+    padding: 6px 12px 6px;
     border: 1px solid #fff;
     border-radius: 40px;
     transition: all .2s ease-in-out;
@@ -154,7 +187,7 @@ form>* {
            height: 100%;
            margin: 0;
            width: 100%;
-           padding: 14px;
+           padding: 13.5px;
            padding-left:30px;
            flex: 0 0 auto;
    };
@@ -180,39 +213,37 @@ form>* {
 .search-section{
     display: flex;
     align-items: center;
-
-    gap: 2px;
     // border: 1px solid #c2c2c2 ;
     border-radius: 3px;
     img {
         margin-left: 4px;
         position:absolute;
-        bottom:13px;
+        // bottom:13px;
         width:20px;
         height:20px;
     }
 
 }
-.search {
-   align-items: center;
-   background-color: #fff;
-   display: flex;
-   justify-content: center;
-   margin: 0;
-   width: 100%;
-   font-size: 16px;
-   height: 47px;
-   flex: 1 1 auto;
-   padding: 7px 7px 7px 44px;
-   border-radius: 3px;
-   border: 1px solid #C5C6C9;
-   border-color: #DADBDD;
-   box-shadow: none;
-   margin-bottom: 0;
-   border-radius: 4px 0 0 4px;
-   border-right: 0;
-   outline: none;
-}
+// .search {
+//    align-items: center;
+//    background-color: #fff;
+//    display: flex;
+//    justify-content: center;
+//    margin: 0;
+//    width: 100%;
+//    font-size: 16px;
+//    height: 47px;
+//    flex: 1 1 auto;
+//    padding: 7px 7px 7px 44px;
+//    border-radius: 3px;
+//    border: 1px solid #C5C6C9;
+//    border-color: #DADBDD;
+//    box-shadow: none;
+//    margin-bottom: 0;
+//    border-radius: 4px 0 0 4px;
+//    border-right: 0;
+//    outline: none;
+// }
 .search-header {
    height: 35px;
 }
