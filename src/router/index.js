@@ -23,7 +23,7 @@ const router = createRouter({
       name: 'explore',
       component: explore,
       meta: {
-        headerClass: 'border'
+        headerClass: 'border relative'
       }
 
 
@@ -35,7 +35,7 @@ const router = createRouter({
       name: 'gig-details',
       component: gigDetails,
       meta: {
-        headerClass: 'border'
+        headerClass: 'border relative'
       }
 
     },
@@ -44,7 +44,7 @@ const router = createRouter({
       name: 'order-app',
       component: orderApp,
       meta: {
-        headerClass: 'border'
+        headerClass: 'border relative'
       }
 
 
@@ -57,7 +57,7 @@ const router = createRouter({
     //     headerClass: 'border'
     //   }
     // },
-    
+
 
   ]
 })
