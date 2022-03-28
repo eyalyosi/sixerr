@@ -29,17 +29,17 @@
           />-->
         </div>
         <nav class="nav">
-          <router-link to="/explore">
+          <router-link to="/explore" >
             <a :class="$route.meta.logoClass" href>Explore</a>
           </router-link>
           <router-link :class="$route.meta.logoClass" to="/order-app">Become A Seller</router-link>
           <a :class="$route.meta.logoClass">Login</a>
           <a class="join">Join</a>
           <div class="login-modal" v-if="login">
-            <login />
+            <!-- <login /> -->
           </div>
           <div class="signup-modal" v-if="signup">
-            <signup />
+            <!-- <signup /> -->
           </div>
         </nav>
       </div>
@@ -84,7 +84,7 @@ export default {
 
     updateScroll() {
       if (!this.isHome) {
-        console.log('isnt home');
+        // console.log('isnt home');
         return
       }
       this.scrollPosition = window.scrollY

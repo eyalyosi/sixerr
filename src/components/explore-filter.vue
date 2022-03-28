@@ -1,5 +1,5 @@
 <template>
-  <section class="explore-filter">
+  <section class="explore-filter main-layout">
     <el-select
       @change="setFilter"
       v-model="filterBy.delivery"
@@ -25,23 +25,23 @@ export default {
       filterBy: {
         delivery: ref(""),
         title: "",
-        category: null
+        category: null,
       },
       options: [
         {
-          value: "24",
+          value: 1,
           label: "Express 24H",
         },
         {
-          value: "3",
+          value: 3,
           label: "Up to 3 days",
         },
         {
-          value: "7",
+          value: 7,
           label: "Up to 7 days",
         },
         {
-          value: "all",
+          value: Infinity,
           label: "Anytime",
         },
       ],
@@ -49,8 +49,17 @@ export default {
   },
   methods: {
     setFilter() {
-        // console.log(this.filterBy);
-        this.$emit("setFilter", JSON.parse(JSON.stringify(this.filterBy)));
+      const { category } = this.$route.params;
+      // console.log(category);
+      // // if (!category)
+      // console.log(this.filterBy.delivery);
+      
+      const delivery =  this.filterBy.delivery 
+      const filterBy = { category, delivery};
+      // console.log(filterBy);
+
+      // console.log(this.filterBy);
+      this.$emit("setFilter", JSON.parse(JSON.stringify(filterBy)));
     },
   },
 };

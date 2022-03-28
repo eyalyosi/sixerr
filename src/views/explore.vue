@@ -14,6 +14,7 @@ export default {
   },
   methods: {
     setFilter(filterBy) {
+      console.log(filterBy);
       this.$store.dispatch({ type: "setFilter", filterBy });
     },
   },
@@ -23,10 +24,14 @@ export default {
     },
   },
   created() {
-    const {category} = this.$route.params;
-    const filterBy = {category}
-    console.log(filterBy);
-    this.$store.dispatch({ type: "setFilter", filterBy });
+
+    // if (!category) {
+    //   console.log('sddsf');
+    // }
+    // // console.log();
+    // const filterBy = {}
+    // // console.log(filterBy);
+    this.$store.dispatch({ type: "setFilter", filterBy: {} });
   },
   components: {
     gigList,

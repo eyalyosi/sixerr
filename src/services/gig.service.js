@@ -323,7 +323,7 @@ function _createGigs() {
                 memberSince: "Feb 2021",
                 avgResponceTime: "1 hour",
                 lastDelivery: "about 9 hours",
-                daysToMake: 2,
+                daysToMake: 7,
                 about: "Hello Welcome to AMA Studio. If You are looking for Explainer video or Want to share your Story With World in Creative Way Or Maybe you launched a music and thinking about a video for it well you came to the right place, here in ama studio we provide professional animation with 3 different styles, we also provide scriptwriting and professional voiceovers with multiple gender and multiple accents so what are you waiting for Contact us Now.",
                 category: "Video explainers",
                 tags: [
@@ -390,7 +390,7 @@ function _createGigs() {
                 memberSince: "Dec 2012",
                 avgResponceTime: "2 hours",
                 lastDelivery: "about 2 hours",
-                daysToMake: 2,
+                daysToMake: 1,
                 about: "Online Marketing professional with 20 years of experience. After running websites, paid-ads, blogs, and e-shops, in 2012 it was clear that video was essential for Internet Marketing and I began creating whiteboard and animated explainers, which quickly became a passion. I decided to start offering those services to others on Fiverr and since then I have gathered a great team of artists in order to provide quality animation work at affordable prices.",
                 category: "Video explainers",
                 tags: [
@@ -421,7 +421,7 @@ function _createGigs() {
                 memberSince: "Nov 2021",
                 avgResponceTime: "2 hours",
                 lastDelivery: "1 week",
-                daysToMake: 2,
+                daysToMake: 3,
                 about: "Hi guys! I am a native level speaker (reader, writer, typer, dreamer) of Hebrew and English, and I live in beautiful Israel. I can translate English to Hebrew and Hebrew to English, for any type of content you need - articles, blog posts, social media posts, ads, books, presentation, reports and many more. I am SUPER organised and LOVE what I do. So let's start working on your projects! Contact me :)",
                 category: "Write & Translation",
                 tags: [
@@ -454,7 +454,7 @@ function _createGigs() {
                 memberSince: "Jun 2014",
                 avgResponceTime: "2 hours",
                 lastDelivery: "about 14 hours",
-                daysToMake: 2,
+                daysToMake: 1,
                 about: "In 2014, I joined Fiverr to offer professional Russian to English and English to Russian translation services. I hold a Master of Arts degree in Spanish and English and graduated from Russian Military University in 2009. I worked in Uganda, Thailand, Russia, and several other countries, and I'm open to all cultures and nations. I have huge experience in the field of Russian and English philology. I really love dogs because they are my life and my passion... especially Dobermans ^__^. Hire me and unleash the power of Russian military translator and interpreter.",
                 category: "Write & Translation",
                 tags: [
@@ -487,7 +487,7 @@ function _createGigs() {
                 memberSince: "Sep 2018",
                 avgResponceTime: "2 hours",
                 lastDelivery: "about 2 hours",
-                daysToMake: 2,
+                daysToMake: 7,
                 about: "French native translator/copywriter born in Paris & I grew up in the U.S. If you've been looking for a writer that'll actually get you results, you've just found him. Some of my clients: Kayak, L’Express (black Friday event), Viral launch, publishing companies, etc...",
                 category: "Write & Translation",
                 tags: [
@@ -519,7 +519,7 @@ function _createGigs() {
                 memberSince: "Apr 2021",
                 avgResponceTime: "1 hour",
                 lastDelivery: "5 days",
-                daysToMake: 2,
+                daysToMake: 3,
                 about: "We are a small team consisting of bilingual English, French and Spanish speakers. We have extensive experience translating all kinds of documents ranging from academic essays to business reports, subtitles and scripts to short novels. We ensure all of our projects are completed with the highest degree of quality and our dedicated approach means that your translated document will be a perfect version, with attention paid over the register and vocabulary used.",
                 category: "Write & Translation",
                 tags: ["french to english", "english translation", "translation", "french translation",],
