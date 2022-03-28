@@ -30,10 +30,10 @@
         </div>
         <nav class="nav">
           <router-link to="/explore">
-            <a href>Explore</a>
+            <a :class="$route.meta.logoClass" href>Explore</a>
           </router-link>
-          <router-link to="/order-app">Become A Seller</router-link>
-          <router-link to="/">Login</router-link>
+          <router-link :class="$route.meta.logoClass" to="/order-app">Become A Seller</router-link>
+          <router-link :class="$route.meta.logoClass" to="/">Login</router-link>
           <router-link class="join" to>Join</router-link>
         </nav>
       </div>
