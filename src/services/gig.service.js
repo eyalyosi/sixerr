@@ -378,7 +378,7 @@ function _createGigs() {
                     "https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs3/177527415/original/ea2ad2c5bd78c1cdc0bc9fb228f7ce2d33c62dbc/create-an-eyecatching-whiteboard-animation-with-voiceover.png",
                     "https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/156017552/original/4549f5a789d5a809f0bbddd48110c7b61573a727/create-an-eye-catching-animated-whiteboard-explainer-video-in-24-hours.png",
                 ],
-                title: "I will create an eye catching whiteboard animation digital hand drawn",
+                title: "I will create a whiteboard animation digital hand drawn",
                 description: "ENGAGE YOUR AUDIENCE!!!\nwith your own whiteboard animated doodle video\nULTRA FAST 48 Hours turn-around available\nPUT YOUR VIDEO MARKETING ON STEROIDS\nWe`ll create a fantastic speed-draw or whiteboard animation of any logo, picture, script or text\nWhat you get for $35:\n30-second video with voice over recording\nImages from our Exclusive Hand Drawn Library + 2 Custom Drawings\nBackground Music\nYou must Provide the Script for the video - Up to 75 words\n1080p Video in MP4 or any video format you need\nExtras Available\nFull HD 1920x1080 Delivery\nFast Delivery\nScript Writing\nWatermark\nColor\nSubtitles\nIf you have other requirements just contact us and we´ll reply soon.\n100% Satisfaction Guaranteed\nYour satisfaction is important to us.\nORDER NOW!\nATTENTION - Projects of 300+ words, contact me for a quote and timeframe first.",
                 price: 117.90,
                 owner: {
@@ -442,7 +442,7 @@ function _createGigs() {
                     "https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/140128472/original/da4c1149537b4206a9a7d33bb39e8f994590a46f/translate-anything-danish-to-english-or-english-to-danish.png",
                     "https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/3354601/original/0f7e66e4c85d9dff7e7ab9259787d195b46546bf/translate-any-text-from-english-to-norwegian.jpg"
                 ],
-                title: "I will perfectly translate from russian to english or from english to russian",
+                title: "I will perfectly translate from russian to english",
                 description: "**The one and only Top Rated Seller with flawless Russian as the mother tongue (34+ years in Moscow)**\nOn this page, you can order professional and flawless Russian to English translation and English to Russian translation by a native and experienced Russian and English translator.\nI work in the field of Russian to English and English to Russian translation since 2009 and have successfully received a diploma with honors and a Master of Arts degree in Spanish and English.\nIn case if you are looking for perfect quality at the best price, I am your best choice!\nI offer the following:\n- An individual approach for every customer\n- My goal is quality, and I will never make something average just to finish it as fast as I can\n- Free correction after implementation is offered for all the orders\n- Flexible rules and ultimate solutions for my customers\n- I research translated topics, reading articles and related websites in order to get the context\nI have vast experience in Russian and English translation of\n- religious documents\n- whitepapers (ICOs)\n- software\n- games\n- websites\n- CMS\n- agreements\n- manuals\n- subtitles\nand other materials\nOrder Russian and English translation",
                 price: 50.52,
                 owner: {
@@ -755,7 +755,7 @@ function _createGigs() {
                     "https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs2/243253829/original/9d3f59c1ef269ef88c85bd9cb8e2189983a91fdd/do-research-case-study-analysis-articles-and-summaries.png",
                     "https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/230560010/original/c8a5fcc782be1e63cf7b24954ebb764375d30c3c/research-and-write-urgent-apa-mla-easy-or-article-on-any-topic.png",
                 ],
-                title: "I will deliver quality case study analysis, articles, research and summaries",
+                title: "I will deliver quality case study analysis and summaries",
                 description: "Hi, thank you for clicking my gig.\nKindly contact me before placing an order to discuss the requirements and check for availability.\nAre you looking for a professional for your essays, articles, case study, reflections, summary and research work? Then look no further, you are on the right PLACE.\nI am here to provide you with high-quality and professional services. I have been in the writing industry for over six years. As a researcher, I have a keen interest in identifying major problems and proposing better solutions/recommendations against them.\nWhat you will get from this gig?\nUnique and creative content\nOn-time delivery\nEngaging content\nWell researched and quality work\n100% plagiarism-free\nN/B: I OFFER SERVICES ACCORDING TO FIVERR TERMS OF SERVICE (TOS).",
                 price: 33.68,
                 owner: {

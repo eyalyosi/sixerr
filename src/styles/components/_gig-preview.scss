@@ -8,16 +8,22 @@
   position: relative;
   width: 100%;
   height: 345;
-  font-family: "Lato", sans-serif;
+  // font-family: 'Macan-bold';
   border: 1px solid #e4e5e7;
 }
 .seller-level {
   color: #74767e;
+  font-family: "Macan-regular";
 }
-.seller.name {
-  color: black;
-}
+// .seller.name {
+//   color: black;
+//   font-family: 'macan-bold';
+//   font-weight: bold;
+// }
 
+.seller-name {
+  font-family: "macan-bold";
+}
 .preview-card {
   .seller-info {
     align-items: center;
@@ -36,14 +42,16 @@
 }
 
 .gig-title {
+  font-family: "Macan-regular";
   margin: 5px 0 0;
   padding: 0 12px 5px;
   font-size: 16px;
   height: 43px;
-
-  overflow:hidden;
-  white-space:nowrap;
-  text-overflow: ellipsis;
+  color: #222325;
+  line-height: 22px;
+  // overflow:hidden;
+  // white-space:nowrap;
+  // text-overflow: ellipsis;
   &:hover {
     cursor: pointer;
     color: #1dbf73;
@@ -60,8 +68,13 @@
   }
 }
 
-.rating {
+.rating-star-preview {
+  color: #ffbe5b;
   padding-inline-end: 3px;
+  padding-right: 5px;
+  svg {
+    vertical-align: -0.16em;
+  }
 }
 
 .footer-preview {
@@ -78,6 +91,7 @@
   letter-spacing: 0.5px;
   padding: 2px 0;
   text-transform: uppercase;
+  font-family: "Macan-bold";
 }
 
 .price {
@@ -86,10 +100,15 @@
   font-size: 18px;
 }
 
+.like {
+  fill: #b5b6ba;
+}
 
-
-
-
-
-
-
+.price-cent {
+  margin-left: 1px;
+  font-size: 70%;
+  top: 2px;
+  // line-height: 0;
+  position: relative;
+  margin-left: 1px;
+}

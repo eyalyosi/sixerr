@@ -10,7 +10,8 @@ export const userService = {
     signup,
     logout,
     getLoggedinUser,
-    query
+    query,
+    getById
 };
 _createUsers()
 
@@ -18,7 +19,7 @@ function query(filterBy) {
     return storageService.query(USERS_KEY);
 }
 function getById(userId) {
-    console.log('userId:', userId);
+    // console.log('userId:', userId);
     return storageService.get(USERS_KEY, userId);
 }
 async function login(userCred) {

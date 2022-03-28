@@ -14,7 +14,7 @@ function query(entityType) {
 
 async function get(entityType, entityId) {
     const entities = await query(entityType);
-    console.log('entities:',entities);
+    // console.log('entities:',entities);
     return entities.find(entity => entity._id === entityId);
 }
 

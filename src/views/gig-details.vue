@@ -12,6 +12,7 @@
           <div v-if="gig.owner.rate">
             <p>⭐ ({{ gig.owner.rate }})</p>
           </div>
+          <img src="https://cdn.iconscout.com/icon/free/png-256/star-bookmark-favorite-shape-rank-16-28621.png" alt="">
         </div>
       </div>
       <carusel-details :images="images"></carusel-details>
