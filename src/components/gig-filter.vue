@@ -6,7 +6,7 @@
                 @change="setFilter"
                 v-model="filterBy.title"
                 type="text"
-                placeholder="Try logo"
+                placeholder="Try building mobile app"
                 class="search"
             />
             <button class="search-btn">Search</button>
@@ -24,6 +24,7 @@ export default {
     },
     methods: {
         setFilter() {
+            console.log(this.filterBy);
             this.$emit("setFilter", JSON.parse(JSON.stringify(this.filterBy)));
         },
     },

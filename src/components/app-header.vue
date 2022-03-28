@@ -17,7 +17,7 @@
             <div>
               <div class="sticky-search">
                 <img src="../assets/logo/magnifying-glass.png" alt />
-                <input type="text" value="Try Logo" />
+                <input type="text" value="Try building mobile app" />
                 <button class="search-header-btn">Search</button>
               </div>
             </div>
@@ -30,11 +30,17 @@
         </div>
         <nav class="nav">
           <router-link to="/explore">
-            <a href>Explore</a>
+            <a :class="$route.meta.logoClass" href>Explore</a>
           </router-link>
-          <router-link to="/order-app">Become A Seller</router-link>
-          <router-link to="/">Login</router-link>
-          <router-link class="join" to>Join</router-link>
+          <router-link :class="$route.meta.logoClass" to="/order-app">Become A Seller</router-link>
+          <a :class="$route.meta.logoClass">Login</a>
+          <a class="join">Join</a>
+          <div class="login-modal" v-if="login">
+            <login />
+          </div>
+          <div class="signup-modal" v-if="signup">
+            <signup />
+          </div>
         </nav>
       </div>
     </main>
@@ -43,12 +49,16 @@
 
 <script>
 import gigFilter from "./gig-filter.vue";
+import login from "./login.vue";
+import signup from "./signup.vue";
 export default {
   data() {
     return {
       // stickyNav: null,
       // headerObserver: null,
-      scrollPosition: null
+      scrollPosition: null,
+      login: true,
+      signup: true
 
 
 
@@ -69,6 +79,8 @@ export default {
     //     this.stickyNav = entry.isIntersecting ? false : true;
     //   });
     // },
+
+
 
     updateScroll() {
       if (!this.isHome) {
@@ -109,7 +121,9 @@ export default {
   // },
 
   components: {
-    gigFilter
+    gigFilter,
+    login,
+    signup
   }
 
 }
@@ -117,3 +131,5 @@ export default {
 </script>
 
 
+<style>
+</style>

@@ -23,19 +23,23 @@ const router = createRouter({
       name: 'explore',
       component: explore,
       meta: {
-        headerClass: 'border'
+        headerClass: 'border relative'
       }
-
-
-
-
+    },
+    {
+      path: '/explore/:category',
+      name: 'explore-category',
+      component: explore,
+      meta: {
+        headerClass: 'border relative'
+      }
     },
     {
       path: '/gig/:_id',
       name: 'gig-details',
       component: gigDetails,
       meta: {
-        headerClass: 'border'
+        headerClass: 'border relative'
       }
 
     },
@@ -44,10 +48,8 @@ const router = createRouter({
       name: 'order-app',
       component: orderApp,
       meta: {
-        headerClass: 'border'
+        headerClass: 'border relative'
       }
-
-
     },
     // {
     //   path: '/order-app',
@@ -57,7 +59,7 @@ const router = createRouter({
     //     headerClass: 'border'
     //   }
     // },
-    
+
 
   ]
 })

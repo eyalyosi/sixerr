@@ -1,4 +1,4 @@
-<template >
+<template>
   <section>
     <h2 class="category-title">Popular professional services</h2>
 
@@ -53,7 +53,8 @@ export default defineComponent({
     explore(filter) {
       console.log(filter);
       this.$emit("explore", filter);
-      this.$router.push("/explore");
+      // this.$router.push("/explore");
+      this.$router.push(`/explore/${filter}`);
     },
   },
   components: {

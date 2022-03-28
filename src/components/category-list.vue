@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <section>
   
     <ul class="category-list"> 
@@ -36,4 +36,4 @@ export default {
   computed: {},
   created() {},
 };
-</script>
+</script> -->
