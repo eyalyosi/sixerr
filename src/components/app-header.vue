@@ -17,7 +17,7 @@
             <div>
               <div class="sticky-search">
                 <img src="../assets/logo/magnifying-glass.png" alt />
-                <input type="text" value="Try building mobile app" />
+                <input type="text" value="Find Services" />
                 <button class="search-header-btn">Search</button>
               </div>
             </div>
@@ -33,7 +33,7 @@
             <a :class="$route.meta.logoClass" href>Explore</a>
           </router-link>
           <router-link :class="$route.meta.logoClass" to="/order-app">Become A Seller</router-link>
-          <a :class="$route.meta.logoClass">Login</a>
+          <a :class="$route.meta.logoClass">Sign in</a>
           <a class="join">Join</a>
           <div class="login-modal" v-if="login">
             <!-- <login /> -->

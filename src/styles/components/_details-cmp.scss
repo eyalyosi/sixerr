@@ -23,7 +23,7 @@
 
     h1 {
         font-size: 28px;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: Macan-bold, Helvetica, sans-serif;
         margin: 0;
         padding-bottom: 16px;
         // margin-bottom: 24px;
@@ -36,8 +36,9 @@
     align-items: center;
     font-size: 14px;
     line-height: 21px;
-    font-family: 'Cabin', sans-serif;
+    font-family: Macan-regular;
     gap: 11px;
+    font-weight: 400;
     
     
     .owner-name {
@@ -77,12 +78,13 @@
 
 
     p {
-        font-family: 'Cabin', sans-serif;
+        font-family: Macan-regular;
         color: #404145;
         font-size: 20px;
         font-weight: 700;
         
     } a {
+        font-family: Macan-regular;
         color: #1dbf73;
         font-weight: 400;
         font-size: 14px;
@@ -107,7 +109,7 @@
 }
 
 .about-title {
-    font-family: 'Cabin', sans-serif;
+    font-family: Macan-regular;
     color: #404145;
     font-size: 20px;
     font-weight: 700;
@@ -115,12 +117,13 @@
 }
 
 .about-text {
-    font-family: 'Cabin', sans-serif;
+    font-family: Macan-regular;
     font-size: 16px;
     color: #62646a;
 }
 
 .about-gig {
+    font-family: Macan-regular;
     padding-bottom: 20px;
     border-bottom: 1px solid #dadbdd;
     color: #62646a;
@@ -141,6 +144,7 @@
     padding-bottom: 24px;
     
     p {
+        font-family: Macan-regular;
         color: #62646a;
         font-weight: 700;
         font-size: 16px;
@@ -155,27 +159,28 @@
     flex-direction: column;
     align-items: flex-start;
     padding-left: 15px;
-    font-family: 'Cabin', sans-serif;
+    font-family: Macan-regular;
     
-    a {
-        font-size: 14px;
-        height: 40px;
-        color: #62646a;
-        width: 130px;
-        margin-top: 20px;
-        font-family: 'Cabin', sans-serif;
-        border: 1px solid #62646a ;
+    button {
+        border: 1px solid #62646a;
         border-radius: 4px;
-        text-align: center;
+        margin: 20px 0 0;
+        font-size: 14px;
+        width: auto;
+        font-family: Macan-regular;
         font-weight: 600;
         line-height: 100%;
         padding: 12px 24px;
-        position: relative;
-        text-align: center;
-        text-decoration: none;
+        background: none;
+        color: #62646a;
+        cursor: pointer;
 
     }
-}
+
+
+
+    }
+
 
 .seller-info-details {
     border: 1px solid #dadbdd ;
@@ -186,6 +191,8 @@
 
 .info-table {
     border-bottom: 1px solid #dadbdd ;
+    font-family: Macan-regular;
+
     
     ul {
         columns: 2;
@@ -193,10 +200,12 @@
         -moz-columns: 2;
         list-style: none;
         color: #74767e;
+
         padding: 0;
         margin: 0;
     }
     li {
+
         padding-right: 40px;;
         padding-bottom: 40px;;
 
@@ -208,6 +217,8 @@
 }
 
 .seller-description {
+    font-family: Macan-regular;
+
     padding-top: 15px;
     line-height: 150%;
     color: #62646a;
@@ -218,13 +229,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-family: Macan-regular;
+
     color: #404145;
     
     .price {
+        font-family: Macan-regular;
         font-size: 20px;
         margin: 0;
     }
     .service {
+        font-family: Macan-regular;
         font-size: 16px;
         font-weight: bold;
         margin: 0;
@@ -237,6 +252,8 @@
     // margin-right: 8px;
     align-items: center;
     margin-bottom: 20px;
+    font-family: Macan-regular;
+
 
 
     .img-clock{
@@ -254,10 +271,14 @@
         align-items: center;
         font-weight: bold;
         color: #62646a;
+        font-family: Macan-regular;
+
         
         
         p{
             margin-left: 8px;
+            font-family: Macan-regular;
+
         }
     }
     .revision-wrapper {
@@ -266,9 +287,13 @@
         margin-left: 16px;
         font-weight: bold;
         color: #62646a;
+        font-family: Macan-regular;
+
         
         p{
             margin-left: 8px; 
+            font-family: Macan-regular;
+
         }
         
     }     
@@ -277,16 +302,22 @@
 .buy-btn {
     text-align: center;
     margin: auto 0;
+    font-family: Macan-regular;
+
 
     button {
         width: 100%;
         padding: 12px 24px;
         border: none;
         background-color: #1dbf73;
-        font-weight: bold;
-        color: white;
-        font-size: 16px;
+        font-weight: 600;
+        line-height: 100%;
+
+        color: #fff;
+        font-size: 14px;
         border-radius: 4px;
+        font-family: Macan-regular;
+
 
     
     }
@@ -326,6 +357,7 @@
 }
 
 .review-user {
+    font-family: Macan-regular;
     border-top: 1px solid #dadbdd;
     padding: 16px 0 32px 44px;
     display: list-item;
@@ -338,6 +370,7 @@
     margin-left: -44px;
     width: 32px;
     display: flex;
+    
     img {
         width: 100%;
         height: 100%;
@@ -363,6 +396,7 @@
         margin: 0 10px 0 0;
         outline: 0;
         padding: 0;
+        color: #404145;
 
     }
 }
