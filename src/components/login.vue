@@ -1,7 +1,6 @@
 <template>
     <section class="login section">
         <div class="logout-container" v-if="loggedinUser">
-            <h2>Hello {{ loggedinUser.fullname }}</h2>
             <button @click="logout">Logout</button>
         </div>
         <div class="login-container" v-if="!loggedinUser && !isSignUp">
