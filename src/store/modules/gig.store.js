@@ -13,37 +13,24 @@ export default {
     getGigs({ gigs, filterBy }) {
       if (!filterBy) return gigs
       const gigsDisplay = JSON.parse(JSON.stringify(gigs))
+      const regex = new RegExp(filterBy.title, 'i')
 
       if(filterBy.category) {
         return gigsDisplay?.filter((gig) => gig.category === filterBy.category)
       }
 
-      // if (filterBy.category === "Data Entry") {
-      //   return gigsDisplay.filter((gig) => gig.category === filterBy.category)
-      // }
-      // if (filterBy.category === "Arts and Crafts") {
-      //   return gigsDisplay.filter((gig) => gig.category === filterBy)
-      // }
-      // if (filterBy.category === "Marketing") {
-      //   return gigsDisplay.filter((gig) => gig.category === filterBy)
-      // }
-      // if (filterBy.category === "Translation") {
-      //   return gigsDisplay.filter((gig) => gig.category === filterBy)
-      // }
-      // if (filterBy.category === "Research and Summeries") {
-      //   return gigsDisplay.filter((gig) => gig.category === filterBy)
-      // }
-      // if (filterBy.category === "Write & Translation") {
-      //   return gigsDisplay.filter((gig) => gig.category === filterBy)
-      // }
-      // if (filterBy.category === "Video explainers") {
-      //   return gigsDisplay.filter((gig) => gig.category === filterBy)
-      // }
-      // if (filterBy.category === "Logo design") {
-      //   return gigsDisplay.filter((gig) => gig.category === filterBy)
-      // }
-      const regex = new RegExp(filterBy.title, 'i')
-      return gigsDisplay.filter((gig) => regex.test(gig.title))
+      function isMatchCategory(gig) {
+        if (!filterBy.category) return true
+        return gig.category === filterBy.category
+      }
+
+      function isMatchDelivery(gig) {
+        if (!filterBy.delivery) return true
+        return gig.daysToMake <= filterBy.delivery
+      }
+
+      return gigsDisplay.filter((gig) => isMatchText(gig) && isMatchCategory(gig) && isMatchDelivery(gig));
+
     },
   },
   mutations: {
@@ -53,11 +40,11 @@ export default {
     setFilter(state, { filterBy }) {
       state.filterBy = filterBy
     },
-    saveToy(state, { gig }) {
+    saveGig(state, { gig }) {
       const idx = state.gigs.findIndex((currGig) => currGig._id === gig._id)
       if (idx !== -1) state.gigs.splice(idx, 1, gig)
       else state.gigs.push(gig)
-  },
+    },
   },
   actions: {
     async loadGigs({ commit, state }) {

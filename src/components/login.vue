@@ -1,16 +1,19 @@
 <template>
     <section class="login section">
-        <div class="logout-container" v-if="loggedinUser">
-            <h2>Hello {{ loggedinUser.fullname }}</h2>
-            <button @click="logout">Logout</button>
-        </div>
+        <!-- <div class="logout-container" v-if="loggedinUser"> -->
+        <!-- <button @click="logout">Logout</button> -->
+        <!-- </div> -->
         <div class="login-container" v-if="!loggedinUser && !isSignUp">
-            <h3>Login</h3>
+            <h3>Sign In to Sixerr</h3>
             <form @submit.prevent="login" class="login-details">
                 <input type="text" v-model="username" placeholder="Enter username" />
                 <input type="text" v-model="password" placeholder="Enter password" />
-                <button>Login</button>
+                <button>Continue</button>
             </form>
+            <div class="login-footer flex justify-center align-center">
+                <p>Not a member yet?</p>
+                <a href>Join Now</a>
+            </div>
         </div>
     </section>
 </template>
@@ -47,3 +50,7 @@ export default {
 }
 
 </script>
+
+
+
+

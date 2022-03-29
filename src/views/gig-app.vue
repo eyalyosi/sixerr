@@ -1,6 +1,5 @@
 <template>
   <section>
-    <!-- <app-header class="app-header" :class="{ 'change-color': scrollPosition > 50 }" /> -->
     <hero-cmp />
     <carousel-category
       v-if="categories.length"
@@ -69,3 +68,7 @@ export default {
 };
 </script>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> d49a159315cd47d726d746bef1759a8a19adfb3f

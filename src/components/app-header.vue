@@ -17,7 +17,7 @@
             <div>
               <div class="sticky-search">
                 <img src="../assets/logo/magnifying-glass.png" alt />
-                <input type="text" value="Try building mobile app" />
+                <input type="text" value="Find Services" />
                 <button class="search-header-btn">Search</button>
               </div>
             </div>
@@ -41,6 +41,15 @@
           <div class="signup-modal" v-if="signup">
             <signup /> -->
           <!-- </div> -->
+          <a @click="toggleLogin" :class="$route.meta.logoClass">Sign in</a>
+          <a @click="toggleSignup" class="join">Join</a>
+          <div class="login-modal" v-if="!isLogin">
+            <login />
+          </div>
+          <div class="signup-modal" v-if="!isSignUp">
+            <signup />
+          </div>
+          <!-- <div class="logged-in" v-if="isLogin && isSignUp">hhhh</div> -->
         </nav>
       </div>
     </main>
@@ -50,15 +59,16 @@
 <script>
 import gigFilter from "./gig-filter.vue";
 import login from "./login.vue";
-import signup from "./signup.vue";
+import signup from './signup.vue';
+
 export default {
   data() {
     return {
       // stickyNav: null,
       // headerObserver: null,
       scrollPosition: null,
-      login: true,
-      signup: true
+      isSignUp: true,
+      isLogin: true,
 
 
 
@@ -81,13 +91,18 @@ export default {
     // },
 
 
+    toggleLogin() {
+      this.isLogin = !this.isLogin;
+    },
+    toggleSignup() {
+      this.isSignUp = !this.isSignUp;
+    },
 
     updateScroll() {
       if (!this.isHome) {
         return
       }
       this.scrollPosition = window.scrollY
-      // console.log(this.scrollPosition);
     },
 
   },

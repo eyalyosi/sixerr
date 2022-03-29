@@ -2,6 +2,7 @@
   height: 184px;
   width: 100%;
   object-fit: cover;
+  cursor: pointer;
 }
 
 .gig-preview-box {
@@ -12,7 +13,7 @@
   border: 1px solid #e4e5e7;
 }
 .seller-level {
-  color: #74767e;
+  color: $clr2;
   font-family: "Macan-regular";
 }
 // .seller.name {
@@ -54,7 +55,7 @@
   // text-overflow: ellipsis;
   &:hover {
     cursor: pointer;
-    color: #1dbf73;
+    color: $clr1;
     transition: 0.2s ease-in-out;
   }
 }
@@ -86,7 +87,7 @@
 }
 
 .small {
-  color: #74767e;
+  color: $clr2;
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.5px;

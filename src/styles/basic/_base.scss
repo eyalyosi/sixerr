@@ -4,7 +4,6 @@
 
 body {
     font-family: 'Macan';
-
     margin: 0;
     height: 100%;
 }
@@ -13,23 +12,3 @@ body, h1, h2, h3, h4, h5, h6, hr, html, li, p, pre, table, tbody, td, textarea, 
     padding: 0;
     outline: 0;
 }
-// .main-section {
-//     width: calc(100% - 40px);
-
-// }
-// .main-section{
-//     display: grid;
-//     grid-template-columns: 20px 1fr 20px;
-//     > * {
-//         grid-column: 2;
-//     }
-
-//     > *.full {
-//         grid-column: 1 / -1;
-//     }
-    
-// }
-
-// .main-content-container{
-//     grid-column: 2;
-// }
