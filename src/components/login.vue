@@ -10,7 +10,7 @@
                 <input type="text" v-model="password" placeholder="Enter password" />
                 <button>Continue</button>
             </form>
-            <div class="login-footer flex">
+            <div class="login-footer flex justify-center align-center">
                 <p>Not a member yet?</p>
                 <a href>Join Now</a>
             </div>

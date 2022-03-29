@@ -35,12 +35,13 @@
           <router-link :class="$route.meta.logoClass" to="/order-app">Become A Seller</router-link>
           <a @click="toggleLogin" :class="$route.meta.logoClass">Sign in</a>
           <a @click="toggleSignup" class="join">Join</a>
-          <div class="login-modal" v-if="isLogin">
+          <div class="login-modal" v-if="!isLogin">
             <login />
           </div>
-          <div class="signup-modal" v-if="isSignUp">
+          <div class="signup-modal" v-if="!isSignUp">
             <signup />
           </div>
+          <div class="logged-in" v-if="isLogin && isSignUp">hhhh</div>
         </nav>
       </div>
     </main>
@@ -58,10 +59,8 @@ export default {
       // stickyNav: null,
       // headerObserver: null,
       scrollPosition: null,
-      // login: true,
-      // signup: true,
       isSignUp: true,
-      isLogin: false,
+      isLogin: true,
 
 
 

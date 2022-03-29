@@ -19,7 +19,7 @@
 
 .details-title-info {
     margin-bottom: 24px;
-    color: #404145;
+    color: $clr3;
 
     h1 {
         font-size: 28px;
@@ -43,7 +43,7 @@
     
     .owner-name {
         font-weight: 700;
-        color: #404145;
+        color: $clr3;
 
     }
 
@@ -79,7 +79,7 @@
 
     p {
         font-family: Macan-regular;
-        color: #404145;
+        color: $clr3;
         font-size: 20px;
         font-weight: 700;
         
@@ -110,7 +110,7 @@
 
 .about-title {
     font-family: Macan-regular;
-    color: #404145;
+    color: $clr3;
     font-size: 20px;
     font-weight: 700;
     
@@ -231,7 +231,7 @@
     align-items: center;
     font-family: Macan-regular;
 
-    color: #404145;
+    color: $clr3;
     
     .price {
         font-family: Macan-regular;
@@ -396,7 +396,7 @@
         margin: 0 10px 0 0;
         outline: 0;
         padding: 0;
-        color: #404145;
+        color: $clr3;
 
     }
 }
@@ -436,7 +436,7 @@
 
 .review-description {
     line-height: 22px;
-    color: #404145;
+    color: $clr3;
     word-wrap: break-word;
 }
 
