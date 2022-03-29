@@ -41,7 +41,7 @@
           <div class="signup-modal" v-if="!isSignUp">
             <signup />
           </div>
-          <div class="logged-in" v-if="isLogin && isSignUp">hhhh</div>
+          <!-- <div class="logged-in" v-if="isLogin && isSignUp">hhhh</div> -->
         </nav>
       </div>
     </main>

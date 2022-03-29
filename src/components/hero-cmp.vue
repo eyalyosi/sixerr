@@ -1,7 +1,9 @@
 <template>
   <div class="hero-section">
     <div class="hero-img">
-      <img :src="image" alt="hero image" />
+        <div v-bind:style="{backgroundImage: `url(${image})`}"  class="hero-img-box">
+        </div>
+      <!-- <img :src="image" alt="hero image" /> -->
     </div>
     <div class="hero-box">
       <div class="hero-container main-layout flex space-between">
