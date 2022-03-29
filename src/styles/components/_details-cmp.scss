@@ -74,6 +74,8 @@
     justify-content: space-between;
     align-items: baseline;
     border-bottom: 1px solid #dadbdd;
+    padding-bottom: 25px;
+
 
 
 
@@ -108,11 +110,14 @@
     padding: 24px;
 }
 
+
 .about-title {
     font-family: Macan-regular;
     color: #404145;
     font-size: 20px;
     font-weight: 700;
+    padding-bottom: 25px;
+
     
 }
 
@@ -127,6 +132,10 @@
     padding-bottom: 20px;
     border-bottom: 1px solid #dadbdd;
     color: #62646a;
+    margin-bottom: 64px;
+    margin-top: 64px;
+
+
 }
 
 .profile-img-about {
@@ -184,7 +193,9 @@
 
 .seller-info-details {
     border: 1px solid #dadbdd ;
-    padding: 24px
+    padding: 24px;
+    margin-bottom: 64px;
+
 
 
 }
@@ -230,6 +241,8 @@
     justify-content: space-between;
     align-items: center;
     font-family: Macan-regular;
+    padding-bottom: 10px;
+
 
     color: #404145;
     
@@ -438,6 +451,11 @@
     line-height: 22px;
     color: #404145;
     word-wrap: break-word;
+
+    p {
+        padding: 8px 0;
+
+    }
 }
 
 .review-published {
@@ -446,4 +464,15 @@
     line-height: 21px;
 
 }
+
+.reviews-count {
+    font-size: 20px;
+    font-family: Macan-bold;
+    color: #404145;
+    font-weight: 700;
+    line-height: 42px;
+
+}
+
+
 

@@ -1,28 +1,34 @@
 <template>
-    <table class="rate-table">
-        <tbody>
-            <tr v-for="rate in reviewCounter" :key="rate">
-                <td class="stars-name">
-                    <p>{{ rate.rate }} Stars</p>
-                </td>
-                <td class="progress-bar-container">
-                    <div class="star-progress-bar">
-                        <div class="wrapper-progress star-progress-bar">
-                            <div
-                                class="progress-bar"
-                                role="progressbar"
-                                v-bind:style="fullWidth(rate.rate)"
-                                v-bind:aria-valuenow="width"
-                                aria-valuemin="0"
-                                aria-valuemax="100"
-                            >{{ }}</div>
+    <div class="review-section-details">
+        <div class="reviews-count">
+            <!-- <p>{{ gigRate }}</p> -->
+            <p>{{ userLength }} Reviews</p>
+        </div>
+        <table class="rate-table">
+            <tbody>
+                <tr v-for="rate in reviewCounter" :key="rate">
+                    <td class="stars-name">
+                        <p>{{ rate.rate }} Stars</p>
+                    </td>
+                    <td class="progress-bar-container">
+                        <div class="star-progress-bar">
+                            <div class="wrapper-progress star-progress-bar">
+                                <div
+                                    class="progress-bar"
+                                    role="progressbar"
+                                    v-bind:style="fullWidth(rate.rate)"
+                                    v-bind:aria-valuenow="width"
+                                    aria-valuemin="0"
+                                    aria-valuemax="100"
+                                >{{ }}</div>
+                            </div>
                         </div>
-                    </div>
-                </td>
-                <td class="star-sum">({{ rate.numOfVotes }})</td>
-            </tr>
-        </tbody>
-    </table>
+                    </td>
+                    <td class="star-sum">({{ rate.numOfVotes }})</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </template>
 
 <script>
@@ -60,11 +66,35 @@ export default {
                         numOfVotes: scoreCounter[key],
                         rate: key
                     }
+
                     arr.push(obj)
                 })
 
             return arr
+        },
+        userLength() {
+            return this.user.reviews.length
+        },
+        userRate() {
+            return this.user.reviews
+        },
+        async gigRate() {
+            try {
+                const res = user.reviews.reduce((acc, review) => {
+                    acc += +review.rate;
+                    console.log(acc);
+                    return acc;
+                }, 0) / user.reviews.length;
+                this.totalReviews = user.reviews.length
+                this.avgRate = res.toFixed(1);
+                return res.toFixed(1);
+            } catch {
+                console.log('err');
+            }
+
         }
+
+
 
     },
 
@@ -109,6 +139,7 @@ export default {
     margin: 0;
     padding: 0px;
     margin-right: 15px;
+    font-family: Macan-regular;
 }
 .stars-name {
     padding: 0px;
@@ -131,7 +162,7 @@ tbody {
 
 .star-sum {
     color: #446ee7;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .wrapper-progress.star-progress-bar {
@@ -159,6 +190,10 @@ td {
 
 tr:nth-child(even) {
     background-color: white;
+}
+
+.review-section-details {
+    padding-bottom: 24px;
 }
 </style>
 

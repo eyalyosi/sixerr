@@ -35,12 +35,12 @@
           <router-link :class="$route.meta.logoClass" to="/order-app">Become A Seller</router-link>
           <a :class="$route.meta.logoClass">Login</a>
           <a class="join">Join</a>
-          <div class="login-modal" v-if="login">
+          <!-- <div class="login-modal" v-if="login">
             <login />
           </div>
           <div class="signup-modal" v-if="signup">
-            <signup />
-          </div>
+            <signup /> -->
+          <!-- </div> -->
         </nav>
       </div>
     </main>
@@ -84,7 +84,6 @@ export default {
 
     updateScroll() {
       if (!this.isHome) {
-        console.log('isnt home');
         return
       }
       this.scrollPosition = window.scrollY

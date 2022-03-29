@@ -105,9 +105,9 @@ export default {
     display: flex;
 }
 
-.vueperslides__track-inner {
+/* .vueperslides__track-inner {
     justify-content: space-around;
-}
+} */
 
 .vueperslides__arrows svg {
     max-width: 40px;

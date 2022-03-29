@@ -1,7 +1,7 @@
 import { userService } from "../../services/user.service"
 export default {
     state: {
-        users: [],
+        users: null,
         user: null
     },
     getters: {
@@ -15,10 +15,19 @@ export default {
         },
     },
     actions: {
-        loadUsers({ commit, state }) {
-            userService.query().then((users) => {
+        async loadUsers({ commit, state }) {
+            try {
+                const users = await userService.query()
+                console.log('users:', users);
                 commit({ type: 'setUsers', users })
-            })
+            } catch {
+                console.log('error');
+            }
         },
+        // loadUsers({ commit, state }) {
+        //     userService.query().then((users) => {
+        //         commit({ type: 'setUsers', users })
+        //     })
+        // },
     }
 }

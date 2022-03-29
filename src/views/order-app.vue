@@ -27,7 +27,6 @@
 <script>
 import { orderService } from "../services/order.service"
 import { gigService } from "../services/gig.service";
-import appHeaderVue from "../components/app-header.vue";
 
 
 export default {
@@ -59,7 +58,6 @@ export default {
     components: {
         gigService,
         orderService,
-        appHeaderVue
 
     }
 }
