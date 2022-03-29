@@ -33,13 +33,13 @@
             <a :class="$route.meta.logoClass" href>Explore</a>
           </router-link>
           <router-link :class="$route.meta.logoClass" to="/order-app">Become A Seller</router-link>
-          <a :class="$route.meta.logoClass">Sign in</a>
-          <a class="join">Join</a>
-          <div class="login-modal" v-if="login">
-            <!-- <login /> -->
+          <a @click="toggleLogin" :class="$route.meta.logoClass">Sign in</a>
+          <a @click="toggleSignup" class="join">Join</a>
+          <div class="login-modal" v-if="isLogin">
+            <login />
           </div>
-          <div class="signup-modal" v-if="signup">
-            <!-- <signup /> -->
+          <div class="signup-modal" v-if="isSignUp">
+            <signup />
           </div>
         </nav>
       </div>
@@ -50,16 +50,18 @@
 <script>
 import gigFilter from "./gig-filter.vue";
 import login from "./login.vue";
-import signup from "./signup.vue";
+import signup from './signup.vue';
+
 export default {
   data() {
     return {
       // stickyNav: null,
       // headerObserver: null,
       scrollPosition: null,
-      login: true,
-      signup: true,
-      isSignUp: false
+      // login: true,
+      // signup: true,
+      isSignUp: true,
+      isLogin: false,
 
 
 
@@ -82,14 +84,18 @@ export default {
     // },
 
 
+    toggleLogin() {
+      this.isLogin = !this.isLogin;
+    },
+    toggleSignup() {
+      this.isSignUp = !this.isSignUp;
+    },
 
     updateScroll() {
       if (!this.isHome) {
-        // console.log('isnt home');
         return
       }
       this.scrollPosition = window.scrollY
-      // console.log(this.scrollPosition);
     },
 
   },

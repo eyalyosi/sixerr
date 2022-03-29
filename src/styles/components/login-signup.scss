@@ -1,34 +1,6 @@
-// .login-modal {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: space-between;
-//     border-radius: 5px;
-//     padding: 0 36px 24px;
-//     z-index: 999999999;
-//     height: 566px;
-//     width: 404px;
-//     background-color: #fff;
-//     position: fixed;
-//     top: 50%;
-//     left: 50%;
-//     transform: translate(-50%, -50%);
-//   }
-  
-//   .signup-modal {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: space-between;
-//     border-radius: 5px;
-//     padding: 0 36px 24px;
-//     z-index: 999999999;
-//     height: 566px;
-//     width: 404px;
-//     background-color: #fff;
-//     position: fixed;
-//     top: 50%;
-//     left: 50%;
-//     transform: translate(-50%, -50%);
-//   }
+
+
+
 
 .login-container, .sign-up-container{
     display: flex;
@@ -68,7 +40,7 @@
     width: 100%;
     padding: 9px 20px 8px;
     border-radius: 3px;
-    background-color: #1dbf73;
+    background-color: $clr1;
     border: 1px solid transparent;
     font-family: 'macan-bold';
     font-size: .875rem;
@@ -100,6 +72,6 @@
     width: 100%;   
  & a{
         font-size: 14px;
-        color: #1dbf73;
+        color: $clr1;
     }
 }
