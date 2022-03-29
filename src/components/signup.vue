@@ -1,6 +1,5 @@
 <template>
-    <button @click="isSignUp = !isSignUp" v-if="!loggedinUser"></button>
-    <div class="sign-up-container" v-if="!loggedinUser && isSignUp">
+    <div class="sign-up-container">
         <h3>Join Sixerr</h3>
         <form @submit.prevent="signup" class="signup-details">
             <input type="text" v-model="fullname" placeholder="Enter fullname" />
@@ -21,7 +20,6 @@ export default {
             password: '',
             fullname: '',
             loggedinUser: userService.getLoggedinUser(),
-            isSignUp: false,
         }
     },
     methods: {

@@ -1,16 +1,19 @@
 <template>
-  <!-- <app-header class="app-header" :class="{ 'change-color': scrollPosition > 50 }" /> -->
-  <hero-cmp />
-  <carousel-category
-    v-if="categories.length"
-    :categories="categories"
-    @explore="explore"
-    class="main-layout"
-  />
-  <main-info-cmp />
-  <!-- <category-list v-if="categories" :categories="categories" @explore="explore"/> -->
-  {{ getUsers }}
+  <section>
+    <hero-cmp />
+    <carousel-category
+      v-if="categories.length"
+      :categories="categories"
+      @explore="explore"
+      class="main-layout"
+    />
+    <main-info-cmp />
+    <!-- <category-list v-if="categories" :categories="categories" @explore="explore"/> -->
+    {{ getUsers }}
+  </section>
 </template>
+
+
 
 <script>
 
@@ -18,13 +21,12 @@ import categoryList from "../components/category-list.vue";
 import carouselCategory from "../components/carousel-category.vue";
 import heroCmp from "../components/hero-cmp.vue";
 import mainInfoCmp from '../components/main-info-cmp.vue'
-import appHeader from "../components/app-header.vue";
 
 export default {
   name: "gig-app",
   data() {
     return {
-      scrollPosition: null
+      scrollPosition: null,
 
     };
   },
@@ -59,10 +61,11 @@ export default {
     carouselCategory,
     heroCmp,
     mainInfoCmp,
-    appHeader
 
 
 
   },
 };
 </script>
+
+

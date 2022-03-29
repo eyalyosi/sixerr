@@ -19,7 +19,7 @@
 
 .details-title-info {
     margin-bottom: 24px;
-    color: #404145;
+    color: $clr3;
 
     h1 {
         font-size: 28px;
@@ -43,7 +43,7 @@
     
     .owner-name {
         font-weight: 700;
-        color: #404145;
+        color: $clr3;
 
     }
 
@@ -79,13 +79,13 @@
 
     p {
         font-family: Macan-regular;
-        color: #404145;
+        color: $clr3;
         font-size: 20px;
         font-weight: 700;
         
     } a {
         font-family: Macan-regular;
-        color: #1dbf73;
+        color: $clr1;
         font-weight: 400;
         font-size: 14px;
         cursor: pointer;
@@ -110,7 +110,7 @@
 
 .about-title {
     font-family: Macan-regular;
-    color: #404145;
+    color: $clr3;
     font-size: 20px;
     font-weight: 700;
     
@@ -199,7 +199,7 @@
         -webkit-columns: 2;
         -moz-columns: 2;
         list-style: none;
-        color: #74767e;
+        color: $clr2;
 
         padding: 0;
         margin: 0;
@@ -231,7 +231,7 @@
     align-items: center;
     font-family: Macan-regular;
 
-    color: #404145;
+    color: $clr3;
     
     .price {
         font-family: Macan-regular;
@@ -309,7 +309,7 @@
         width: 100%;
         padding: 12px 24px;
         border: none;
-        background-color: #1dbf73;
+        background-color: $clr1;
         font-weight: 600;
         line-height: 100%;
 
@@ -396,7 +396,7 @@
         margin: 0 10px 0 0;
         outline: 0;
         padding: 0;
-        color: #404145;
+        color: $clr3;
 
     }
 }
@@ -436,7 +436,7 @@
 
 .review-description {
     line-height: 22px;
-    color: #404145;
+    color: $clr3;
     word-wrap: break-word;
 }
 
