@@ -29,12 +29,12 @@
           />-->
         </div>
         <nav class="nav">
-          <router-link to="/explore" >
+          <router-link to="/explore">
             <a :class="$route.meta.logoClass" href>Explore</a>
           </router-link>
           <router-link :class="$route.meta.logoClass" to="/order-app">Become A Seller</router-link>
-          <a @click="signin" :class="$route.meta.logoClass">Sign in</a>
-          <a href @click="isSignUp = !isSignUp" class="join">Join</a>
+          <a :class="$route.meta.logoClass">Sign in</a>
+          <a class="join">Join</a>
           <div class="login-modal" v-if="login">
             <!-- <login /> -->
           </div>

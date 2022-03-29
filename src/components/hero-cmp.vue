@@ -1,40 +1,40 @@
 <template>
-    <div class="hero-section main-layout">
+    <div class="hero-section">
         <div class="hero-img">
             <img :src="image" alt="hero image" />
         </div>
         <div class="hero-box main-layout">
-            <!-- <div class="hero-container flex column space-between"> -->
-            <!-- <div class="hero-content"> -->
-            <h1>
-                Find the perfect
-                <span>freelance</span>
-                <br />services for your business
-            </h1>
-            <!-- </div> -->
-            <!-- <div class="hero-search"> -->
-            <gig-filter @setFilter="setFilter" />
-            <!-- </div> -->
-            <div class="popular-categories">
-                <p>Popular:</p>
-                <span>
-                    <a>Website Design</a>
-                </span>
-                <span>
-                    <a>Wordpress</a>
-                </span>
-                <span>
-                    <a>Logo Design</a>
-                </span>
-                <span>
-                    <a>Music</a>
-                </span>
-            </div>
-            <!-- </div> -->
-
-            <div class="seller-star-name">
-                <p class="stars-hero">⭐⭐⭐⭐⭐</p>
-                <p class="seller-name-hero">{{ sellerName }}</p>
+            <div class="hero-container flex column space-between">
+                <div class="hero-content">
+                    <h1>
+                        Find the perfect
+                        <span>freelance</span>
+                        <br />services for your business
+                    </h1>
+                    <!-- </div> -->
+                    <!-- <div class="hero-search"> -->
+                    <gig-filter @setFilter="setFilter" />
+                    <!-- </div> -->
+                    <div class="popular-categories">
+                        <p>Popular:</p>
+                        <span>
+                            <a>Website Design</a>
+                        </span>
+                        <span>
+                            <a>Wordpress</a>
+                        </span>
+                        <span>
+                            <a>Logo Design</a>
+                        </span>
+                        <span>
+                            <a>Music</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="seller-star-name">
+                    <p class="stars-hero">⭐⭐⭐⭐⭐</p>
+                    <p class="seller-name-hero">{{ sellerName }}</p>
+                </div>
             </div>
         </div>
     </div>
