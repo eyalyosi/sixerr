@@ -8,7 +8,8 @@
             <img :src="gigSellerImg" alt="seller image" class="seller-img" />
           </div>
           <p class="owner-name">{{ gig.owner.fullname }}</p>
-          <p>Level {{ gig.owner.level }} Seller</p>|
+          <p>Level {{ gig.owner.level }} Seller</p>
+          |
           <div v-if="gig.owner.rate">
             <!-- <div class="demo-rate-block flex">
               <span class="demonstration">Default</span>
@@ -16,7 +17,10 @@
             </div>-->
             <p>({{ getStars }})</p>
           </div>
-          <img src="https://cdn.iconscout.com/icon/free/png-256/star-bookmark-favorite-shape-rank-16-28621.png" alt="">
+          <img
+            src="https://cdn.iconscout.com/icon/free/png-256/star-bookmark-favorite-shape-rank-16-28621.png"
+            alt=""
+          />
         </div>
       </div>
       <carusel-details :images="images"></carusel-details>
@@ -29,6 +33,7 @@
         <p>What people loved about this seller</p>
         <a href>See all reviews</a>
       </div>
+      <caruser-details-review :user="currUser" v-if="currUser" />
       <div class="about-gig">
         <p class="about-title">About This Gig</p>
         <p class="about-text">{{ gig.about }}</p>
@@ -75,35 +80,41 @@
         <div class="seller-description">{{ gig.description }}</div>
       </div>
       <progress-bar-details :user="currUser" v-if="currUser" />
-      <div v-if="currUser" class="reviews-wrap" v-for="review in currUser.reviews" :key="review">
-        <ul class="review-list">
-          <li class="review-user">
-            <div class="user-profile-image">
-              <img :src="review.by.imgUrl" alt />
-            </div>
-            <div class="header-info">
-              <div class="reviewer-details">
-                <p>{{ review.by.fullname }}</p>
-                <div class="review-rating">
-                  <span class="star">⭐</span>
-                  <p>{{ review.rate }}</p>
+      <div v-if="currUser">
+        <div
+          class="reviews-wrap"
+          v-for="review in currUser.reviews"
+          :key="review"
+        >
+          <ul class="review-list">
+            <li class="review-user">
+              <div class="user-profile-image">
+                <img :src="review.by.imgUrl" alt />
+              </div>
+              <div class="header-info">
+                <div class="reviewer-details">
+                  <p>{{ review.by.fullname }}</p>
+                  <div class="review-rating">
+                    <span class="star">⭐</span>
+                    <p>{{ review.rate }}</p>
+                  </div>
+                </div>
+                <div class="reviewer-sub-details">
+                  <div class="country">
+                    <img :src="review.by.flag" alt class="country-flag" />
+                    <p>{{ review.by.country }}</p>
+                  </div>
                 </div>
               </div>
-              <div class="reviewer-sub-details">
-                <div class="country">
-                  <img :src="review.by.flag" alt class="country-flag" />
-                  <p>{{ review.by.country }}</p>
-                </div>
+              <div class="review-description">
+                <p>{{ review.txt }}</p>
               </div>
-            </div>
-            <div class="review-description">
-              <p>{{ review.txt }}</p>
-            </div>
-            <div class="review-published">
-              <p>{{ review.reviewedAt }}</p>
-            </div>
-          </li>
-        </ul>
+              <div class="review-published">
+                <p>{{ review.reviewedAt }}</p>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
 
@@ -140,40 +151,40 @@ import { orderService } from "../services/order.service.js";
 import { userService } from "../services/user.service.js";
 import progressBarDetails from "../components/progress-bar-details.vue";
 import ProgressBarDetails from "../components/progress-bar-details.vue";
-
+import caruserDetailsReview from "../components/caruser-details-review.vue";
 export default {
   name: "gig-detail",
   data() {
     return {
       gig: null,
-      images: '',
-      rates: '',
+      images: "",
+      rates: "",
       orderToAdd: null,
-      currUser: null
+      currUser: null,
     };
   },
-  created() {
+  async created() {
     const { _id } = this.$route.params;
-    gigService.getById(_id).then((gig) => {
+    await gigService.getById(_id).then((gig) => {
       this.gig = gig;
-      this.images = gig.image
-      this.rates = gig.owner.rate
-      this.orderToAdd = orderService.getEmptyOrder()
-      this.orderToAdd.gig._id = gig._id
-      this.orderToAdd.gig.name = gig.category
-      this.orderToAdd.gig.price = gig.price
-      this.orderToAdd.seller = gig.owner.fullname
+      this.images = gig.image;
+      this.rates = gig.owner.rate;
+      this.orderToAdd = orderService.getEmptyOrder();
+      this.orderToAdd.gig._id = gig._id;
+      this.orderToAdd.gig.name = gig.category;
+      this.orderToAdd.gig.price = gig.price;
+      this.orderToAdd.seller = gig.owner.fullname;
       // this.orderToAdd. = gig.price
       // console.log('ORDER PRICE', this.orderToAdd.gig.price);
 
-      const userId = this.gig.owner._id
+      const userId = this.gig.owner._id;
+      console.log("%c userId:", "color:red", userId);
       userService.getById(userId).then((user) => {
-        // console.log('userId:',userId);
-        this.currUser = user
-        // console.log('this.user:',this.user);
-      })
-    })
-
+        this.currUser = user;
+        console.log("%c eyal", "color:lightgreen");
+        console.log("this.user:", this.user);
+      });
+    });
   },
   computed: {
     gigSellerImg() {
@@ -183,43 +194,39 @@ export default {
       return this.user.imgUrl;
     },
     gigImg() {
-      return this.gig.image
+      return this.gig.image;
     },
     orders() {
-      return this.$store.getters.orders
+      return this.$store.getters.orders;
     },
     getUser() {
-      return this.user
+      return this.user;
     },
     getStars() {
       let stars = "";
-      console.log(' this.gig.owner.rate:', this.gig.owner.rate);
       for (let index = 0; index < this.gig.owner.rate; index++) {
-        stars += "⭐"
+        stars += "⭐";
       }
-      return stars
-
-      //  
-    }
-
+      return stars;
+    },
   },
 
   methods: {
-    addOrder() {
-      this.$store.dispatch({ type: 'addOrder', order: this.orderToAdd })
+    async addOrder() {
+      this.$store.dispatch({ type: "addOrder", order: this.orderToAdd });
       this.$router.push(`/order-app/${this.gig._id}`);
     },
     // getUserById() {
 
     // }
-
   },
   components: {
     caruselDetails,
     progressBarDetails,
-    ProgressBarDetails
+    ProgressBarDetails,
+    caruserDetailsReview,
   },
-}
+};
 </script>
 <style scoped>
 .demo-rate-block {

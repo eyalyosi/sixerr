@@ -18,7 +18,8 @@ export default {
     data() {
         return {
             filterBy: {
-                title: "",
+                title: '',
+                category: []
             },
         };
     },
@@ -28,5 +29,10 @@ export default {
             this.$emit("setFilter", JSON.parse(JSON.stringify(this.filterBy)));
         },
     },
+    computed: {
+        categories() {
+            return this.$store.getters.getCategories
+        }
+    }
 }
 </script>
