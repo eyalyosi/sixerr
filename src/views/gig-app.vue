@@ -8,7 +8,6 @@
       class="main-layout"
     />
     <main-info-cmp />
-    <!-- <category-list v-if="categories" :categories="categories" @explore="explore"/> -->
     {{ getUsers }}
   </section>
 </template>
@@ -17,7 +16,6 @@
 
 <script>
 
-import categoryList from "../components/category-list.vue";
 import carouselCategory from "../components/carousel-category.vue";
 import heroCmp from "../components/hero-cmp.vue";
 import mainInfoCmp from '../components/main-info-cmp.vue'
@@ -57,7 +55,6 @@ export default {
     window.addEventListener('scroll', this.updateScroll);
   },
   components: {
-    categoryList,
     carouselCategory,
     heroCmp,
     mainInfoCmp,

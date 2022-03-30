@@ -12,7 +12,6 @@
 
           <img :src="category.img" alt />
         </li>
-        <!-- <div class="carousel__item">{{ category.name }}</div> -->
       </Slide>
 
       <template #addons>
@@ -21,18 +20,12 @@
     </Carousel>
   </section>
 
-  <!-- <category-preview
-    v-for="category in categories"
-    :category="category"
-    :key="category.name"
-    @explore="explore"
-  />-->
+
 </template>
 
 <script>
 import { defineComponent } from "vue";
 import { Carousel, Navigation, Slide } from "vue3-carousel";
-import categoryPreview from "./category-preview.vue";
 
 import "vue3-carousel/dist/carousel.css";
 
@@ -58,7 +51,6 @@ export default defineComponent({
     },
   },
   components: {
-    categoryPreview,
     Carousel,
     Slide,
     Navigation,
