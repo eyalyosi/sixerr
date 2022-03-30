@@ -34,7 +34,7 @@
           </router-link>
           <router-link :class="$route.meta.logoClass" to="/order-app">Become A Seller</router-link>
           <a :class="$route.meta.logoClass">Login</a>
-          <a class="join">Join</a>
+          <!-- <a class="join">Join</a> -->
           <!-- <div class="login-modal" v-if="login">
             <login />
           </div>
