@@ -14,7 +14,8 @@ const router = createRouter({
       component: gigApp,
       meta: {
         headerClass: 'fixed',
-        logoClass: 'white'
+        logoClass: 'white',
+        bodyClass: 'modal-open'
       }
 
 

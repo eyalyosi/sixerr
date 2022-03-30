@@ -1,6 +1,11 @@
 <template>
-  <section class="main-section">
-    <app-header :class="$route.meta.headerClass" />
+  <div
+    @click="toggleScreen('addClass', 'modal-open')"
+    class="main-screen"
+    :class="{ 'modal-open': isScreen }"
+  ></div>
+  <section>
+    <app-header :class="$route.meta.headerClass" @toggleScreen="toggleScreen" />
 
     <div class="main-content-container">
       <router-view />
@@ -17,6 +22,7 @@ export default {
   name: "App",
   data() {
     return {
+      isScreen: false
 
     };
   },
@@ -29,12 +35,24 @@ export default {
   },
   computed: {},
   methods: {
-    updateScroll() {
-      this.scrollPosition = window.scrollY;
-    },
+    toggleScreen(addRemoveClass, className) {
+      const el = document.body;
+      this.isScreen = !this.isScreen;
+      if (addRemoveClass === 'addClass') {
+        el.classList.add('modal-open');
+      } else {
+        el.classList.remove(className);
+      }
+    }
   },
+
+
+
+
   mounted() {
-    window.addEventListener("scroll", this.updateScroll);
+
   },
+
 }
+
 </script>
