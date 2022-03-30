@@ -112,5 +112,10 @@ export default {
   border: 1px solid #e4e5e7;
   border-radius: 4px px;
 }
+
+.vueperslide {
+  /* background-size: 30px; */
+}
+
 </style>
 

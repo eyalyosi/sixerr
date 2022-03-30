@@ -62,8 +62,8 @@ export const gigService = {
     remove
 }
 
-async function query() {
-    return await httpService.get(ENDPOINT)
+async function query(filterBy) {
+    return await httpService.get(ENDPOINT,filterBy)
 }
 
 async function save(gig) {

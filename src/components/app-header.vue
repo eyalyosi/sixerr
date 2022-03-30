@@ -22,19 +22,18 @@
               </div>
             </div>
           </form>
-          <!-- <gig-filter
+          <gig-filter
           @setFilter="setFilter"
           class="hidden"
           :class="{ 'search-header-box': scrollPosition > 50 }"
-          />-->
+          />
         </div>
         <nav class="nav">
           <router-link to="/explore">
             <a :class="$route.meta.logoClass" href>Explore</a>
           </router-link>
           <router-link :class="$route.meta.logoClass" to="/order-app">Become A Seller</router-link>
-          <a :class="$route.meta.logoClass">Login</a>
-          <a class="join">Join</a>
+
           <!-- <div class="login-modal" v-if="login">
             <login />
           </div>
@@ -44,7 +43,7 @@
           <a @click="toggleLogin" :class="$route.meta.logoClass">Sign in</a>
           <a @click="toggleSignup" class="join">Join</a>
           <div class="login-modal" v-if="!isLogin">
-            <login />
+            <login v-on="close = false" />
           </div>
           <div class="signup-modal" v-if="!isSignUp">
             <signup />
@@ -81,9 +80,9 @@ export default {
   },
 
   methods: {
-    // setFilter(filterBy) {
-    //   this.$store.dispatch({ type: "setFilter", filterBy });
-    // },
+    setFilter(filterBy) {
+      this.$store.dispatch({ type: "setFilter", filterBy });
+    },
     // onHeaderObserved(entries) {
     //   entries.forEach((entry) => {
     //     this.stickyNav = entry.isIntersecting ? false : true;

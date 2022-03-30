@@ -4,6 +4,7 @@
         <!-- <button @click="logout">Logout</button> -->
         <!-- </div> -->
         <div class="login-container" v-if="!loggedinUser && !isSignUp">
+        <button @click="$emit('close')">X</button>
             <h3>Sign In to Sixerr</h3>
             <form @submit.prevent="login" class="login-details">
                 <input type="text" v-model="username" placeholder="Enter username" />
@@ -39,6 +40,7 @@ export default {
         logout() {
             userService.logout().then(() => (this.loggedinUser = null))
         },
+        
     },
     computed: {
         //     signUpBtnText() {

@@ -10,27 +10,29 @@ export default {
     getCategories(state) {
       return state.categories;
     },
-    getGigs({ gigs, filterBy }) {
-      if (!filterBy) return gigs
-      const gigsDisplay = JSON.parse(JSON.stringify(gigs))
-      const regex = new RegExp(filterBy.title, 'i')
+    // getGigs({ gigs, filterBy }) {
+    //   if (!filterBy) return gigs
+    //   const gigsDisplay = JSON.parse(JSON.stringify(gigs))
+    //   const regex = new RegExp(filterBy.title, 'i')
 
-      if(filterBy.category) {
-        return gigsDisplay?.filter((gig) => gig.category === filterBy.category)
-      }
+    //   if(filterBy.category) {
+    //     return gigsDisplay?.filter((gig) => gig.category === filterBy.category)
+    //   }
 
-      function isMatchCategory(gig) {
-        if (!filterBy.category) return true
-        return gig.category === filterBy.category
-      }
+    //   function isMatchCategory(gig) {
+    //     if (!filterBy.category) return true
+    //     return gig.category === filterBy.category
+    //   }
 
-      function isMatchDelivery(gig) {
-        if (!filterBy.delivery) return true
-        return gig.daysToMake <= filterBy.delivery
-      }
+    //   function isMatchDelivery(gig) {
+    //     if (!filterBy.delivery) return true
+    //     return gig.daysToMake <= filterBy.delivery
+    //   }
 
-      return gigsDisplay.filter((gig) => isMatchText(gig) && isMatchCategory(gig) && isMatchDelivery(gig));
-
+    //   return gigsDisplay.filter((gig) => isMatchText(gig) && isMatchCategory(gig) && isMatchDelivery(gig));
+  // }
+    getGigs(state) {
+      return state.gigs
     },
   },
   mutations: {
@@ -50,6 +52,7 @@ export default {
     async loadGigs({ commit, state }) {
       try {
         const gigs = await gigService.query(state.filterBy)
+        console.log('Gigs from loadGigs');
         commit({ type: 'setGigs', gigs })
       } catch {
         console.log('error');
