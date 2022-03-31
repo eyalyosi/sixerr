@@ -9,7 +9,6 @@
             <small class="category-txt">{{ category.txt }}</small>
             <h4 class="category-name">{{ category.name }}</h4>
           </div>
-
           <img :src="category.img" alt />
         </li>
       </Slide>
@@ -19,16 +18,12 @@
       </template>
     </Carousel>
   </section>
-
-
 </template>
 
 <script>
 import { defineComponent } from "vue";
 import { Carousel, Navigation, Slide } from "vue3-carousel";
-
 import "vue3-carousel/dist/carousel.css";
-
 export default defineComponent({
   name: "WrapAround",
   props: {

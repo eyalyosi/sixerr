@@ -4,6 +4,7 @@ import explore from '../views/explore.vue'
 import gigDetails from '../views/gig-details.vue'
 import orderApp from '../views/order-app.vue'
 import category from '../views/category.vue'
+import userProfile from '../views/user-profile.vue'
 
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
@@ -17,8 +18,6 @@ const router = createRouter({
         logoClass: 'white',
         bodyClass: 'modal-open'
       }
-
-
     },
     {
       path: '/explore',
@@ -43,7 +42,14 @@ const router = createRouter({
       meta: {
         headerClass: 'border relative'
       }
-
+    },
+    {
+      path: '/user-profile',
+      name: 'user-profile',
+      component: userProfile,
+      meta: {
+        headerClass: 'border relative'
+      }
     },
     {
       path: '/order-app/:_id',
@@ -53,16 +59,6 @@ const router = createRouter({
         headerClass: 'border relative'
       }
     },
-    // {
-    //   path: '/order-app',
-    //   name: 'order-app',
-    //   component: orderApp,
-    //   meta: {
-    //     headerClass: 'border'
-    //   }
-    // },
-
-
   ]
 })
 

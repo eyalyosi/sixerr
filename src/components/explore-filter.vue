@@ -50,15 +50,8 @@ export default {
   methods: {
     setFilter() {
       const { category } = this.$route.params;
-      // console.log(category);
-      // // if (!category)
-      // console.log(this.filterBy.delivery);
-      
       const delivery =  this.filterBy.delivery 
       const filterBy = { category, delivery};
-      // console.log(filterBy);
-
-      // console.log(this.filterBy);
       this.$emit("setFilter", JSON.parse(JSON.stringify(filterBy)));
     },
   },

@@ -11,7 +11,7 @@ export const userService = {
     logout,
     getLoggedinUser,
     query,
-    getById
+    getById,
 };
 // _createUsers()
 
@@ -19,7 +19,7 @@ async function query() {
     return await httpService.get(USERS_KEY)
 }
 async function getById(id) {
-    console.log('id:',id);
+    // console.log('id:',id);
     return await httpService.get(`${USERS_KEY}/${id}`)
 
 }
@@ -38,7 +38,6 @@ async function logout() {
     return await httpService.post('auth/logout')
 }
 
-
 function _saveLocalUser(user) {
     sessionStorage.setItem(LOGGEDIN_USER_KEY, JSON.stringify(user))
     return user
@@ -47,6 +46,8 @@ function _saveLocalUser(user) {
 function getLoggedinUser() {
     return JSON.parse(sessionStorage.getItem(LOGGEDIN_USER_KEY) || 'null')
 }
+
+
 
 // function _createUsers() {
 //     let users = utilService.loadFromStorage(USERS_KEY);

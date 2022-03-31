@@ -14,7 +14,6 @@ export default {
   },
   methods: {
     setFilter(filterBy) {
-      console.log(filterBy);
       this.$store.dispatch({ type: "setFilter", filterBy });
     },
   },
@@ -24,14 +23,15 @@ export default {
     },
   },
   created() {
-
-    // if (!category) {
-    //   console.log('sddsf');
-    // }
-    // // console.log();
-    // const filterBy = {}
-    // // console.log(filterBy);
-    this.$store.dispatch({ type: "setFilter", filterBy: {} });
+    // this.$store.dispatch({ type: "setFilter", filterBy: {} });
+  },
+  watch: {
+    getFilterBy: {
+      handler() {
+        this.$store.dispatch("loadGigs");
+      },
+      deep: true,
+    },
   },
   components: {
     gigList,

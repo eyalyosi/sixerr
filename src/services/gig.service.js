@@ -51,8 +51,6 @@ const categories = [{
     img: 'https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_2.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741663/animated-explainer-2x.png'
 }
 ]
- 
-
 
 export const gigService = {
     query,
@@ -63,12 +61,12 @@ export const gigService = {
 }
 
 async function query(filterBy) {
-    return await httpService.get(ENDPOINT,filterBy)
+    return await httpService.get(ENDPOINT, filterBy)
 }
 
 async function save(gig) {
     return gig._id
-        ? await httpService.put(`${ENDPOINT}/${toy._id}`, gig)
+        ? await httpService.put(`${ENDPOINT}/${gig._id}`, gig)
         : await httpService.post(ENDPOINT, gig)
     // return toy._id ? storageService.put(KEY, toy) : storageService.post(KEY, toy)
 }
@@ -81,7 +79,7 @@ async function remove(id) {
     return await httpService.delete(`${ENDPOINT}/${id}`)
     // return axios.delete(BASE_URL + id).then((res) => res.data)
     // return storageService.remove(KEY, id)
-  }
+}
 
 function getCategories() {
     return categories
@@ -749,7 +747,7 @@ function getCategories() {
 //                 image: ["https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/222820209/original/50b95e0afd209c75fa3693b835fd0db671249736.png",
 //                     "https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/227917705/original/69cf8d3eb5d59f7b2e7554f9fc76aabb461dba54/provide-legal-research-on-any-legal-topic-and-write-case-briefs-for-your-project.png",
 //                     "https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/238875546/original/34b3144a3a29d8a6fa1cb00a458d2310488f0318/handle-case-studies-and-research-related-tasks.jpg",
-//                     "https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/242276518/original/a675be73993504f5131a133841bae5709ec2318c/do-any-internet-search-and-downloads.jpg",              
+//                     "https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/242276518/original/a675be73993504f5131a133841bae5709ec2318c/do-any-internet-search-and-downloads.jpg",
 //                 ],
 //                 title: "I will perform research on any subject matter for you",
 //                 description: "I have over 5 years of experience conducting high-quality, detailed research throughout my Master of Science by Research degree and PhD programme.\nThe training and projects I have undertaken in my degrees have given me the ability to efficiently source key information. In particular, the niche research required for academic theses has made me proficient at sourcing the most relevant details.\nFurthermore, I have learned how to synthesise a lot of information in a short period of time, incorporate it into further research, and write what I have learned into top-quality publications. This allows me to pinpoint the most important information and produce concise, detailed summaries.\nI will provide a document in whichever format you require (e.g. Word.docx, Adobe.pdf) complete with a detailed summary, references and links should you wish to conduct further research. If you would like me to conduct follow-up research based on what I have provided, please do not hesitate to get in touch for discounted rates.\n<---- PLEASE NOTE: I will not write academic articles, essays or papers. ---->\nPLEASE GET IN TOUCH BEFORE ORDERING TO DISCUSS YOUR REQUIREMENTS.",

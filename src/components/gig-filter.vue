@@ -6,7 +6,7 @@
                 @change="setFilter"
                 v-model="filterBy.title"
                 type="text"
-                placeholder="Try &quot;building mobile app&quot; "
+                placeholder="Try &quot;Logo Design&quot; "
                 class="search"
             />
             <button class="search-btn">Search</button>
@@ -19,7 +19,6 @@ export default {
         return {
             filterBy: {
                 title: '',
-                category: []
             },
         };
     },

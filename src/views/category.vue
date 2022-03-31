@@ -58,9 +58,7 @@ export default {
   created() {
     const { category } = this.$route.params;
     this.category = category;
-    console.log(this.category);
     const filterBy = { category };
-    // console.log(filterBy);
     this.$store.dispatch({ type: "setFilter", filterBy });
   },
   components: {
