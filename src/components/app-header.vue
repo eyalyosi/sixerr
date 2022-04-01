@@ -36,11 +36,7 @@
             </div>
           </form>
         </div>
-        <!-- <gig-filter
-          @setFilter="setFilter"
-          class="test"
-          :class="{ 'search-header-box': scrollPosition > 50 }"
-          /> -->
+
         <nav class="nav">
           <router-link to="/explore">
             <a :class="$route.meta.logoClass" href @click="showAllCategories"
@@ -56,17 +52,21 @@
               >Join</a
             >
           </div>
-            <div class="login-modal" v-show="showLogin" @click="closeLogin">
+          <div class="login-modal" v-show="showLogin" @click="closeLogin">
             <login
               @toggleLogin="toggleLogin"
               @join="join"
               @closeLogin="toggleLogin"
             />
           </div>
-            <div class="signup-modal" v-show="showSignup" @click="closeSignup">
+          <div class="signup-modal" v-show="showSignup" @click="closeSignup">
             <signup @toggleSignup="toggleSignup" @closeSignup="toggleSignup" />
           </div>
-          <div v-if="loggedInUser" class="avatar-box" @click.stop="openProfileModal">
+          <div
+            v-if="loggedInUser"
+            class="avatar-box"
+            @click.stop="openProfileModal"
+          >
             <el-avatar :size="40" :src="loggedInUser.img">{{
               userLatter
             }}</el-avatar>
@@ -115,9 +115,9 @@ export default {
   },
   methods: {
     closeProfilePopover(event) {
-      const elModal = document.getElementsByClassName("profile-nav")[0]
-      if(elModal.contains(event.target)) return
-      this.showProfileNav = false
+      const elModal = document.getElementsByClassName("profile-nav")[0];
+      if (elModal.contains(event.target)) return;
+      this.showProfileNav = false;
     },
     setFilter(filterBy) {
       console.log("filterBy:", filterBy);
@@ -131,13 +131,13 @@ export default {
       this.$router.push("/explore");
     },
     closeSignup(event) {
-      const elModal = document.getElementsByClassName("sign-up-container")[0]
-      if(elModal.contains(event.target)) return
+      const elModal = document.getElementsByClassName("sign-up-container")[0];
+      if (elModal.contains(event.target)) return;
       this.showSignup = false;
     },
     closeLogin(event) {
-      const elModal = document.getElementsByClassName("login-container")[0]
-      if(elModal.contains(event.target)) return
+      const elModal = document.getElementsByClassName("login-container")[0];
+      if (elModal.contains(event.target)) return;
       this.showLogin = false;
     },
     openProfileModal() {

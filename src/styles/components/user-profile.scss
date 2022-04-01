@@ -2,16 +2,92 @@
     background-color: #f7f7f7;
     display: flex;
     justify-content: space-around;
+    font-family: "macan-regular";
 }
 
 .user-profile-info-card {
+    border: 1px solid #dadbdd;
+    padding: 30px;
     background-color: white;
     height: 420px;
     width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    .username-name{
+        font-size: 20px;
+        font-family: "macan-bold";
+        color: #222325;;
+    }
 }
 .edit-profile {
     img {
         height: 30px;
         width: 30px;
     }
+    img:hover{
+        cursor: pointer;
+    }
+}
+
+.user-avatar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    img {
+    object-fit: cover;
+    border-radius: 50%;
+    height: 160px;
+    width: 160px;
+    }
+    input {
+        height: 0;
+        width: 0;
+    }
+} 
+
+.user-profile-img-card {
+    margin-bottom: 15px;
+}
+
+.user-from-member {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    border-top: 1px solid #dadbdd;
+    padding-top: 20px;
+    margin-top: 24px;
+    font-size: 14px;
+}
+
+
+.from-img {
+    height: 13px;
+    width: 13px;
+    margin-right: 12px;
+    fill: #62646A;
+}
+.user-img-info {
+    height: 13px;
+    width: 13px;
+    margin-right: 12px;
+    fill: #62646A;
+}
+
+.user-from {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    color: #62646a;
+}
+.user-member {
+    display: flex;
+    justify-content: space-between;
+    color: #62646a;
+}
+.from-font {
+    font-family: "macan-bold";
 }
