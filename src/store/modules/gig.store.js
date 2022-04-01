@@ -3,13 +3,33 @@ import { gigService } from '../../services/gig.service.js'
 export default {
   state: {
     gigs: null,
-    filterBy: null,
-    categories: gigService.getCategories()
+    filterBy: { title: '', catergory: '', delivery: '' },
+    categories: gigService.getCategories(),
+    // filterBy: null,
   },
   getters: {
     getCategories(state) {
       return state.categories;
     },
+    getGigs(state) {
+      console.log(state.filterBy);
+      if (!state.gigs) return
+      if (state.filterBy.title) {
+        console.log(state.filterBy);
+        return state.gigs.filter(gig => gig.title.includes(state.filterBy.title))
+      }
+      if (state.filterBy.category) {
+        return state.gigs.filter(gig => gig.category === state.filterBy.category)
+      }
+      if (state.filterBy.delivery) {
+        return state.gigs.filter(gig => gig.daysToMake === state.filterBy.delivery)
+      }
+      return state.gigs
+    },
+    // getFilterBy(state) {
+    //   return state.filterBy
+    // },
+
     // getGigs({ gigs, filterBy }) {
     //   if (!filterBy) return gigs
     //   const gigsDisplay = JSON.parse(JSON.stringify(gigs))
@@ -30,10 +50,10 @@ export default {
     //   }
 
     //   return gigsDisplay.filter((gig) => isMatchText(gig) && isMatchCategory(gig) && isMatchDelivery(gig));
-  // }
-    getGigs(state) {
-      return state.gigs
-    },
+    // }
+    // getGigs(state) {
+    //   return state.gigs
+    // },
   },
   mutations: {
     setGigs(state, { gigs }) {
@@ -58,28 +78,18 @@ export default {
         console.log('error');
       }
     },
-    // loadGigs({ commit, state }) {
-    //   gigService.query(state.filterBy).then((gigs) => {
-    //     commit({ type: 'setGigs', gigs })
-    //   })
-    // },
     async saveGig({ dispatch }, payload) {
       try {
-          await toyService.save(payload.gig)
-          dispatch('loadGigs')
+        await toyService.save(payload.gig)
+        dispatch('loadGigs')
       } catch (err) {
-          console.log('Couldnt save gig', err)
-          commit({
-              type: 'setIsError',
-              isError: true
-          })
+        console.log('Couldnt save gig', err)
+        commit({
+          type: 'setIsError',
+          isError: true
+        })
       }
-  },
-  //   saveGig({ commit, dispatch }, { gig }) {
-  //     gigService.save(gig).then((gig) => {
-  //         commit({ type: 'saveGig', gig })
-  //     })
-  // },
+    },
     setFilter({ dispatch, commit }, { filterBy }) {
       commit({ type: 'setFilter', filterBy })
       dispatch({ type: 'loadGigs' })

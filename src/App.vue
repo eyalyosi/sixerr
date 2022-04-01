@@ -1,12 +1,6 @@
 <template>
-  <div
-    @click="toggleScreen('addClass', 'modal-open')"
-    class="main-screen"
-    :class="{ 'modal-open': isScreen }"
-  ></div>
   <section>
-    <app-header :class="$route.meta.headerClass" @toggleScreen="toggleScreen" />
-
+    <app-header :class="$route.meta.headerClass"/>
     <div class="main-content-container">
       <router-view />
     </div>
@@ -22,8 +16,7 @@ export default {
   name: "App",
   data() {
     return {
-      isScreen: false
-
+      isScreen: false,
     };
   },
   created() {
@@ -34,25 +27,7 @@ export default {
     appFooter,
   },
   computed: {},
-  methods: {
-    toggleScreen(addRemoveClass, className) {
-      const el = document.body;
-      this.isScreen = !this.isScreen;
-      if (addRemoveClass === 'addClass') {
-        el.classList.add('modal-open');
-      } else {
-        el.classList.remove(className);
-      }
-    }
-  },
-
-
-
-
-  mounted() {
-
-  },
-
-}
-
+  methods: {},
+  mounted() {},
+};
 </script>

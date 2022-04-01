@@ -1,4 +1,22 @@
 .signup-modal {
+  position: fixed;
+  // position: relative;
+  inset: 0 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 60%);
+  // cursor: pointer;
+}
+.login-modal {
+  position: fixed;
+  // position: relative;
+  inset: 0 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 60%);
+  // cursor: pointer;
 }
 
 .login-container,
@@ -13,10 +31,10 @@
   height: 538px;
   width: 400px;
   background-color: #fff;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  // position: fixed;
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
 }
 
 .login-details > * {
@@ -45,6 +63,7 @@
     font-family: "macan-bold";
     font-size: 0.875rem;
     color: #fff;
+    cursor: pointer;
   }
   h4 {
     color: #62646a;

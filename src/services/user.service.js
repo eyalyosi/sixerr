@@ -1,4 +1,6 @@
 import { httpService } from './http.service'
+import axios from 'axios';
+
 // import { utilService } from './util-service.js';
 // import { storageService } from './async-storage-service.js';
 
@@ -11,7 +13,7 @@ export const userService = {
     logout,
     getLoggedinUser,
     query,
-    getById
+    getById,
 };
 // _createUsers()
 
@@ -19,7 +21,7 @@ async function query() {
     return await httpService.get(USERS_KEY)
 }
 async function getById(id) {
-    console.log('id:',id);
+    // console.log('id:',id);
     return await httpService.get(`${USERS_KEY}/${id}`)
 
 }
@@ -38,7 +40,6 @@ async function logout() {
     return await httpService.post('auth/logout')
 }
 
-
 function _saveLocalUser(user) {
     sessionStorage.setItem(LOGGEDIN_USER_KEY, JSON.stringify(user))
     return user
@@ -47,6 +48,26 @@ function _saveLocalUser(user) {
 function getLoggedinUser() {
     return JSON.parse(sessionStorage.getItem(LOGGEDIN_USER_KEY) || 'null')
 }
+
+export const uploadImg = async (file) => {
+    //gets the file and upload it to cloudinary
+    // Defining our variables
+    const UPLOAD_PRESET = 'ssrtedsh'; // Insert yours
+    const CLOUD_NAME = 'dkqvblbeq'; // Insert yours
+    const UPLOAD_URL = `https://api.cloudinary.com/v1_1/${CLOUD_NAME}/image/upload`;
+    const FORM_DATA = new FormData();
+    // Building the request body
+    FORM_DATA.append('file', file);
+    FORM_DATA.append('upload_preset', UPLOAD_PRESET);
+    // Sending a post method request to Cloudniarys' API
+    try {
+      const res = await axios.post(UPLOAD_URL, FORM_DATA);
+      return res.data;
+    } catch (err) {
+      console.error('ERROR!', err);
+    }
+  };
+  
 
 // function _createUsers() {
 //     let users = utilService.loadFromStorage(USERS_KEY);
