@@ -1,5 +1,5 @@
-<!-- <template>
-  <section class="main-layout">
+<template>
+  <section>
     <table>
       <tr>
         <th>Order ID</th>
@@ -26,33 +26,28 @@
 <script>
 import { orderService } from "../services/order.service";
 import { gigService } from "../services/gig.service";
-
 export default {
+  name: "user-orders",
+  props: {},
   data() {
     return {
-      gig: null,
-      ordersBy: null,
+      orders: [],
     };
   },
+  components: {},
   created() {
-    this.orders = this.$store
-      .dispatch({ type: "getOrders" })
-      .then(function (ordersBy) {
-        console.log(ordersBy);
-        // return ordersBy
-      });
+    // this.orders = this.$store
+    //   .dispatch({ type: "getOrders" })
+    //   .then(function (ordersBy) {
+    //     console.log(ordersBy);
+    //     // return ordersBy
+    //   });
   },
-
   computed: {
-    getOrders() {
-      return this.$store.getters.orders;
-    },
+    // getOrders() {
+    //   return this.$store.getters.orders;
+    // },
   },
-  components: {
-    gigService,
-    orderService,
-  },
+  methods: {},
 };
 </script>
-
- -->

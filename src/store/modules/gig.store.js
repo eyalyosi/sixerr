@@ -12,10 +12,10 @@ export default {
       return state.categories;
     },
     getGigs(state) {
-      console.log(state.filterBy);
+      // console.log(state.filterBy);
       if (!state.gigs) return
       if (state.filterBy.title) {
-        console.log(state.filterBy);
+        // console.log(state.filterBy);
         return state.gigs.filter(gig => gig.title.includes(state.filterBy.title))
       }
       if (state.filterBy.category) {
@@ -72,7 +72,7 @@ export default {
     async loadGigs({ commit, state }) {
       try {
         const gigs = await gigService.query(state.filterBy)
-        console.log('Gigs from loadGigs');
+        // console.log('Gigs from loadGigs');
         commit({ type: 'setGigs', gigs })
       } catch {
         console.log('error');
@@ -80,7 +80,7 @@ export default {
     },
     async saveGig({ dispatch }, payload) {
       try {
-        await toyService.save(payload.gig)
+        await gigService.save(payload.gig)
         dispatch('loadGigs')
       } catch (err) {
         console.log('Couldnt save gig', err)

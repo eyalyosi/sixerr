@@ -36,7 +36,7 @@
         </div>
       </div>
       <div class="user-orders">
-        <button>Create New Gig</button>
+        <h3>My orders</h3>
       </div>
     </div>
   </section>
