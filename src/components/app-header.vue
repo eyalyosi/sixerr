@@ -1,5 +1,8 @@
 <template>
-  <header class="app-header full" :class="{ 'change-color': scrollPosition > 50 }">
+  <header
+    class="app-header full"
+    :class="{ 'change-color': scrollPosition > 50 }"
+  >
     <main class="main-header" ref="nav">
       <div class="main-layout header-flex">
         <div class="logo-and-search">
@@ -13,43 +16,23 @@
               </div>
             </router-link>
           </h1>
-          <form class="search-bar-header" :class="{ 'search-header': scrollPosition > 100 }">
-            <div>
-              <div class="sticky-search">
-                <img src="../assets/logo/magnifying-glass.png" alt />
-                <input type="text" value="Find Services" />
-                <button class="search-header-btn">Search</button>
-              </div>
-            </div>
-          </form>
-          <gig-filter
-          @setFilter="setFilter"
-          class="hidden"
-          :class="{ 'search-header-box': scrollPosition > 50 }"
-          />
+          <gig-filter-header @setFilter="setFilter"></gig-filter-header>
         </div>
         <nav class="nav">
-          <router-link to="/explore">
-            <a :class="$route.meta.logoClass" href>Explore</a>
-          </router-link>
-          <router-link :class="$route.meta.logoClass" to="/order-app">Become A Seller</router-link>
+          <p @click="showAllCategories" class="explore">Explore</p>
+          <router-link :class="$route.meta.logoClass" to="/order-app"
+            >Become A Seller</router-link
+          >
           <a :class="$route.meta.logoClass">Login</a>
-          <!-- <a class="join">Join</a> -->
-          <!-- <div class="login-modal" v-if="login">
-            <login />
-          </div>
-          <div class="signup-modal" v-if="signup">
-            <signup /> -->
-          <!-- </div> -->
+
           <a @click="toggleLogin" :class="$route.meta.logoClass">Sign in</a>
           <a @click="toggleSignup" class="join">Join</a>
           <div class="login-modal" v-if="!isLogin">
-            <login v-on="close = false" />
+            <login v-on="(close = false)" />
           </div>
           <div class="signup-modal" v-if="!isSignUp">
             <signup />
           </div>
-          <!-- <div class="logged-in" v-if="isLogin && isSignUp">hhhh</div> -->
         </nav>
       </div>
     </main>
@@ -59,7 +42,8 @@
 <script>
 import gigFilter from "./gig-filter.vue";
 import login from "./login.vue";
-import signup from './signup.vue';
+import signup from "./signup.vue";
+import gigFilterHeader from "./gig.filter.header.vue";
 
 export default {
   data() {
@@ -69,27 +53,29 @@ export default {
       scrollPosition: null,
       isSignUp: true,
       isLogin: true,
-
-
-
-
-    }
+      filterBy: {
+        category: "",
+      },
+    };
   },
   created() {
-    window.addEventListener('scroll', this.updateScroll);
-
+    window.addEventListener("scroll", this.updateScroll);
   },
 
   methods: {
     setFilter(filterBy) {
+      console.log("filterBy:", filterBy);
+      this.$emit("setFilter", { ...filterBy });
       this.$store.dispatch({ type: "setFilter", filterBy });
+      this.$router.push("/explore");
     },
-    // onHeaderObserved(entries) {
-    //   entries.forEach((entry) => {
-    //     this.stickyNav = entry.isIntersecting ? false : true;
-    //   });
-    // },
 
+    showAllCategories() {
+      this.setFilter("");
+      console.log("route:", this.$route);
+      if (this.$route.path === "/explore") return;
+      this.$router.push("/explore");
+    },
 
     toggleLogin() {
       this.isLogin = !this.isLogin;
@@ -100,50 +86,40 @@ export default {
 
     updateScroll() {
       if (!this.isHome) {
-        return
+        return;
       }
-      this.scrollPosition = window.scrollY
+      this.scrollPosition = window.scrollY;
     },
-
   },
 
-
-
   mounted() {
-    // this.headerObserver = new IntersectionObserver(this.onHeaderObserved, {
-    //   rootMargin: "-91px 0px 0px",
-    // });
-    // this.headerObserver.observe(this.$refs.header);
-    window.addEventListener('scroll', this.updateScroll);
+    window.addEventListener("scroll", this.updateScroll);
   },
   computed: {
     isHome() {
-      return this.$route.path === '/'
+      return this.$route.path === "/";
+    },
+  },
+  watch: {
+    isHome: {
+      handler() {
+        if(!this.isHome) this.scrollPosition = 0
+      }
     }
   },
-  // watch: {
-  //   '$route.path': {
-  //     immediate: true,
-  //     handler() {
-  //       console.log(this.$route.path);
-  //       this.scrollPosition > 50
-
-  //     }
-
-  //   },
-
-  // },
 
   components: {
     gigFilter,
     login,
-    signup
-  }
-
-}
-
+    signup,
+    gigFilterHeader,
+  },
+};
 </script>
 
 
 <style>
+.explore {
+  cursor: pointer;
+}
 </style>

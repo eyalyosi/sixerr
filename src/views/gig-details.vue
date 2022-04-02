@@ -11,16 +11,13 @@
           <p>Level {{ gig.owner.level }} Seller</p>
           |
           <div v-if="gig.owner.rate">
-            <!-- <div class="demo-rate-block flex">
-              <span class="demonstration">Default</span>
-              <el-rate v-model="gig.owner.rate" />
-            </div>-->
+ 
             <p>({{ getStars }})</p>
           </div>
-          <img
+          <!-- <img
             src="https://cdn.iconscout.com/icon/free/png-256/star-bookmark-favorite-shape-rank-16-28621.png"
             alt=""
-          />
+          /> -->
         </div>
       </div>
       <carusel-details :images="images"></carusel-details>
@@ -152,6 +149,9 @@ import { userService } from "../services/user.service.js";
 import progressBarDetails from "../components/progress-bar-details.vue";
 import ProgressBarDetails from "../components/progress-bar-details.vue";
 import caruserDetailsReview from "../components/caruser-details-review.vue";
+// import { id } from "element-plus/lib/locale";
+
+
 export default {
   name: "gig-detail",
   data() {
@@ -173,20 +173,22 @@ export default {
       this.orderToAdd.gig._id = gig._id;
       this.orderToAdd.gig.name = gig.category;
       this.orderToAdd.gig.price = gig.price;
-      this.orderToAdd.seller = gig.owner.fullname;
-      // this.orderToAdd. = gig.price
-      // console.log('ORDER PRICE', this.orderToAdd.gig.price);
+      this.orderToAdd.seller = gig.owner;
 
+      this.$store.dispatch({type:'setUser', userId: '624440b1f11c47915c617278'}).then(() => {
+      this.orderToAdd.buyer = this.getMiniUser
+      })
       const userId = this.gig.owner._id;
-      console.log("%c userId:", "color:red", userId);
       userService.getById(userId).then((user) => {
         this.currUser = user;
-        console.log("%c eyal", "color:lightgreen");
-        console.log("this.user:", this.user);
+        console.log(this.currUser);
       });
     });
   },
   computed: {
+    getMiniUser() {
+      return this.$store.getters.getMiniUser
+    },
     gigSellerImg() {
       return this.gig.owner.imgUrl;
     },
@@ -216,18 +218,18 @@ export default {
       this.$store.dispatch({ type: "addOrder", order: this.orderToAdd });
       this.$router.push(`/order-app/${this.gig._id}`);
     },
-    // getUserById() {
-
-    // }
   },
   components: {
     caruselDetails,
     progressBarDetails,
     ProgressBarDetails,
     caruserDetailsReview,
+    
   },
 };
 </script>
+
+
 <style scoped>
 .demo-rate-block {
   padding: 30px 0;

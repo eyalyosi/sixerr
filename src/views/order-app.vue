@@ -9,6 +9,7 @@
                 <th>Price</th>
                 <th>Status</th>
                 <th>Seller Name</th>
+                <th>Buyer Name</th>
             </tr>
             <tr class="order-table" v-for="order in getOrders" :key="order">
                 <td>{{ order._id }}</td>
@@ -17,7 +18,8 @@
                 <td>{{ order.gig.name }}</td>
                 <td>{{ order.gig.price }}</td>
                 <td>{{ order.status }}</td>
-                <td>{{ order.seller }}</td>
+                <td>{{ order.seller.fullname }}</td>
+                <td>{{ order.buyer.fullname }}</td>
             </tr>
         </table>
     </section>

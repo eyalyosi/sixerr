@@ -1,9 +1,10 @@
 <template>
   <div class="hero-section">
     <div class="hero-img">
-        <div v-bind:style="{backgroundImage: `url(${image})`}"  class="hero-img-box">
-        </div>
-      <!-- <img :src="image" alt="hero image" /> -->
+      <div
+        v-bind:style="{ backgroundImage: `url(${image})` }"
+        class="hero-img-box"
+      ></div>
     </div>
     <div class="hero-box">
       <div class="hero-container main-layout flex space-between">
@@ -94,7 +95,9 @@ export default {
       }, 5000);
     },
     setFilter(filterBy) {
+      console.log("filterBy:", filterBy);
       this.$store.dispatch({ type: "setFilter", filterBy });
+      this.$router.push('/explore')
     },
   },
 

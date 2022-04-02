@@ -46,6 +46,36 @@
 }
 
 
+.search-new {
+    flex: 1 1 auto;
+    // padding: 7px 7px 7px 28px;
+    border-right: 0;
+    border-radius: 3px 0 0 3px;
+    border: 1px solid #c5c6c9;
+    border-color: #dadbdd;
+    box-shadow: none;
+    outline: none;
+    z-index: 3;
+    font-size: 16px;
+    height: 100%;
+
+}
+
+.search-btn-new{
+    padding: 8px 16px;
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 0 3px 3px 0;
+    flex-shrink: 0;
+    text-shadow: none;
+    border: 1px solid transparent;
+    background-color: #1dbf73;
+    color: #fff;
+    cursor: pointer;
+
+}
+
 
 
 
@@ -62,12 +92,57 @@
 
 }
 
+.img-and-input {
+    // border: 1px solid black;
+    display: flex;
+    width: 100%;
+    align-items: center;    
+    height: 34px;
+    // background-color: white;
+
+    img {
+        height: 16px;
+        width: 16px;
+        left: 13px;
+        margin-left: 38px;
+        // position: absolute;
+        
+
+    } 
+    
+    input {
+        flex: 1 1 auto;
+        padding: 7px 7px 7px 28px;
+        border-right: 0;
+        border-radius: 3px 0 0 3px;
+        border: 1px solid #c5c6c9;
+        border-color: #dadbdd;
+        box-shadow: none;
+        outline: none;
+        z-index: 3;
+        font-size: 16px;
+        height: 100%;
+    
+
+        
+    }
+}
+
 .search-bar-header{
     // display: flex;
     align-items: center;
     opacity: 0;
     transition: opacity 1s;
 }
+
+.search-section-header-new {
+    display: flex;
+    align-items: center;
+    height: 34px;
+
+}
+
+
 
 .search-header{
 // visibility:visible; 
@@ -138,6 +213,7 @@ top: 1%;
 
 }
 
+
 .logo {
     text-decoration: none;
     // font-family: sans-serif;
@@ -197,6 +273,19 @@ nav {
         }
 
     }
+    p {
+        text-decoration: none;
+        color: #62646a;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 16px;
+        transition: color .3s;
+
+        header.change-color & {
+            color: #62646a;
+        }
+
+    }
 }
 
 .join {
@@ -241,4 +330,6 @@ footer {
     object-fit: cover;
 
  }
+
+
 

@@ -7,6 +7,9 @@ import category from '../views/category.vue'
 
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
+  scrollBehavior() {
+    return { top:0 };
+  },
   routes: [
     {
       path: '/',
@@ -24,7 +27,7 @@ const router = createRouter({
       name: 'explore',
       component: explore,
       meta: {
-        headerClass: 'border relative'
+        headerClass: 'relative'
       }
     },
     {
@@ -52,17 +55,11 @@ const router = createRouter({
         headerClass: 'border relative'
       }
     },
-    // {
-    //   path: '/order-app',
-    //   name: 'order-app',
-    //   component: orderApp,
-    //   meta: {
-    //     headerClass: 'border'
-    //   }
-    // },
+  
+  ],
+  mode: 'history'
 
 
-  ]
 })
 
 export default router

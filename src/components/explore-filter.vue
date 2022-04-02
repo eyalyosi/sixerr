@@ -1,19 +1,32 @@
 <template>
   <section class="explore-filter main-layout">
-    <el-select
-      @change="setFilter"
-      v-model="filterBy.delivery"
-      class="m-2"
-      placeholder="Delivery Time"
-      size="large"
-    >
-      <el-option
-        v-for="item in options"
-        :key="item.value"
-        :label="item.label"
-        :value="item.value"
-      />
-    </el-select>
+    <div class="options-warpper">
+      <el-select
+        @change="setFilter"
+        v-model="filterBy.delivery"
+        class="m-2"
+        placeholder="Delivery Time"
+        size="large"
+      >
+        <el-option
+          v-for="item in options"
+          :key="item.value"
+          :label="item.label"
+          :value="item.value"
+        />
+      </el-select>
+      <el-select multiple class="m-2" size="large" placeholder="Seller Level">
+        <el-option v-for="level in optionsForLevel" :key="level.value">
+          <el-checkbox
+            v-model="filterBy.level"
+            @change="setFilter"
+            :true-label="level.value"
+            :value="level.value"
+            :label="level.label"
+          />
+        </el-option>
+      </el-select>
+    </div>
   </section>
 </template>
 <script>
@@ -26,6 +39,7 @@ export default {
         delivery: ref(""),
         title: "",
         category: null,
+        level: ref(""),
       },
       options: [
         {
@@ -45,22 +59,57 @@ export default {
           label: "Anytime",
         },
       ],
+      optionsForLevel: [
+        {
+          value: 0,
+          label: "All",
+        },
+        {
+          value: 4,
+          label: "Seller Level 4",
+        },
+        {
+          value: 3,
+          label: "Seller Level 3",
+        },
+        {
+          value: 2,
+          label: "Seller Level 2",
+        },
+        {
+          value: 1,
+          label: "Seller Level 1",
+        },
+      ],
     };
   },
   methods: {
     setFilter() {
       const { category } = this.$route.params;
-      // console.log(category);
-      // // if (!category)
-      // console.log(this.filterBy.delivery);
-      
-      const delivery =  this.filterBy.delivery 
-      const filterBy = { category, delivery};
-      // console.log(filterBy);
-
-      // console.log(this.filterBy);
-      this.$emit("setFilter", JSON.parse(JSON.stringify(filterBy)));
+      const delivery = this.filterBy.delivery;
+      const level = this.filterBy.level;
+      const filterBy = { delivery, level };
+      console.log("filterby", filterBy);
+      this.$emit("setFilter", { ...filterBy });
     },
   },
 };
 </script>
+<style scoped>
+.el-select-dropdown__item {
+  font-family: Macan-regular;
+  color: black;
+}
+
+.el-checkbox {
+  color: black;
+}
+
+.el-input-inner {
+  font-size: 16px;
+  min-width: 50px;
+}
+.m-2 {
+  position: relative;
+}
+</style>

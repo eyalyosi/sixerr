@@ -1,7 +1,8 @@
 <template>
-  <section>
-    <explore-filter @setFilter="setFilter" />
-    <gig-list v-if="gigs" :gigs="gigs" />
+  <section >
+    <explore-filter v-if="gigs " @setFilter="setFilter" />
+    <gig-list v-if="gigs && gigs.length" :gigs="gigs" />
+    <p v-else class="user-msg-explore">No Gigs maching your search, try clearing filters</p>
   </section>
 </template>
 <script>
@@ -14,7 +15,6 @@ export default {
   },
   methods: {
     setFilter(filterBy) {
-      console.log(filterBy);
       this.$store.dispatch({ type: "setFilter", filterBy });
     },
   },
@@ -22,16 +22,20 @@ export default {
     gigs() {
       return this.$store.getters.getGigs;
     },
+
+  },
+  watch: {
+    getFilterBy: {
+      handler() {
+        this.$store.dispatch("loadGigs");
+      },
+      deep: true,
+    },
   },
   created() {
+    // location.reload();
 
-    // if (!category) {
-    //   console.log('sddsf');
-    // }
-    // // console.log();
-    // const filterBy = {}
-    // // console.log(filterBy);
-    this.$store.dispatch({ type: "setFilter", filterBy: {} });
+
   },
   components: {
     gigList,
