@@ -1,6 +1,5 @@
 <template>
   <section class="main-layout">
-    
     <div class="main-grid ">
       <gig-preview v-for="gig in gigs" :gig="gig" :key="gig._id" />
     </div>

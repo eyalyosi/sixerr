@@ -51,8 +51,6 @@ const categories = [{
     img: 'https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_2.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741663/animated-explainer-2x.png'
 }
 ]
- 
-
 
 export const gigService = {
     query,
@@ -63,7 +61,7 @@ export const gigService = {
 }
 
 async function query(filterBy) {
-    return await httpService.get(ENDPOINT,filterBy)
+    return await httpService.get(ENDPOINT, filterBy)
 }
 
 async function save(gig) {
@@ -80,7 +78,7 @@ async function remove(id) {
     return await httpService.delete(`${ENDPOINT}/${id}`)
     // return axios.delete(BASE_URL + id).then((res) => res.data)
     // return storageService.remove(KEY, id)
-  }
+}
 
 function getCategories() {
     return categories

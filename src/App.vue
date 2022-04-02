@@ -1,7 +1,6 @@
 <template>
-  <section class="main-section">
-    <app-header :class="$route.meta.headerClass" />
-
+  <section>
+    <app-header :class="$route.meta.headerClass"/>
     <div class="main-content-container">
       <router-view />
     </div>
@@ -17,7 +16,7 @@ export default {
   name: "App",
   data() {
     return {
-
+      isScreen: false,
     };
   },
   created() {
@@ -28,13 +27,7 @@ export default {
     appFooter,
   },
   computed: {},
-  methods: {
-    updateScroll() {
-      this.scrollPosition = window.scrollY;
-    },
-  },
-  mounted() {
-    window.addEventListener("scroll", this.updateScroll);
-  },
-}
+  methods: {},
+  mounted() {},
+};
 </script>

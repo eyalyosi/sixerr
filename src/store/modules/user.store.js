@@ -2,7 +2,8 @@ import { userService } from "../../services/user.service"
 export default {
     state: {
         users: null,
-        user: null
+        user: null,
+        loggedinUser: userService.getLoggedinUser(),
     },
     getters: {
         getUsers(state) {
@@ -12,7 +13,8 @@ export default {
             console.log('user', user);
             const { _id, fullname, username } = user
             return { _id, fullname, username }
-        }
+        },
+        loggedinUser({ loggedinUser }) { return loggedinUser },
     },
     mutations: {
         setUsers(state, { users }) {
@@ -36,10 +38,14 @@ export default {
                 console.log('error');
             }
         },
-        // loadUsers({ commit, state }) {
-        //     userService.query().then((users) => {
-        //         commit({ type: 'setUsers', users })
-        //     })
-        // },
+        async logout({ commit }) {
+            try {
+                await userService.logout()
+                commit({ type: 'setLoggedinUser', user: null })
+            } catch (err) {
+                console.log('userStore: Error in logout', err)
+                throw err
+            }
+        },
     }
 }

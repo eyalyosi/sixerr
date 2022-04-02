@@ -1,0 +1,82 @@
+@media screen and (max-width: 900px) {
+  .app-header {
+    width: 100vw;
+    .main-header {
+      background-color: #fff;
+      display: flex;
+      justify-content: space-between;
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+  }
+  .main-content-container {
+    overflow: hidden;
+    width: 100vw;
+  }
+  .logo-part {
+    padding: 10px;
+    p {
+      color: #222325;
+    }
+  }
+  .join {
+    border: none;
+    color: #62646a;
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 0;
+    // padding: 7px 0;
+    &:hover {
+      color: #93959b;
+      background-color: transparent;
+      border: none;
+      opacity: 0.8;
+    }
+  }
+  .hero-section {
+    background-color: #023a15;
+    height: 55vh;
+    width: 100vw;
+    justify-content: center;
+  }
+  .hero-content {
+    margin-top: 100px;
+    position: static;
+  }
+  .search-section {
+    display: flex;
+  }
+  .hero-box {
+    h1 {
+      font-size: 2em;
+      height: fit-content;
+      line-height: 1.3em;
+      margin-bottom: 0;
+      margin-top: 1vh;
+      padding-bottom: 30px;
+      padding-top: 1em;
+      width: 100%;
+    }
+  }
+  .home-info {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+  }
+  .main-info-box {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 6% 6%;
+  }
+  .category-title,
+  .carousel,
+  .hero-img,
+  .seller-star-name-box,
+  .popular-categories {
+    display: none;
+  }
+  .hamburger {
+    display: inline-block;
+  }
+}

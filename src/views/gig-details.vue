@@ -134,7 +134,7 @@
           </div>
         </div>
         <div class="buy-btn">
-          <button @click="addOrder">Continue (${{ gig.price }})</button>
+          <button @click="addOrder">Continue (${{ gigPrice }})</button>
         </div>
       </div>
     </div>
@@ -215,8 +215,28 @@ export default {
 
   methods: {
     async addOrder() {
+      // TODO- add order with all details
+      // console.log(this.gig);
+      // console.log(this.currUser);
+      this.orderToAdd = orderService.getEmptyOrder();
+
+      //TODO - order id??
+      this.orderToAdd.buyer._id = this.currUser._id;
+      this.orderToAdd.buyer.name = this.currUser.fullname;
+      this.orderToAdd.seller._id = this.gig.owner._id;
+      this.orderToAdd.seller.name = this.gig.owner.fullname;
+      this.orderToAdd.gig._id = this.gig._id;
+      this.orderToAdd.gig.name = this.gig.category;
+      this.orderToAdd.gig.price = this.gig.price;
+      console.log(this.orderToAdd);
       this.$store.dispatch({ type: "addOrder", order: this.orderToAdd });
-      this.$router.push(`/order-app/${this.gig._id}`);
+      this.$router.push("/user-profile");
+      // try {
+      //   await this.$store.dispatch({ type: "addOrder", order: this.orderToAdd });
+      //   this.$router.push("/user-profile");
+      // } catch (err) {
+      //   console.log("err", err);
+      // }
     },
   },
   components: {

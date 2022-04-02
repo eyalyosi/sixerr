@@ -38,7 +38,7 @@ export default {
     };
   },
    created() {
-    console.log(this.user);
+    // console.log(this.user);
   },
   methods: {
     appendSlide() {
